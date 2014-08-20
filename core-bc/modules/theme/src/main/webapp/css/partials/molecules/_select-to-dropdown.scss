@@ -1,0 +1,62 @@
+// Select To Dropdown (js plugin)
+
+.select-to-dropdown-wrap {
+    display: block;
+    position: relative;
+    z-index: 600;
+
+  .select-to-dropdown-trigger {
+      background: transparent url(../images/theme/icons/dropdown.png) right center no-repeat;
+      cursor: pointer;
+      display: block;
+      height: 20px;
+      line-height: 20px;
+      padding-right: 25px;
+  }
+
+  .select-to-dropdown-list {
+      background: #f9f9fb;
+      border: 1px solid #bbc6ce;
+      border-top: none;
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 19px;
+      width: 200px;
+      z-index: 598;
+
+      &.select-to-dropdown-list-active {
+        display: block;
+      }
+
+      li {
+          background: #f9f9fb;
+          border-bottom: 1px solid #dadfe5;
+          color: #2f72a9;
+          cursor: pointer;
+          padding: 10px;
+
+          &:hover,
+          &.hover {
+              background: #3a84c1 url(../images/navigation/theme/navigation-bg-hover.png) top left repeat-x;
+              color: #fff;
+          }
+
+          &:last-child,
+          &.last {
+              border-bottom: none;
+          }
+
+      }
+
+  }
+
+}
+
+.ie7 {
+  .select-to-dropdown-list-active {
+      zoom: 1;
+  }
+}

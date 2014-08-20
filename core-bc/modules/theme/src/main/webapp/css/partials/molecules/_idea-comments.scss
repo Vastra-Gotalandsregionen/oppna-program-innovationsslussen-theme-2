@@ -1,0 +1,147 @@
+.idea-comments {
+	margin: 10px 0;
+
+  > h2 {
+    border-bottom: 1px solid #d5e3ee;
+    color: #999;
+    font-size: 1.6em;
+    margin: 0 0 15px 0;
+    padding: 0 0 2px 0;
+    text-transform: uppercase;
+  }
+
+  .comment {
+    background: #fff;
+    border: 1px solid #d5e3ee;
+    @include border-radius(3px);
+    margin: 10px 0;
+    padding: 15px;
+
+    &.comment-innovationsslussen {
+      background: #eef5fa;
+      border-color: #c4ced5;
+    }
+
+    .comment-author {
+      float: left;
+      font-size: 1.1em;
+      min-width: 150px;
+      position: relative;
+    }
+
+    .comment-author-name {
+      color: #555;
+      margin-bottom: 0.2em;
+      font-weight: bold;
+    }
+
+    .comment-author-title {
+      color: #555;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .comment-entry {
+      color: #424242;
+      float: left;
+      padding-left: 20px;
+      padding-right: 20px;
+      max-width: 500px;
+      position: relative;
+
+      .comment-entry-date {
+        margin-bottom: 0.4em;
+      }
+
+      .comment-entry-text {
+        line-height: 1.4;
+      }
+    }
+
+    .comment-controls {
+      float: right;
+      position: relative;
+
+      .comment-control {
+        background: transparent url(../images/common/tool.png) 0 0 no-repeat;
+        display: inline-block;
+        font-size: 0;
+        height: 16px;
+        text-indent: -9999em;
+        width: 16px;
+
+        .comment-control-delete {
+          background: transparent url(../images/common/close.png) 0 0 no-repeat;
+        }
+      }
+    }
+  }
+
+  .action-link {
+      background: #ddd;
+      @include border-radius(4px);
+      color: #444;
+      display: block;
+      font-size: 1.3em;
+      padding: 10px;
+      text-align: center;
+      text-decoration: underline;
+  }
+}
+
+
+.ie7 {
+  .idea-comments {
+    .comment {
+      .comment-control {
+          display: block;
+          float: left;
+      }
+    }
+  }
+}
+
+.js {
+  .idea-comments {
+    .comment {
+      .requires-confirmation {
+        visibility: hidden;
+
+        &.requires-confirmation-active {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+.ie7 {
+  .js {
+    .idea-comments {
+      .comment {
+        .requires-confirmation-active {
+            display: block;
+        }
+      }
+    }
+  }
+}
+
+
+.idea-outer-private {
+	.idea-comments {
+		.comment {
+			background: #fff;
+			border-color: #d5e3ee;
+
+			&.comment-innovationsslussen {
+				background: #fcf7f7;
+				border-color: #bf3434;
+			}
+
+			.comment-author-name {
+				color: #555;
+			}
+		}
+	}
+}

@@ -1,0 +1,82 @@
+ul.vgr-list-view {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    background: #eef5fa;
+    border: 1px solid #c4ced5;
+    @include border-radius(3px);
+    margin: 7px 0;
+    padding: 10px;
+    position: relative;
+
+    &.vgr-list-view-item-odd {
+        background: #fff;
+    }
+
+    .hd,
+    .bd,
+    .ft {
+        margin: 5px 0;
+    }
+
+    .ft {
+        margin-bottom: 0;
+    }
+
+    .hd {
+      h3 {
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        a {
+            color: #2f72a9;
+            text-decoration: none;
+
+            &:hover {
+              color: #2f72a9;
+              text-decoration: underline;
+            }
+        }
+
+      }
+
+    }
+
+    .bd {
+
+      a {
+        color: #2f72a9;
+        text-decoration: none;
+
+        &:hover {
+          color: #2f72a9;
+          text-decoration: underline;
+        }
+
+      }
+
+    }
+
+
+  }
+
+  // Condensed view
+  &.vgr-list-view-condensed {
+    .vgr-list-view-item {
+      .hd {
+          h3 {
+            font-size: 1.1em;
+          }
+      }
+    }
+  }
+
+}
+
+&.ie7 li.vgr-list-view-item,
+&.ie8 li.vgr-list-view-item {
+    zoom: 1;
+}

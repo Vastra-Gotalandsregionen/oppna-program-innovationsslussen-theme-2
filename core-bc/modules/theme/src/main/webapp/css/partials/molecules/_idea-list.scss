@@ -1,0 +1,206 @@
+.idea-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+  > li {
+    display: -moz-inline-stack;
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    min-width: 230px;
+    padding: 0;
+    vertical-align: top;
+    width: 32.55%;
+
+    .idea-item {
+      background: url(../images/theme/bg/box-shadow-24.png) bottom center no-repeat;
+      margin: 0 5% 0 0;
+      padding-bottom: 5%;
+
+      a {
+        background: #3583bf;
+        border: 0;
+        @include border-radius(3px);
+        color: #555;
+        display: block;
+        margin: 0;
+        padding: 3px;
+        position: relative;
+        text-decoration: none;
+
+        .idea-content {
+          background: #fff;
+          @include border-radius(3px);
+          height: 120px;
+          overflow: hidden;
+          position: relative;
+
+          .idea-content-1,
+          .idea-content-2 {
+            background: #fff;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            padding: 10px;
+            padding: 0;
+            width: 100%;
+          }
+
+          .idea-content-1 {
+            top: 0;
+          }
+
+          .idea-content-2 {
+            background: #fcfcfc;
+            top: 140px;
+          }
+
+          .idea-content-inner {
+            padding: 6%;
+          }
+
+          h3 {
+            color: #555;
+            font-size: 1.2em;
+            margin: 0 0 10px 0;
+          }
+
+        }
+
+        &:hover {
+          color: #555;
+          text-decoration: none;
+
+          .idea-content {
+
+            .idea-content-1 {
+              top: 140px;
+            }
+
+            .idea-content-2 {
+              top: 0;
+            }
+
+          }
+        }
+
+        .idea-label {
+          color: #fff;
+          font-size: 0.9em;
+          font-weight: bold;
+          margin: 3px 6px 0 6px;
+        }
+
+
+      }
+
+
+    }
+
+
+    &.done a {
+      background: #5e9237;
+      border-color: #426627;
+    }
+
+    &.active-innovationsslussen a {
+      background: #bfb331;
+      border-color: #948b2a;
+    }
+
+    &.active-innovationsslussen .idea-label {
+      color: #444011;
+    }
+
+    &.private a {
+      background: #bf3434;
+      border-color: #8b2626;
+    }
+
+
+  }
+
+  &.idea-list-closed {
+    > li {
+      width: 24.25%;
+    }
+  }
+
+  .idea-stats {
+    bottom: 6%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 6%;
+
+    li {
+      color: #777;
+      display: block;
+      float: left;
+      font-size: 12px;
+      font-weight: bold;
+      height: 20px;
+      line-height: 20px;
+      margin: 0 0 0 20px;
+      padding-left: 22px;
+      position: relative;
+      text-align: center;
+
+      &.likes,
+      &.comments,
+      &.open,
+      &.closed {
+          background: url(../images/toolbar/idea-toolbar-icon-sprite-private.png) 0 0 no-repeat;
+      }
+
+      &.likes {
+        background-position: 0 -100px;
+      }
+
+      &.comments {
+        background-position: 0 3px;
+      }
+
+      &.open {
+        background-position: 0 -298px;
+      }
+
+      &.closed {
+        background-position: 0 -398px;
+      }
+
+    }
+
+  }
+
+  .idea-stats-state {
+      left: 6%;
+
+      li {
+        &.first {
+          margin-left: 0;
+          margin-right: 20px;
+
+        }
+      }
+  }
+
+}
+
+.ie7 {
+  .idea-list {
+    > li {
+      display: inline;
+      zoom: 1;
+
+      .idea-item {
+          margin-right: 15px;
+          padding-bottom: 15px;
+      }
+
+    }
+  }
+}

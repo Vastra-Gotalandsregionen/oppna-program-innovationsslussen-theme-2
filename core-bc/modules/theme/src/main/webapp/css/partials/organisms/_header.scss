@@ -1,0 +1,37 @@
+#banner {
+  background: transparent;
+
+  #heading {
+    margin: 0 0 1em 0;
+    padding: 0;
+    @include pie-clearfix();
+
+    .site-title {
+
+      display: block;
+      height: 41px;
+      float: left;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      width: 410px;
+
+      a {
+        display: block;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .top-navigation {
+      float: right;
+      margin: 0;
+      position: relative;
+    }
+
+
+  }
+
+}

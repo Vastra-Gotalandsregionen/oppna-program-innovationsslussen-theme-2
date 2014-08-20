@@ -1,0 +1,62 @@
+ul.idea-flow-list {
+  background: transparent url(../images/theme/ideas/flow-line.png) left center repeat-x;
+  list-style: none;
+  margin: 5px 0 0 0;
+  overflow: hidden;
+  padding: 0;
+
+  li {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 5px;
+    position: relative;
+
+    span {
+      background: #fff;
+      border: 1px solid #bf3434;
+      @include border-radius(12px);
+      color: #bf3434;
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 24px;
+      text-align: center;
+      height: 24px;
+      width: 24px;
+    }
+
+    &.done {
+      span {
+        background: #bf3434;
+        color: #fff;
+      }
+    }
+
+  }
+
+}
+
+.idea-outer-private {
+
+  ul.idea-flow-list {
+    background-image: url(../images/theme/ideas/flow-line-private.png);
+
+    li {
+      span {
+        background: #fff;
+        color: #bf3434;
+        border-color: #bf3434;
+      }
+
+      &.done {
+        span {
+          background: #bf3434;
+          color: #fff;
+        }
+      }
+    }
+
+  }
+
+}

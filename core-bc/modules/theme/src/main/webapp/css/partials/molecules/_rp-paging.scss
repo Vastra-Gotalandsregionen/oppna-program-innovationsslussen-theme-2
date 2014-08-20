@@ -1,0 +1,84 @@
+
+.rp-paging {
+  margin-top:10px;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 auto;
+
+    li {
+      float:left;
+      margin: 5px 5px;
+      position: relative;
+
+      a,
+      strong,
+      span {
+        border: 1px solid transparent;
+        @include border-radius(6px);
+        display:block;
+        font-size: 16px;
+        height: 20px;
+        line-height: 1.0;
+        padding: 2px 4px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        width: 20px;
+
+        &:hover {
+          background-color: #e4edf9;
+          border-color: #255d8c;
+        }
+
+
+      }
+
+      &.first a,
+      &.previous a,
+      &.next a,
+      &.last a {
+        background: #e7f0fc url(../images/theme/paginator/rp-paginator-sprite.png) no-repeat 0 0;
+        border-color: #d4dce7;
+        color: #255d8c;
+        font-size: 0;
+        position: relative;
+        text-indent: -9999em;
+        width: 30px;
+      }
+
+      &.first a { background-position: 50% 5px; }
+      &.previous a { background-position: 50% -45px; }
+      &.next a { background-position: 50% -95px; }
+      &.last a { 	background-position: 50% -145px; }
+
+      &.first span,
+      &.previous span,
+      &.next span,
+      &.last span {
+        font-size: 0;
+        text-indent: -9999em;
+        visibility: hidden;
+        width: 30px;
+      }
+
+    }
+  }
+
+}
+
+
+&.ie7 {
+  .rp-paging {
+    ul {
+      display: inline;
+    }
+  }
+
+}
+
+.paginator-wrap .search-info {
+	text-align: center;
+}
