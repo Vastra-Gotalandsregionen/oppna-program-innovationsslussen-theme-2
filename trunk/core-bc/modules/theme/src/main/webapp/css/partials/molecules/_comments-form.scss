@@ -1,0 +1,57 @@
+.add-comment-form {
+	padding: 10px;
+
+  .field-wrap {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 74%;
+
+    label {
+      color: #555;
+      float: left;
+      font-weight: bold;
+      position: relative;
+      width: 24%;
+    }
+
+    .field-element-wrap {
+      float: left;
+      position: relative;
+      width: 74%;
+
+      textarea {
+        background: #fff;
+        border: 1px dashed #c4ced5;
+        min-height: 60px;
+        width: 100%;
+      }
+    }
+  }
+
+  .aui-button-holder {
+    clear: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 24%;
+  }
+
+  .notice {
+    color: #424242;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+  }
+
+  .rp-button {
+    input[type="submit"] {
+      background: #778289;
+      border: 0;
+      margin: 0 10px 10px 10px;
+      padding: 10px 20px;
+    }
+  }
+
+}

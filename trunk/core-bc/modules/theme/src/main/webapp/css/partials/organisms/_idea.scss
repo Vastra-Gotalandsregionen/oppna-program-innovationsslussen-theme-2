@@ -1,0 +1,274 @@
+
+.idea-outer {
+  background: url(../images/theme/ideas/idea-shadow-24.png) bottom center no-repeat;
+  padding: 0 0 27px 0;
+
+  .idea {
+    background: #3583bf;
+    border: 0;
+    @include border-radius(3px);
+    padding: 5px;
+    position: relative;
+
+    .idea-inner {
+      background: #fff;
+      border: 1px solid #a9bdcf;
+      @include border-radius(3px);
+      padding: 15px;
+    }
+
+    .idea-toolbar-wrap {
+      float: left;
+      max-width: 820px;
+      position: relative;
+
+      ul {
+        margin-bottom: 10px;
+
+        li.icon {
+          a {
+            background: url(../images/toolbar/idea-toolbar-icon-sprite.png) 4px  1000px no-repeat;
+            color: #3583bf;
+            padding-left: 26px;
+
+            &:hover {
+              background-color: #f7f7f7;
+            }
+
+            span {
+              color: #3583bf;
+            }
+          }
+
+          &.comment a {
+            background-position: 4px  6px;
+          }
+
+          &.like a {
+            background-position: 4px  -96px;
+          }
+
+          &.favorite a {
+            background-position: 4px  -196px;
+          }
+
+          &.open a {
+            background-position: 4px  -296px;
+          }
+
+          &.closed a {
+            background-position: 4px  -396px;
+          }
+
+          &.barium a {
+            background-position: 4px  -494px;
+          }
+
+          &.reload a {
+            background-position: 4px  -596px;
+          }
+        }
+
+
+      }
+
+    }
+
+    .idea-flow-wrap {
+      float: right;
+      position: relative;
+    }
+
+    h1 {
+      color: #3583bf;
+      margin: 0.6em 0 0.2em 0;
+    }
+
+    .idea-creator {
+      color: #555;
+      margin: 0.2em 0 0.7em 0;
+    }
+
+    .idea-creator-name,
+    .idea-create-date {
+      font-weight: bold;
+    }
+
+    .idea-creator-name {
+      color: #555;
+    }
+
+    .idea-content-item {
+      margin: 0 0 10px 0;
+    }
+
+    .label {
+      color: #555;
+    }
+
+    .intro {
+      color: #555;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .idea-meta {
+
+      .aui-column-content {
+        padding-left: 7.0em;
+      }
+
+      h2 {
+        border-bottom: 1px solid #d5e3ee;
+        color: #999;
+        font-size: 1.6em;
+        margin: 0 0 5px 0;
+        padding: 0 0 5px 0;
+        text-transform: uppercase;
+
+        span {
+          padding: 0 5px;
+        }
+      }
+
+      .documents-list {
+        list-style: none;
+        margin: 0;
+        padding: 0 5px;
+
+        li {
+          margin: 10px 0;
+
+          a {
+            background: url(../images/file_system/small/txt.png) left center no-repeat;
+            color: #777;
+            display: block;
+            line-height: 16px;
+            min-height: 16px;
+            padding-left: 22px;
+            text-decoration: underline;
+
+            &:hover {
+              color: #222;
+              text-decoration: none;
+            }
+          }
+
+          &.pdf a {
+            background-image: url(../images/file_system/small/pdf.png);
+          }
+
+          &.doc a,
+          &.docx a {
+            background: url(../images/file_system/small/docx.png) left center no-repeat;
+          }
+
+          &.xls a,
+          &.xlsx a {
+              background: url(../images/file_system/small/xlsx.png) left center no-repeat;
+          }
+
+          &.ppt a,
+          &.pptx a {
+              background: url(../images/file_system/small/pptx.png) left center no-repeat;
+          }
+
+          &.img a {
+            background: url(../images/file_system/small/jpg.png) left center no-repeat;
+          }
+
+        }
+      }
+
+    }
+  }
+}
+
+// Private view
+.idea-outer-private {
+  .idea {
+    background: #bf3434;
+
+    h1 {
+      color: #bf3434;
+
+      span {
+      	color: #555;
+      	font-size: 0.6em;
+      }
+    }
+
+    .idea-toolbar-wrap {
+      li.icon {
+        a {
+          background-image: url(../images/theme/toolbar/idea-toolbar-icon-sprite-private.png);
+          color: #bf3434;
+
+          span {
+            color: #bf3434;
+          }
+        }
+      }
+    }
+
+    .idea-creator-name {
+      color: #555;
+    }
+  }
+}
+
+// Public - Active at Innovationsslussen
+.active-innovationsslussen {
+  .idea {
+    background: #bfb331;
+
+    .idea-inner {
+      border-color: #948b2a;
+    }
+
+    h1 {
+      color: #b08700;
+    }
+
+    .idea-toolbar-wrap {
+      li.icon {
+        a {
+          background-image: url(../images/toolbar/idea-toolbar-icon-sprite-active.png);
+          color: #b08700;
+
+          span {
+            color: #b08700;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Public - Done
+.done {
+  .idea {
+    background: #5e9237;
+
+    .idea-inner {
+      border-color: #426627;
+    }
+
+    h1 {
+      color: #b08700;
+    }
+
+    .idea-toolbar-wrap {
+      li.icon {
+        a {
+          background-image: url(../images/toolbar/idea-toolbar-icon-sprite-done.png);
+          color: #5e9237;
+
+          span {
+            color: #5e9237;
+          }
+        }
+      }
+    }
+  }
+}

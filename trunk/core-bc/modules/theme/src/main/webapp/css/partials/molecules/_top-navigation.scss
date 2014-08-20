@@ -1,0 +1,80 @@
+.top-wrap {
+  background: #fff url(../images/theme/navigation/top-navigation-bg.png) bottom left repeat-x;
+  border: 1px solid #d5e0ea;
+  @include border-radius(3px);
+  @include box-shadow(0px 1px 4px 0px #cccccc);
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  position: relative;
+  padding: 0 5px;
+
+  ul.top-nav-list {
+    background: none;
+    border: none;
+    @include border-radius(0);
+    @include box-shadow(none);
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    position: relative;
+    padding: 0 5px;
+
+    li {
+      background: none;
+      border-right: 1px solid #e0e0e0;
+      display: block;
+      float: left;
+      line-height: 1.0;
+      padding: 0;
+      margin: 0;
+
+      &.last {
+        background: none;
+        border-right: none;
+      }
+
+      a,
+      & > span {
+        color: #555;
+        display: block;
+        float: left;
+        font-size: 1.1em;
+        line-height: 21px;
+        padding: 10px 10px;
+        text-decoration: none;
+      }
+
+      & > span {
+        display: block;
+        margin: 0;
+        color: #777;
+      }
+
+      a {
+
+        &:hover {
+          background-color: #3a84c1;
+          color: #fff;
+        }
+
+        &.active {
+          background-color: #3a84c1;
+          color: #fff;
+        }
+
+
+      }
+
+      .login-link-portlet > a {
+          padding: 0px;
+      }
+
+    }
+
+  }
+
+
+}

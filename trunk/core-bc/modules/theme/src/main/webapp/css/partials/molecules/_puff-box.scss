@@ -1,0 +1,128 @@
+.puff-box {
+	background: url(../images//theme/bg/box-shadow-24.png) bottom center no-repeat;
+	padding: 0 0 14px 0;
+	position: relative;
+	margin: 0;
+
+  .puff-box-inner {
+    background: #eef5fa;
+    border: 1px solid #e5e5e5;
+    @include border-radius(6px);
+    margin: 0;
+    padding: 20px;
+    position: relative;
+  }
+
+  h2 {
+    color: #327cb4;
+    font-size: 1.8em;
+    font-weight: normal;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  .puff-box-content {
+    margin-bottom: 10px;
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.5;
+    }
+  }
+
+  .puff-box-link-wrap {
+    margin: 0 auto;
+    text-align: center;
+
+    a {
+      background: #2f6ea1 url(../images/theme/articles/puff-box-link-sprite.png) 0 0 repeat-x;
+      @include border-radius(3px);
+      color: #fff;
+      display: inline-block;
+      font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
+      font-size: 1.3em;
+      padding: 10px 10px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #3685c2;
+        background-position: 0 -100px;
+        text-decoration: none;
+      }
+    }
+
+  }
+
+
+
+}
+
+///// Start here
+
+
+
+
+
+.ie7 {
+  .puff-box {
+    .puff-box-link-wrap {
+      a {
+        display: inline;
+        zoom: 1;
+      }
+    }
+  }
+}
+
+// Puff Box Alternative 2 (green)
+.puff-box-alt2 {
+
+  .puff-box-inner {
+    background: #f0faeb;
+  }
+
+  h2 {
+    color: #456c29;
+  }
+
+  .puff-box-link-wrap {
+    a {
+      background-color: #548332;
+      background-position: 0 -200px;
+      color: #fff;
+
+      &:hover {
+        background-color: #5b8b38;
+        background-position: 0 -300px;
+      }
+    }
+  }
+
+
+}
+
+// Puff Box Alternative 3 (yellow)
+.puff-box-alt3 {
+
+  .puff-box-inner {
+    background: #fef6db;
+  }
+
+  h2 {
+    color: #af8602;
+  }
+
+  .puff-box-link-wrap {
+    a {
+      background-color: #d7a702;
+      background-position: 0 -400px;
+      color: #5e4a11;
+
+      &:hover {
+        background-color: #e2b002;
+        background-position: 0 -500px;
+      }
+    }
+  }
+
+}
