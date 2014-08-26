@@ -77,6 +77,11 @@ ${theme.include(body_bottom_include)}
 
 ${theme.include(bottom_include)}
 
+<script type="text/javascript" src="${javascript_folder}/modules/innovationsslussen-banner-communicate-plugin.js"></script>
+<script type="text/javascript" src="${javascript_folder}/modules/select-to-dropdown-plugin.js"></script>
+<script type="text/javascript" src="${javascript_folder}/modules/innovationsslussen-theme-2.js"></script>
+<script type="text/javascript" src="${javascript_folder}/theme-main.js"></script>
+
 <script src="//www.youtube.com/player_api"></script>
 
 <#include "${full_templates_path}/piwik.ftl" />
