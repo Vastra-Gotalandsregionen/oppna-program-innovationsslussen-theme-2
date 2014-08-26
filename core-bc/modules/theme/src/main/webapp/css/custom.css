@@ -45,6 +45,7 @@ body {
 		@import 'partials/molecules/idea-list';
 		@import 'partials/molecules/idea-msg';
 		@import 'partials/molecules/info-box';
+		@import 'partials/molecules/innovationsslussen-dialog';
 		@import 'partials/molecules/main-navigation';
 		@import 'partials/molecules/mobile-navigation';
 		@import 'partials/molecules/person-list';
