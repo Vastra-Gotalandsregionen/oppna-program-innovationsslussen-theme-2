@@ -78,10 +78,10 @@ ${theme.include(body_bottom_include)}
 ${theme.include(bottom_include)}
 
 <script type="text/javascript" src="${javascript_folder}/modules/innovationsslussen-banner-communicate-plugin.js"></script>
-<script type="text/javascript" src="${javascript_folder}/modules/select-to-dropdown-plugin.js"></script>
-
 <script type="text/javascript" src="${javascript_folder}/modules/innovationsslussen-signin-prompt.js"></script>
 <script type="text/javascript" src="${javascript_folder}/modules/innovationsslussen-signin-prompt-link-plugin.js"></script>
+<script type="text/javascript" src="${javascript_folder}/modules/rp-action-confirmation-plugin.js"></script>
+<script type="text/javascript" src="${javascript_folder}/modules/select-to-dropdown-plugin.js"></script>
 
 <script type="text/javascript" src="${javascript_folder}/modules/innovationsslussen-theme-2.js"></script>
 <script type="text/javascript" src="${javascript_folder}/theme-main.js"></script>

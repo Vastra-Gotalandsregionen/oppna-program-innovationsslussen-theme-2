@@ -1,10 +1,10 @@
 AUI.add('rp-iframe-link-plugin', function(A) {
-	
+
 	var	Lang = A.Lang,
 		getClassName = A.ClassNameManager.getClassName,
 		NAME = 'rp-iframe-link-plugin',
 		NS = 'rp-iframe-link',
-	
+
 		// Custom Attributes
 		ALIGN_HEIGHT_WITH_VIEWPORT = 'alignHeightWithViewport',
 		ALIGN_WIDTH_WITH_VIEWPORT = 'alignWidthWithViewport',
@@ -14,18 +14,18 @@ AUI.add('rp-iframe-link-plugin', function(A) {
 		IFRAME_ID = 'iframeId',
 		MAX_HEIGHT = 'maxHeight',
 		WIDTH = 'width',
-	
+
 		// Property keys
 		HOST = 'host'
 	;
-	
+
 	var TPL_IFRAME = '<iframe class="content-iframe" title="" frameborder="0" allowfullscreen src="{url}" width="100%" height="100%" scrolling="yes"></iframe>';
 
 	var RpIframeLink = A.Component.create({
-		
+
 		ATTRS:
 			{
-            	alignHeightWithViewport: {
+        	alignHeightWithViewport: {
         		value: true
             },
 	            alignWidthWithViewport: {
@@ -64,7 +64,7 @@ AUI.add('rp-iframe-link-plugin', function(A) {
 
 			initializer: function() {
 				var instance = this;
-				
+
 				var host = instance.get(HOST);
 
 				instance.dialogTitle = '&nbsp;'
@@ -91,16 +91,16 @@ AUI.add('rp-iframe-link-plugin', function(A) {
 
 			_initLinks: function() {
 				var instance = this;
-		
+
 				var host = instance.get(HOST);
 				var uri = host.getAttribute('href');
 				uri = uri.replace('p_p_state=normal', 'p_p_state=pop_up');
 
 				host.setAttribute('href', uri);
-				
+
 				host.on('click', instance._onHostClick, instance);
 			},
-			
+
             // Event listener - on before documentDialog render
             _onBeforeDocumentDialogRender: function (e, params) {
 
@@ -108,14 +108,14 @@ AUI.add('rp-iframe-link-plugin', function(A) {
                 var instance = this;
 
                 var iframeURL = params[0];
-                
+
                 var contentIframe = A.substitute(TPL_IFRAME, {
                 	url: iframeURL
                 });
 
                 instance.set('bodyContent', contentIframe);
             },
-			
+
 			_onHostClick: function(e) {
 				var instance = this;
 				e.halt();
@@ -125,11 +125,11 @@ AUI.add('rp-iframe-link-plugin', function(A) {
 				var iframeId = instance.get(IFRAME_ID);
 				var width = instance.get(WIDTH);
 				var height = 'auto';
-				
+
 				var title = linkNode.html();
-				
+
 				var useMaxHeight = instance.get(USE_MAX_HEIGHT);
-				
+
 				if(useMaxHeight) {
 					height = instance.get(MAX_HEIGHT);
 				}
@@ -146,7 +146,7 @@ AUI.add('rp-iframe-link-plugin', function(A) {
 					height: height,
 					width: width
 				});
-				
+
 				var params = [uri];
 				dialog.before('render', instance._onBeforeDocumentDialogRender, dialog, params);
 				dialog.render();
@@ -166,7 +166,7 @@ AUI.add('rp-iframe-link-plugin', function(A) {
 				var currentDialog = instance.dialog;
 
 				// _uiSetHeight method only exist in later versions of aui-dialog-iframe
-				
+
 				// Intercept the _uiSetHeight method to check if to close dialog
 				A.Do.before(function(height) {
 					var iframeDoc = iframeNode.resizeiframe._iframeDoc;
@@ -174,8 +174,8 @@ AUI.add('rp-iframe-link-plugin', function(A) {
 
 					var iframeDocElNode = A.one(iframeDocEl);
 					var savedIndicatorNode = iframeDocElNode.one('.iframe-saved-indicator');
-					if(savedIndicatorNode) { 
-						currentDialog.close(); 
+					if(savedIndicatorNode) {
+						currentDialog.close();
 					}
 				}, iframeNode.resizeiframe, '_uiSetHeight');
 

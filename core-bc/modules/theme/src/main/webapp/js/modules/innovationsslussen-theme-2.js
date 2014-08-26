@@ -26,7 +26,7 @@ AUI().add('innovationsslussen-theme-2',function(A) {
       renderUI: function() {
         var instance = this;
 
-        //instance._initActionConfirmation();
+        instance._initActionConfirmation();
         instance._initSigninPrompt();
         instance._initBannerCommunicate();
         instance._initMainNavigation();
@@ -39,7 +39,7 @@ AUI().add('innovationsslussen-theme-2',function(A) {
           var instance = this;
 
           instance._bindFaq();
-          //instance._bindIdeaSubmitButton();
+          instance._bindIdeaSubmitButton();
           instance._bindIdeaList();
       },
 
@@ -256,13 +256,13 @@ AUI().add('innovationsslussen-theme-2',function(A) {
     requires: [
       'anim',
      	'aui-base',
-     	'aui-loading-mask',
+     	'aui-loading-mask-deprecated',
     	'event',
     	'event-mouseenter',
     	'event-resize',
     	'innovationsslussen-banner-communicate-plugin',
     	'innovationsslussen-signin-prompt-link-plugin',
-    	//'rp-action-confirmation-plugin',
+    	'rp-action-confirmation-plugin',
     	//'rp-iframe-link-plugin',
     	'select-to-dropdown-plugin'
     ]
