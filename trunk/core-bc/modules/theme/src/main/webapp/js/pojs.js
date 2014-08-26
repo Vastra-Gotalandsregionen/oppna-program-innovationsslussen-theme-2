@@ -1,8 +1,13 @@
 // Plain javascript that runs before AUI is ready (to prevent content flashing
 
-// Body
-addCssClass(document.body, 'js');
-bindNavigationTrigger(document.getElementById('navigationTrigger'));
+window.onload= onWindowLoad;
+
+function onWindowLoad() {
+	// Body
+	addCssClass(document.body, 'js');
+
+	//bindNavigationTrigger(document.getElementById('navigationTrigger'));
+}
 
 function hasCssClass(elem, className) {
 	if(elem) {
@@ -19,7 +24,7 @@ function addCssClass(elem, className) {
 }
 
 function removeCssClass(elem, className) {
-	
+
 	var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
 	if (hasCssClass(elem, className)) {
 		while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
