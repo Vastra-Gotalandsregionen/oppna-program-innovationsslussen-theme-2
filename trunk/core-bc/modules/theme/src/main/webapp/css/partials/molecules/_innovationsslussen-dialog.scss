@@ -1,0 +1,23 @@
+.innovationsslussen-dialog {
+
+  .modal-header {
+  	background: #2C6FA7;
+    h3 {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    .close {
+      border: 0;
+      color: #fff;
+      @include border-radius(0);
+      @include box-shadow(none);
+      @include opacity(0.8);
+      @include text-shadow(none);
+    }
+  }
+
+  .modal-body {}
+
+}

@@ -27,7 +27,7 @@ AUI().add('innovationsslussen-theme-2',function(A) {
         var instance = this;
 
         //instance._initActionConfirmation();
-        //instance._initSigninPrompt();
+        instance._initSigninPrompt();
         instance._initBannerCommunicate();
         instance._initMainNavigation();
         //instance._initOverlayLinks();
@@ -196,7 +196,10 @@ AUI().add('innovationsslussen-theme-2',function(A) {
 
         var signinPromptNodes = A.all('.innovationsslussen-signin-prompt');
 
-        signinPromptNodes.plug(A.Plugin.InnovationsslussenSigninPromptLink);
+        signinPromptNodes.each(function(item, index, list) {
+          item.plug(A.Plugin.InnovationsslussenSigninPromptLink);
+        });
+
       },
 
       _onFaqQuestionClick: function(e) {
@@ -258,7 +261,7 @@ AUI().add('innovationsslussen-theme-2',function(A) {
     	'event-mouseenter',
     	'event-resize',
     	'innovationsslussen-banner-communicate-plugin',
-    	//'innovationsslussen-signin-prompt-link-plugin',
+    	'innovationsslussen-signin-prompt-link-plugin',
     	//'rp-action-confirmation-plugin',
     	//'rp-iframe-link-plugin',
     	'select-to-dropdown-plugin'
