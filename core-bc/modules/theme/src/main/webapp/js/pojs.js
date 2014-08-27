@@ -5,8 +5,7 @@ window.onload= onWindowLoad;
 function onWindowLoad() {
 	// Body
 	addCssClass(document.body, 'js');
-
-	//bindNavigationTrigger(document.getElementById('navigationTrigger'));
+	bindNavigationTrigger(document.getElementById('navigationTrigger'));
 }
 
 function hasCssClass(elem, className) {

@@ -30,8 +30,7 @@ ${theme.include(body_top_include)}
 		<div id="heading" class="clearfix">
 			<h1 class="site-title">
 				<a class="" href="${site_default_url}">
-					<#assign logo_src = images_folder + "/theme/logo/logo-vgr-innovationsslussen.png" />
-					<img alt="${logo_description}" src="${logo_src}" />
+					${site_name}
 				</a>
 			</h1>
 
@@ -40,6 +39,13 @@ ${theme.include(body_top_include)}
 						<#include "${full_templates_path}/top_navigation.ftl" />
           </div>
       </div>
+
+			<a href="#navigationTrigger" id="navigationTrigger">
+        <span class="sr-only">Meny</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+	    </a>
 
 		</div>
 

@@ -1,4 +1,11 @@
 .top-wrap {
+
+  display: none;
+
+  @include small {
+    display: block;
+  }
+
   background: #fff url(../images/theme/navigation/top-navigation-bg.png) bottom left repeat-x;
   border: 1px solid #d5e0ea;
   @include border-radius(3px);
