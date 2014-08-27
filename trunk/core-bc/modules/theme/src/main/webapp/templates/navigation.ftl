@@ -62,6 +62,21 @@
 			</li>
 		</#if>
 
+    <#if is_signed_in>
+        <li class="logout">
+            <a href="${sign_out_url}">
+                <span>${sign_out_text}</span>
+            </a>
+        </li>
+    <#else>
+        <li class="login">
+            <a class="signin-link" href="${sign_in_url}">
+                <span>${sign_in_text}</span>
+            </a>
+
+        </li>
+    </#if>
+
 	</ul>
 
 </nav>

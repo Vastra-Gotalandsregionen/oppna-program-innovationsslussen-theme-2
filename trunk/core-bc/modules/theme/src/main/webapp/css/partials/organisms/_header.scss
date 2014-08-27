@@ -17,11 +17,25 @@
       width: 410px;
 
       a {
-        display: block;
 
-        img {
-          width: 100%;
+        background: transparent url(../images/theme/logo/logo-vgr-innovationsslussen.png) 0 -50px no-repeat;
+
+        height: 24px;
+        width: 203px;
+
+        @include small {
+          background-position: 0 0;
+
         }
+
+
+
+        display: block;
+        font-size: 0;
+        height: 72px;
+        text-indent: -9999em;
+        width: 410px;
+
       }
     }
 
