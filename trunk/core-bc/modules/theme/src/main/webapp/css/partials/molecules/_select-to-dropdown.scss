@@ -3,7 +3,7 @@
 .select-to-dropdown-wrap {
     display: block;
     position: relative;
-    z-index: 600;
+    z-index: 9;
 
   .select-to-dropdown-trigger {
       background: transparent url(../images/theme/icons/dropdown.png) right center no-repeat;
@@ -25,7 +25,7 @@
       position: absolute;
       top: 19px;
       width: 200px;
-      z-index: 598;
+      z-index: 498;
 
       &.select-to-dropdown-list-active {
         display: block;

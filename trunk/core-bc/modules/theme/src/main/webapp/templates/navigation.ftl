@@ -56,7 +56,11 @@
 
 		<#if add_idea_layout?has_content>
 			<li class="add-idea">
-				<a class="innovationsslussen-signin-prompt" href="${add_idea_layout.getFriendlyURL()}" data-promptmsg="Du m&aring;ste vara inloggad f&ouml;r att f&aring; skicka in en id&eacute;, information om inloggning finns p&aring; sidan Fr&aring;gor och Svar.">
+                <#assign add_idea_link_css_class = "innovationsslussen-signin-prompt" />
+                <#if is_signed_in>
+                    <#assign add_idea_link_css_class = "" />
+                </#if>
+				<a class="${add_idea_link_css_class}" href="${add_idea_layout.getFriendlyURL()}" data-promptmsg="Du m&aring;ste vara inloggad f&ouml;r att f&aring; skicka in en id&eacute;, information om inloggning finns p&aring; sidan Fr&aring;gor och Svar.">
 					<span>Skicka in din id&eacute;</span>
 				</a>
 			</li>
