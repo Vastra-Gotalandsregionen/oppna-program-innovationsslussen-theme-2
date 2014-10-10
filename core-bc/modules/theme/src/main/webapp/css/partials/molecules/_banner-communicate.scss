@@ -15,6 +15,10 @@
 		.banner-communicate-view-wrap {
 				padding: 30px;
 				position: relative;
+
+            .back-link-wrap .action-link {
+                color: #fff;
+            }
 		}
 
 		.banner-communicate-layout {
@@ -90,7 +94,7 @@
   }
 
   .action-link {
-    color: #fff;
+    color: #3073a7;
     text-decoration: none;
 
     &:hover {
