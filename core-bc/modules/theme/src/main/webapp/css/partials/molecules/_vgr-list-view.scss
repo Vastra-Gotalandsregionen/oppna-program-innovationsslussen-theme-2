@@ -15,6 +15,11 @@ ul.vgr-list-view {
         background: #fff;
     }
 
+    .bd {
+      max-height: 200px;
+      overflow: hidden;
+    }
+
     .hd,
     .bd,
     .ft {
