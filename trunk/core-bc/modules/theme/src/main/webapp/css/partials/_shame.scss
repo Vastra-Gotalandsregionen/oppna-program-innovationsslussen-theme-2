@@ -111,13 +111,52 @@ body>.alert {
 // --------
 
 .aui {
-	.journal-content-article {
-		.portlet-navigation {
-			.nav-menu {
-				margin: 0;
-			}
-		}
-	}
+
+  .nav-menu {
+    margin: 0;
+    width: 250px;
+
+    h2 {
+      margin-bottom: 0;
+
+      a {
+        background: #2f6ea1 url(../images/theme/navigation/navigation-bg-normal.png) top left repeat-x;
+        -moz-border-radius: 3px 3px 0 0;
+        -webkit-border-radius: 3px 3px 0 0;
+        border-radius: 3px 3px 0 0;
+        color: #fff;
+        display: block;
+        font-size: 1.0em;
+        margin: 0;
+        padding: 7px 15px;
+        text-decoration: none;
+      }
+    }
+
+    ul {
+      list-style: none;
+      background: #fff;
+      border: 1px solid #e5e2db;
+      -moz-border-radius: 0 0 3px 3px;
+      -webkit-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border-bottom: 1px solid #eee;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: block;
+          margin: 0;
+          padding: 7px 15px;
+        }
+      }
+    }
+  }
+
 }
 
 // To get "Visa fler nyheter" closer to the blogs aggregator

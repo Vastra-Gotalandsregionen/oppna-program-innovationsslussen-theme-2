@@ -99,38 +99,41 @@
     }
 
     // Outer
-    .element-field-wrap { width: 69.9%; }
+    .element-field-wrap {
+      box-sizing: border-box;
+      padding-right: 20px;
+      width: 69.9%;
+    }
     .element-field-help { width: 29.9%; }
 
     // Inner
-    label { width: 24.9%; }
+    label {
+      box-sizing: border-box;
+      padding-right: 20px;
+      width: 24.9%;
+    }
     .element-field { width: 74.9%; }
 
     label {
       span {
         color: #555;
         display: inline-block;
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: normal;
       }
     }
 
-    .aui-field {
+    // Needs ie7 fix
+    input[type="text"],
+    textarea,
+    select,
+    .empty {
+      @include box-sizing(border-box);
+      display: block;
+    }
 
-      // Needs ie7 fix
-      input[type="text"],
-      textarea,
-      select,
-      .empty {
-        @include box-sizing(border-box);
-        display: block;
-        margin: 0 5%;
-        width: 90%;
-      }
-
-      textarea {
-        min-height: 100px;
-      }
+    textarea {
+      min-height: 100px;
     }
 
     .element-has-errors {
