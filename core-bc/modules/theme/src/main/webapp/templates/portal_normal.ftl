@@ -25,58 +25,62 @@ ${theme.include(body_top_include)}
 	<@liferay.dockbar />
 </#if>
 
-<div class="container" id="wrapper">
+<div class="container-wrapper">
 
-	<header id="banner" role="banner">
-		<div id="heading" class="clearfix">
-			<h1 class="site-title">
-				<a class="" href="${site_default_url}">
-					${site_name}
-				</a>
-			</h1>
+	<div class="container" id="wrapper">
 
-      <div class="top-wrap">
-          <div class="top-navigation-wrap">
-						<#include "${full_templates_path}/top_navigation.ftl" />
-          </div>
-      </div>
+		<header id="banner" role="banner">
+			<div id="heading" class="clearfix">
+				<h1 class="site-title">
+					<a class="" href="${site_default_url}">
+						${site_name}
+					</a>
+				</h1>
 
-			<a href="#navigationTrigger" id="navigationTrigger">
-        <span class="sr-only">Meny</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-	    </a>
+		  <div class="top-wrap">
+			  <div class="top-navigation-wrap">
+							<#include "${full_templates_path}/top_navigation.ftl" />
+			  </div>
+		  </div>
+
+				<a href="#navigationTrigger" id="navigationTrigger">
+			<span class="sr-only">Meny</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</a>
+
+			</div>
+
+			<#if has_navigation || is_signed_in>
+					<#include "${full_templates_path}/navigation.ftl" />
+			</#if>
+
+		</header>
+
+		<div id="content">
+
+			<#if show_breadcrumbs>
+				<#include "${full_templates_path}/breadcrumbs.ftl" />
+			</#if>
+
+			<#if selectable>
+				${theme.include(content_include)}
+			<#else>
+				${portletDisplay.recycle()}
+
+				${portletDisplay.setTitle(the_title)}
+
+				${theme.wrapPortlet("portlet.ftl", content_include)}
+			</#if>
 
 		</div>
 
-		<#if has_navigation || is_signed_in>
-				<#include "${full_templates_path}/navigation.ftl" />
-		</#if>
-
-	</header>
-
-	<div id="content">
-
-		<#if show_breadcrumbs>
-			<#include "${full_templates_path}/breadcrumbs.ftl" />
-		</#if>
-
-		<#if selectable>
-			${theme.include(content_include)}
-		<#else>
-			${portletDisplay.recycle()}
-
-			${portletDisplay.setTitle(the_title)}
-
-			${theme.wrapPortlet("portlet.ftl", content_include)}
-		</#if>
-
 	</div>
 
-</div>
+	<#include "${full_templates_path}/footer.ftl" />
 
-<#include "${full_templates_path}/footer.ftl" />
+</div>
 
 </body>
 

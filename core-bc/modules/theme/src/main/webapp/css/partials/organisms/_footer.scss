@@ -1,6 +1,9 @@
 #footer {
   background: #eef4fa url(../images/theme/bg/footer-bg.png) top left repeat-x;
+  bottom: 0;
+  height: 91px;
   padding: 0;
+  position: absolute;
   width: 100%;
 
   .footer-inner {
@@ -18,8 +21,8 @@
       width: 252px;
 
       span {
-          font-size: 0;
-          text-indent: -9999em;
+        font-size: 0;
+        text-indent: -9999em;
       }
 
     }
