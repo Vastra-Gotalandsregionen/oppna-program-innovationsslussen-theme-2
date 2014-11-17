@@ -112,7 +112,7 @@
       padding-right: 20px;
       width: 24.9%;
     }
-    .element-field { width: 74.9%; }
+    .element-field { width: 70%; }
 
     label {
       span {
@@ -128,7 +128,6 @@
     textarea,
     select,
     .empty {
-      @include box-sizing(border-box);
       display: block;
     }
 
