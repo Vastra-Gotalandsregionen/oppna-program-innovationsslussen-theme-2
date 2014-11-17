@@ -51,11 +51,13 @@
           }
 
           .idea-content-1 {
+            filter: alpha(opacity=100);
             opacity: 1;
           }
 
           .idea-content-2 {
             background: #fcfcfc;
+            filter: alpha(opacity=0);
             opacity: 0;
           }
 
@@ -78,10 +80,12 @@
           .idea-content {
 
             .idea-content-1 {
+              filter: alpha(opacity=0);
               opacity: 0;
             }
 
             .idea-content-2 {
+              filter: alpha(opacity=100);
               opacity: 1;
             }
 
@@ -153,7 +157,10 @@
 
       &.likes,
       &.comments,
-      &.open,
+      &.open {
+        background: url(../images/theme/toolbar/idea-toolbar-icon-sprite-default.png) 0 0 no-repeat;
+      }
+
       &.closed {
           background: url(../images/theme/toolbar/idea-toolbar-icon-sprite-private.png) 0 0 no-repeat;
       }

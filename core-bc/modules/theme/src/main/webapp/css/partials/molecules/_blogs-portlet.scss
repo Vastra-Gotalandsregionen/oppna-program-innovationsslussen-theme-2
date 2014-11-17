@@ -1,6 +1,12 @@
 .portlet-blogs {
 
-  .navbar {
+  .navbar,
+  .taglib-social-bookmarks,
+  .taglib-ratings.stars {
+    display: none;
+  }
+
+/*  .navbar {
     .navbar-inner {
       // background: none;
       // border: none;
@@ -12,7 +18,7 @@
 
       ul {}
     }
-  }
+  }*/
 
   .entry-date {
     background: none;
@@ -33,4 +39,12 @@
     padding: 0.3em;
   }
 
+}
+
+/*------- Recent blog entries -------*/
+
+.recent-blog-entries > .hd span {
+  background: transparent url(../images/theme/icons/module-icons-sprite.png) 0 0 no-repeat;
+  display: block;
+  padding: 3px 0 3px 36px;
 }
