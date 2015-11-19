@@ -1,0 +1,23 @@
+.info-tiles-wrap {
+  background: $is-linkwater;
+  overflow-x: hidden; //needed to make edgetoedge work
+  @extend %edgetoedge;
+
+  .info-tiles-ctn {
+    padding: 30px 20px;
+  }
+
+  .tile {
+    color: $is-blue;
+
+    text-align: center;
+
+    h2 {
+      color: $is-blue;
+      margin: 0 0 0.5em 0;
+    }
+
+  }
+
+
+}

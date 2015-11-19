@@ -71,11 +71,6 @@
 <#-- Include Scope Group Admin -->
 <#assign show_page_edit = show_page_edit || is_scope_group_admin />
 
-<#if show_page_edit>
-	<#assign css_class = css_class + " page-edit dockbar-split" />
-</#if>
-
-
 <#------ Macros -------------------------------------------------->
 
 <#-- Include Web Content Display portlet in theme. attribute: group_id is long, article_id is String-->

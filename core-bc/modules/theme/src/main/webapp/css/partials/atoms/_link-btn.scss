@@ -1,0 +1,58 @@
+.link-btn {
+  background: transparent;
+  border: 1px solid $is-blue;
+  color: $is-blue;
+  display: inline-block;
+  padding: 0.5em 1.8em;
+  text-decoration: none;
+  @include border-radius(3px);
+
+  &:hover {
+    background: $is-blue;
+    color: $is-white;
+    text-decoration: none;
+  }
+
+  &.link-btn-movie {
+    span {
+      display: inline-block;
+      &:after {
+        font-family: 'fontawesome-alloy';
+      	speak: none;
+      	font-style: normal;
+      	font-weight: normal;
+      	font-variant: normal;
+      	text-transform: none;
+      	line-height: 1;
+      	-webkit-font-smoothing: antialiased;
+
+        content: "\f04b";
+        margin-left: 0.5em;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  &.link-btn-link {
+    span {
+      display: inline-block;
+      &:after {
+        font-family: 'fontawesome-alloy';
+      	speak: none;
+      	font-style: normal;
+      	font-weight: normal;
+      	font-variant: normal;
+      	text-transform: none;
+      	line-height: 1;
+      	-webkit-font-smoothing: antialiased;
+
+        content: "\f054";
+        margin-left: 0.5em;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+
+
+}

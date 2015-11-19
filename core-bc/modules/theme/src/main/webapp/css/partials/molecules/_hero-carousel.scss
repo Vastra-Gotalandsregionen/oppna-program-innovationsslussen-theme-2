@@ -1,0 +1,125 @@
+.hero-carousel-wrap {
+  background: $is-blue-alt;
+  color: $is-white;
+  overflow-x: hidden; //needed to make edgetoedge work
+  @extend %edgetoedge;
+
+  &.hero-carousel-wrap-green {
+    background: $is-green;
+  }
+
+  &.hero-carousel-wrap-red {
+    background: $is-red;
+  }
+
+  margin-top: -1em; // Same as body
+  padding-top: 1em;
+
+  margin-bottom: -19px; // offset journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2)
+  padding-bottom: 19px;
+
+  .hero-carousel-ctn {
+    padding: 0;
+    position: relative;
+  }
+
+  .owl-carousel {
+
+    .owl-controls {
+
+      .owl-pagination {
+        .owl-page {
+          span {
+            background: transparent;
+            border: 1px solid $is-white;
+            height: 8px;
+            width: 8px;
+            @include border-radius(50%);
+          }
+          &.active {
+            span {
+              background: $is-white;
+            }
+          }
+        }
+      }
+
+      .owl-buttons {
+
+        div {
+          background: transparent;
+          border: none;
+          color: $is-white;
+          font-size: 2.5em;
+          position: absolute;
+          top:40%;
+
+          @include border-radius(0);
+
+          &.owl-prev {
+            left: 0;
+          }
+
+          &.owl-next {
+            right: 0;
+          }
+
+          .label {
+            background: transparent;
+            font-size: 0;
+            height: 0;
+            width: 0;
+            text-indent: -9999em;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  .slide {
+    padding: 20px 100px 10px 100px;
+    @include clearfix();
+
+    .image-ctn {
+      float: left;
+      width: 44%;
+
+      img {
+        border: 2px solid $is-white;
+        max-height: 220px;
+        @include border-radius(3px);
+      }
+    }
+
+    .content-ctn {
+      float: right;
+      width: 44%;
+    }
+
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    color: $is-white;
+  }
+
+  .link-btn {
+    background: transparent;
+    border-color: $is-white;
+    padding: 0.6em 2.0em;
+
+    &:hover {
+      background: shade($is-blue-alt, 20);
+      border-color: shade($is-blue-alt, 20);
+      color: $is-white;
+
+    }
+  }
+
+}

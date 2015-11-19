@@ -1,6 +1,14 @@
+.navigation-wrapper {
+  background: $is-blue-alt;
+  border: 1px solid $is-blue-dark;
+  border-width: 1px 0 1px 0;
+  overflow-x: hidden; //needed to make edgetoedge work
+  @extend %edgetoedge;
+}
+
 #navigation {
 
-  background: #3a84c1;
+  background: transparent;
   display: none;
   position: relative;
   margin: 0;
@@ -8,17 +16,12 @@
 
   @include small {
     display: block;
-    margin-bottom: 3em;
   }
 
 
   ul.nav-list {
 
     background: none;
-    border-bottom: 1px solid #245780;
-    border-top: 1px solid #29699e;
-    @include border-radius(3px);
-    @include pie-clearfix();
     cursor: pointer;
     display: block;
     list-style: none;
@@ -27,29 +30,31 @@
     position: relative;
     z-index: 10;
 
+    @include pie-clearfix();
+
     @include small {
-      background: #2f6ea1 url(../images/theme/navigation/navigation-bg-normal.png) top left repeat-x;
+      border-left: 1px solid $is-linkwater;
+      border-left-color: rgba($is-linkwater, 0.5);
     }
 
 
     li {
       background: transparent;
-      border-bottom: 1px solid #2f73a9;
+      border: none;
       display: block;
       line-height: 1.0;
       position: relative;
 
       @include small {
-        background: url(../images/theme/navigation/navigation-separator.png) top right repeat-y;
-        border-bottom: none;
+        border-right: 1px solid $is-linkwater;
+        border-right-color: rgba($is-linkwater, 0.5);
         float: left;
-        padding: 0 2px 0 0;
+        padding: 0;
         zoom: 1;
       }
 
       a {
         background: transparent;
-        border-bottom: 1px solid #468cc6;
         color: #fff;
         display: block;
         font-family: Arial, Verdana, Helvetica, sans-serif;
@@ -80,8 +85,8 @@
         &.selected.hover,
         &.selected:hover {
           > a {
-            background: #3a84c1 url(../images/theme/navigation/navigation-bg-hover.png) top left repeat-x;
-            color: #fff;
+            background: shade($is-blue-alt, 10);
+            color: $is-white;
           }
 
           > .nav-list-sub-wrap {
@@ -103,7 +108,7 @@
         > a,
         &.hover > a,
         &:hover > a {
-          background: #548332 url(../images/theme/navigation/navigation-bg-active.png) top left repeat-x;
+          background: $is-green;
           color: #fff;
         }
 
@@ -126,8 +131,8 @@
           float: right;
 
           a {
-            background: #f2f2f2 url(../images/theme/navigation/navigation-bg-highlight.png) 0 0 repeat-x;
-            color: #3177ae;
+            background: $is-linkwater;
+            color: $is-blue;
             font-weight: bold;
 
             span {
@@ -135,9 +140,17 @@
               min-height: 16px;
               padding-left: 32px;
             }
-
           }
+
+          &.hover,
+          &:hover,
+          &.selected.hover,
+          &.selected:hover {
+            > a {
+              background: shade($is-linkwater, 5);
+            }
         }
+      }
 
         &.login,
         &.logout {
