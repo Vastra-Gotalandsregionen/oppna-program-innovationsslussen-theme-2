@@ -1,0 +1,49 @@
+.event {
+
+  .meta-wrap {
+
+    background: $is-linkwater;
+    border: 1px solid $is-silver;
+    color: $is-tundora;
+    font-size: 1.1em;
+    margin: 10px 0px 20px 0;
+    padding: 10px 10px;
+
+    @include border-radius(3px);
+
+    .meta-item {
+      border-right: 1px solid $is-silver;
+      display: inline-block;
+      margin: 0;
+      padding: 0 20px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      &.time {}
+      &.date {}
+      &.location {}
+
+    }
+
+  }
+
+  .signup {
+    .link-btn {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .map-container {
+    margin: 20px 0;
+    height: 250px;
+  }
+
+}

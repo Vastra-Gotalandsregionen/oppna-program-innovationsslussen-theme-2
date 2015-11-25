@@ -25,12 +25,9 @@ $is-linkwater: #eef5fa;
 
 $is-mineshaft:		#222;
 $is-tundora:		#444;
-
-
-
-
-
-
+$is-graydusty:		#999;
+$is-silver:		#cccccc;
+$is-graylight:		#ececec;
 
 $got-bluealt:		#2665a9;
 $got-bluedark:		#005479;
@@ -216,6 +213,11 @@ $default-box-shadow-v-offset: 0px; // The default vertical offset. Positive is d
 $default-box-shadow-blur: 5px; // The default blur length.
 $default-box-shadow-spread: false; // The default spread length.
 $default-box-shadow-inset: false; // The default shadow inset: inset or false (for standard shadow).
+
+// Transitions
+// -------------------------
+
+$default-transition-time: 0.3s;
 
 // Other
 // -------------------------

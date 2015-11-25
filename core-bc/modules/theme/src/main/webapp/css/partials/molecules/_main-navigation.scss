@@ -1,5 +1,5 @@
 .navigation-wrapper {
-  background: $is-blue-alt;
+  background: $is-blue;
   border: 1px solid $is-blue-dark;
   border-width: 1px 0 1px 0;
   overflow-x: hidden; //needed to make edgetoedge work
@@ -85,7 +85,7 @@
         &.selected.hover,
         &.selected:hover {
           > a {
-            background: shade($is-blue-alt, 10);
+            background: shade($is-blue, 10);
             color: $is-white;
           }
 

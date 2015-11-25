@@ -1,19 +1,12 @@
 .hero-carousel-wrap {
-  background: $is-blue-alt;
+  background: $is-blue;
+  border-bottom: 1px solid $is-blue;
   color: $is-white;
-  overflow-x: hidden; //needed to make edgetoedge work
+  //overflow-x: hidden; //needed to make edgetoedge work
   @extend %edgetoedge;
 
-  &.hero-carousel-wrap-green {
-    background: $is-green;
-  }
-
-  &.hero-carousel-wrap-red {
-    background: $is-red;
-  }
-
-  margin-top: -1em; // Same as body
-  padding-top: 1em;
+  margin-top: -3em; // Same as body
+  padding-top: 3em;
 
   margin-bottom: -19px; // offset journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2)
   padding-bottom: 19px;
@@ -27,34 +20,39 @@
 
     .owl-controls {
 
-      .owl-pagination {
-        .owl-page {
+      .owl-dots {
+        .owl-dot {
           span {
             background: transparent;
-            border: 1px solid $is-white;
+            border: 1px solid $is-tundora;
             height: 8px;
             width: 8px;
             @include border-radius(50%);
           }
           &.active {
             span {
-              background: $is-white;
+              background: $is-tundora;
             }
           }
         }
       }
 
-      .owl-buttons {
+      .owl-nav {
 
         div {
           background: transparent;
           border: none;
-          color: $is-white;
+          color: $is-tundora;
           font-size: 2.5em;
           position: absolute;
           top:40%;
-
           @include border-radius(0);
+          @include opacity(0.8);
+
+          &:hover {
+            background: transparent;
+            @include opacity(1.0);
+          }
 
           &.owl-prev {
             left: 0;
@@ -81,23 +79,31 @@
 
   .slide {
     padding: 20px 100px 10px 100px;
-    @include clearfix();
+    padding: 0;
 
-    .image-ctn {
-      float: left;
-      width: 44%;
+    height: 300px;
+    overflow: hidden;
 
-      img {
-        border: 2px solid $is-white;
-        max-height: 220px;
-        @include border-radius(3px);
-      }
+    img {
+      width: 100%;
     }
 
-    .content-ctn {
-      float: right;
-      width: 44%;
-    }
+
+    // .image-ctn {
+    //   float: left;
+    //   width: 44%;
+    //
+    //   img {
+    //     border: 2px solid $is-white;
+    //     max-height: 220px;
+    //     @include border-radius(3px);
+    //   }
+    // }
+    //
+    // .content-ctn {
+    //   float: right;
+    //   width: 44%;
+    // }
 
   }
 
@@ -106,20 +112,23 @@
   h3,
   p,
   a {
-    color: $is-white;
+    color: $is-tundora;
   }
 
   .link-btn {
     background: transparent;
-    border-color: $is-white;
+    border-color: $is-tundora;
     padding: 0.6em 2.0em;
 
     &:hover {
-      background: shade($is-blue-alt, 20);
-      border-color: shade($is-blue-alt, 20);
+      background: $is-tundora;
+      border-color: $is-tundora;
       color: $is-white;
 
     }
   }
+
+
+
 
 }

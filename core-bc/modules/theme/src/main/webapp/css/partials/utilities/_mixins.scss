@@ -63,9 +63,9 @@
 }
 
 
-// Edge to edge. 
+// Edge to edge.
 // Used if we want to put background color edge to edge of the screen, even
-// to the left/right of the grid, without having to close the grid. 
+// to the left/right of the grid, without having to close the grid.
 // Most commonly used together with background-color.
 // --------
 %edgetoedge {
@@ -164,3 +164,47 @@
   }
 }
 
+
+// Animation
+// Read more http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+// --------
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@include keyframes(fade-in) {
+  0% { opacity: 0; }
+  90% { opacity: 1; }
+}
+
+
+
+
+// Fade in on hover
+// Time is optional
+@mixin hover-fade-in ($time:$default-transition-time) {
+  @include transition(background #{$time} ease);
+}
