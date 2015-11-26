@@ -1,26 +1,26 @@
-.hero-carousel-wrap {
-  background: $is-blue;
-  border-bottom: 1px solid $is-blue;
-  color: $is-white;
-  //overflow-x: hidden; //needed to make edgetoedge work
-  @extend %edgetoedge;
+.hero-carousel-ctn {
 
-  margin-top: -3em; // Same as body
-  padding-top: 3em;
+  margin-bottom: -20px - 19px - 30px; // offset portlet-boundary journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2) + content 30px
+  padding: 0;
+  position: relative;
 
-  margin-bottom: -19px; // offset journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2)
-  padding-bottom: 19px;
-
-  .hero-carousel-ctn {
-    padding: 0;
-    position: relative;
-  }
 
   .owl-carousel {
 
     .owl-controls {
 
+      margin: 0;
+      padding: 0;
+
       .owl-dots {
+        background: rgba($is-white, 0.5);
+        bottom: 5px;
+        left: 50%;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+
         .owl-dot {
           span {
             background: transparent;
@@ -78,55 +78,69 @@
   }
 
   .slide {
-    padding: 20px 100px 10px 100px;
-    padding: 0;
 
-    height: 300px;
+    // Use media query with height to control height
+    max-height: 500px;
     overflow: hidden;
 
+    margin: 0;
+    padding: 0;
+
+
     img {
+      vertical-align: middle;
+      z-index: 1;
       width: 100%;
     }
 
+    .content-area-wrap {
 
-    // .image-ctn {
-    //   float: left;
-    //   width: 44%;
-    //
-    //   img {
-    //     border: 2px solid $is-white;
-    //     max-height: 220px;
-    //     @include border-radius(3px);
-    //   }
-    // }
-    //
-    // .content-ctn {
-    //   float: right;
-    //   width: 44%;
-    // }
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      z-index: 2;
 
-  }
+      .content-area {
+        background: rgba($is-white, 0.8);
+        float: right;
+        max-width: 400px;
+        padding: 40px;
 
-  h1,
-  h2,
-  h3,
-  p,
-  a {
-    color: $is-tundora;
-  }
+        @include border-radius(3px);
 
-  .link-btn {
-    background: transparent;
-    border-color: $is-tundora;
-    padding: 0.6em 2.0em;
+        h2 {
+          color: $is-blue;
+          font-size: 1.8em;
+          margin: 0 0 0.5em 0;
+        }
 
-    &:hover {
-      background: $is-tundora;
-      border-color: $is-tundora;
-      color: $is-white;
+        p {
+          color: $is-blue;
+          font-size: 1.1em;
+          margin: 0 0 0.5 0;
+        }
+
+        .link-btn {
+          background: $is-blue;
+          border-color: $is-blue;
+          color: $is-white;
+          padding: 0.6em 2.0em;
+
+          &:hover {
+            background: $is-blue;
+            border-color: $is-blue;
+            color: $is-white;
+
+          }
+        }
+
+      }
 
     }
+
+
   }
+
 
 
 

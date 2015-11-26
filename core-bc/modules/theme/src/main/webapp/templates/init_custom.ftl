@@ -16,7 +16,6 @@
 
 <#------ Define variables ----------------------------------------------------------------------------------------------------------------->
 
-<#assign show_breadcrumbs = true />
 
 <#------ Expando values ----------------------------------------------------------------------------------------------------------------->
 
@@ -35,11 +34,19 @@
 
 <#------ Theme Settings ----------------------------------------------------------------------------------------------------------------->
 
-<#--
--->
-	<#if theme_display.getThemeSetting("show-breadcrumbs") == "false">
-		<#assign show_breadcrumbs = false />
-	</#if>
+<#-- Breadcrumbs -->
+<#assign show_breadcrumbs = true />
+
+<#if theme_display.getThemeSetting("show-breadcrumbs") == "false">
+	<#assign show_breadcrumbs = false />
+</#if>
+
+<#-- Hero -->
+<#assign show_hero = true />
+
+<#if theme_display.getThemeSetting("show-hero") == "false">
+	<#assign show_hero = false />
+</#if>
 
 <#------ Layouts ----------------------------------------------------------------------------------------------------------------->
 
@@ -75,23 +82,29 @@
 
 <#-- Include Web Content Display portlet in theme. attribute: group_id is long, article_id is String-->
 
-<#macro includeWCD group_id article_id>
-	<#if article_id != "">
+<#macro includeWCD group_id=0 article_id=0>
 
-		<#local portlet_instance_suffix = "gothiaforum" />
-		<#local instance_id = "wcd" + article_id + portlet_instance_suffix />
+		<#local portlet_instance_suffix = "innovationsslussen" />
+		<#if article_id != 0>
+			<#local instance_id = "wcd" + article_id + portlet_instance_suffix />
+		<#else>
+			<#local instance_id = "wcd" + portlet_instance_suffix />
+		</#if>
 		<#local instance_id = instance_id?substring(0, 12) />
 		<#local portlet_id = "56_INSTANCE_" + instance_id />
 
 		${freeMarkerPortletPreferences.reset()}
 
 		${freeMarkerPortletPreferences.setValue("portletSetupShowBorders","false")}
+		<#if group_id != 0>
 		${freeMarkerPortletPreferences.setValue("groupId", group_id?c)}
-		${freeMarkerPortletPreferences.setValue("articleId", article_id)}
+		</#if>
+		<#if article_id != 0>
+			${freeMarkerPortletPreferences.setValue("articleId", article_id)}
+		</#if>
 
 		${theme.runtime(portlet_id, "", freeMarkerPortletPreferences)}
 		${freeMarkerPortletPreferences.reset()}
-	<#else>
-		&nbsp;
-	</#if>
+
+
 </#macro>

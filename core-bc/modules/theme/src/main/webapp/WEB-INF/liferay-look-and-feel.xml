@@ -12,6 +12,7 @@
 		<settings>
 			<setting key="portlet-setup-show-borders-default" value="false" configurable="true" type="checkbox" />
 			<setting key="show-breadcrumbs" value="false" configurable="true" type="checkbox" />
+			<setting key="show-hero" configurable="true" type="checkbox" value="false"></setting>
 		</settings>
 
 	</theme>

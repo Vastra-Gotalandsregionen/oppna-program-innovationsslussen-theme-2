@@ -90,8 +90,8 @@ heroCarousel.owlCarousel({
   dots: true,
 
   autoplay:true,
-  //autoplayTimeout:5000,
-  autoplayTimeout:50000000000000000,
+  autoplayTimeout:5000,
+  //autoplayTimeout:50000000000000000,
   autoplayHoverPause:true,
 
   singleItem: 1
