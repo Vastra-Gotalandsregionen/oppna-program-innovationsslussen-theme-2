@@ -2,8 +2,8 @@
 	margin: 10px 0;
 
   > h2 {
-    border-bottom: 1px solid #d5e3ee;
-    color: #999;
+    border-bottom: 1px solid $is-boticelli;
+    color: $is-graydusty;
     font-size: 1.6em;
     margin: 0 0 15px 0;
     padding: 0 0 2px 0;
@@ -11,15 +11,15 @@
   }
 
   .comment {
-    background: #fff;
-    border: 1px solid #d5e3ee;
+    background: $is-white;
+    border: 1px solid $is-boticelli;
     @include border-radius(3px);
     margin: 10px 0;
     padding: 15px;
 
     &.comment-innovationsslussen {
-      background: #eef5fa;
-      border-color: #c4ced5;
+      background: $is-linkwater;
+      border-color: $is-loblolly;
     }
 
     .comment-author {
@@ -30,19 +30,19 @@
     }
 
     .comment-author-name {
-      color: #555;
+      color: $is-emperor;
       margin-bottom: 0.2em;
       font-weight: bold;
     }
 
     .comment-author-title {
-      color: #555;
+      color: $is-emperor;
       font-weight: bold;
       font-style: italic;
     }
 
     .comment-entry {
-      color: #424242;
+      color: $is-tundora;
       float: left;
       padding-left: 20px;
       padding-right: 20px;
@@ -78,9 +78,9 @@
   }
 
   .action-link {
-      background: #ddd;
+      background: $is-alto;
       @include border-radius(4px);
-      color: #444;
+      color: $is-tundora;
       display: block;
       font-size: 1.3em;
       padding: 10px;
@@ -131,16 +131,16 @@
 .idea-outer-private {
 	.idea-comments {
 		.comment {
-			background: #fff;
-			border-color: #d5e3ee;
+			background: $is-white;
+			border-color: $is-boticelli;
 
 			&.comment-innovationsslussen {
-				background: #fcf7f7;
-				border-color: #bf3434;
+				background: $is-vistawhite;
+				border-color: $is-red;
 			}
 
 			.comment-author-name {
-				color: #555;
+				color: $is-emperor;
 			}
 		}
 	}

@@ -96,10 +96,18 @@
 
   }
 
+
+
   .more-link-wrap {
-    position: absolute;
-    bottom: 1em;
-    right: 1em;
+
+    padding-top: 2em;
+
+    a {
+      display: inline-block;
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+    }
   }
 
   &.content-box-simple {

@@ -3,10 +3,10 @@
   input[type="submit"],
   input[type="cancel"],
   input[type="button"] {
-      background: #bebdbc url(../images/buttons/button-bg.png) 0 0 repeat-x;
-      border: 1px solid #a5a4a3;
+      background: $is-cloud url(../images/buttons/button-bg.png) 0 0 repeat-x;
+      border: 1px solid $is-cloudy;
       @include border-radius(3px);
-      color: #444;
+      color: $is-tundora;
       display: block;
       float: left;
       font-size: 13px;
@@ -20,10 +20,9 @@
   }
 
   input[type="submit"] {
-      background: #2865ad url(../images/buttons/button-bg-normal.png) 0 0 repeat-x;
-      border: 1px solid #2f71a8;
-      border-color: #2f71a8 #052a73 #052a73 #2f71a8;
-      color: #fff;
+      background: $is-blue url(../images/buttons/button-bg-normal.png) 0 0 repeat-x;
+      border: 1px solid $is-blue;
+      color: $is-white;
   }
 
 }

@@ -29,8 +29,8 @@
         width: 20px;
 
         &:hover {
-          background-color: #e4edf9;
-          border-color: #255d8c;
+          background-color: $is-linkwater;
+          border-color: $is-blue;
         }
 
 
@@ -40,9 +40,9 @@
       &.previous a,
       &.next a,
       &.last a {
-        background: #e7f0fc url(../images/theme/paginator/rp-paginator-sprite.png) no-repeat 0 0;
-        border-color: #d4dce7;
-        color: #255d8c;
+        background: $is-linkwater url(../images/theme/paginator/rp-paginator-sprite.png) no-repeat 0 0;
+        border-color: $is-boticelli;
+        color: $is-blue;
         font-size: 0;
         position: relative;
         text-indent: -9999em;

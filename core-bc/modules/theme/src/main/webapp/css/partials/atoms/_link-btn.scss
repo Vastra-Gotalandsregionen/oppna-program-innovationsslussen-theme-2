@@ -36,7 +36,7 @@
       	line-height: 1;
       	-webkit-font-smoothing: antialiased;
 
-        content: "\f04b";
+        content: $content-play;
         margin-left: 0.5em;
         font-size: 0.8em;
       }
@@ -56,7 +56,7 @@
       	line-height: 1;
       	-webkit-font-smoothing: antialiased;
 
-        content: "\f054";
+        content: $content-chevron-right;
         margin-left: 0.5em;
         font-size: 0.8em;
       }

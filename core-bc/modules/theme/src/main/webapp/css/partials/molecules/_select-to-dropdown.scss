@@ -15,8 +15,8 @@
   }
 
   .select-to-dropdown-list {
-      background: #f9f9fb;
-      border: 1px solid #bbc6ce;
+      background: $is-athensgray;
+      border: 1px solid $is-loblolly;
       border-top: none;
       display: none;
       list-style: none;
@@ -32,16 +32,16 @@
       }
 
       li {
-          background: #f9f9fb;
-          border-bottom: 1px solid #dadfe5;
-          color: #2f72a9;
+          background: $is-athensgray;
+          border-bottom: 1px solid $is-alto;
+          color: $is-blue;
           cursor: pointer;
           padding: 10px;
 
           &:hover,
           &.hover {
-              background: #3a84c1 url(../images/navigation/theme/navigation-bg-hover.png) top left repeat-x;
-              color: #fff;
+              background: tint($is-blue, 20%) url(../images/navigation/theme/navigation-bg-hover.png) top left repeat-x;
+              color: $is-white;
           }
 
           &:last-child,

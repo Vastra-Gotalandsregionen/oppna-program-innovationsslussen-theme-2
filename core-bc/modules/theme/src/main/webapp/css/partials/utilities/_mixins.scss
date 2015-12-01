@@ -29,6 +29,37 @@
   }
 }
 
+
+
+
+
+@mixin height-xsmall {
+  @media screen and (min-height : $bp-height-xsmall) {
+    @content;
+  }
+}
+
+@mixin height-small {
+	@media screen and (min-height : $bp-height-small) {
+		@content;
+	}
+}
+
+@mixin height-medium {
+	@media screen and (min-height : $bp-height-medium) {
+		@content;
+	}
+}
+
+@mixin height-large {
+	@media screen and (min-height : $bp-height-large) {
+		@content;
+	}
+}
+
+
+
+
 // Clearfix
 // --------
 // For clearing floats like a boss h5bp.com/q
@@ -128,7 +159,7 @@
 // Underline. For creating beautiful underlining (commonly of links)
 // Read more https://github.com/Team-Sass/toolkit
 // --------
-@mixin underline($background: #fff, $color: #000, $clear-descenders: true, $distance: 1, $width: 2, $extend: false) {
+@mixin underline($background: $is-white, $color: $is-black, $clear-descenders: true, $distance: 1, $width: 2, $extend: false) {
 
   $px: .0625em;
 

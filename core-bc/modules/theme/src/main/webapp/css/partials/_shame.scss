@@ -26,7 +26,9 @@
 // Hides the portlet titles
 // --------
 .aui {
-	/*.portlet-title {
+	/*
+
+	.portlet-title {
 		display: none;
 	}
 
@@ -41,7 +43,8 @@
 		.portlet-title {
 			display: block !important;
 		}
-	}*/
+	}
+	*/
 
 	// If administrator is setting custom css-class '.show-title' on portlet. Make sure it's visible
 	.show-title {
@@ -114,44 +117,46 @@ body>.alert {
 
   .nav-menu {
     margin: 0;
-    width: 250px;
+    max-width: 250px;
 
     h2 {
-      margin-bottom: 0;
+			font-size: 1.1em;
+      margin: 0;
 
       a {
-        background: #2f6ea1 url(../images/theme/navigation/navigation-bg-normal.png) top left repeat-x;
-        -moz-border-radius: 3px 3px 0 0;
-        -webkit-border-radius: 3px 3px 0 0;
-        border-radius: 3px 3px 0 0;
-        color: #fff;
+        background: $is-blue;
+        color: $is-white;
         display: block;
-        font-size: 1.0em;
         margin: 0;
-        padding: 7px 15px;
+        padding: 4px 15px;
         text-decoration: none;
+				@include border-radius(3px 3px 0 0);
       }
     }
 
     ul {
       list-style: none;
-      background: #fff;
-      border: 1px solid #e5e2db;
-      -moz-border-radius: 0 0 3px 3px;
-      -webkit-border-radius: 0 0 3px 3px;
-      border-radius: 0 0 3px 3px;
+      background: $is-white;
+      border: 1px solid $is-graylight;
       margin: 0;
       padding: 0;
+			@include border-radius(0 0 3px 3px);
 
       li {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid shade($is-linkwater, 10%);
         margin: 0;
         padding: 0;
 
         a {
+					background: $is-white;
           display: block;
           margin: 0;
           padding: 7px 15px;
+
+					&:hover {
+						background: $is-linkwater;
+						text-decoration: none;
+					}
         }
       }
     }
@@ -185,28 +190,5 @@ body>.alert {
     max-width: 1100px;
     width: 90%;
   }
-
-  .banner-communicate {
-    background: #3073a7 url(../images/theme/articles/banner-communicate-bg.png) top left repeat-x;
-    border: 1px solid #265a84;
-
-    .banner-communicate-view-wrap {
-      padding: 30px;
-      position: relative;
-
-      .banner-communicate-layout {
-        display: block;
-
-        .banner-communicate-column-1 {
-          display: block;
-        }
-      }
-
-      .back-link-wrap .action-link {
-        color: #fff;
-      }
-    }
-  }
-
 
 }

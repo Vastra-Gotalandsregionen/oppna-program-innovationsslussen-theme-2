@@ -9,14 +9,28 @@
 
   .tile {
     color: $is-blue;
-
+    padding: 20px 0;
     text-align: center;
+
+    &[class*="span"] {
+      margin-left: percentage(2.5641/2/100);
+      margin-right: percentage(2.5641/2/100);
+
+      border-right: 1px solid shade($is-linkwater, 10%);
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        border-right: 0;
+        margin-right: 0;
+      }
+    }
 
     h2 {
       color: $is-blue;
       margin: 0 0 0.5em 0;
     }
-
   }
 
 

@@ -38,7 +38,6 @@ body {
 		@import 'partials/atoms/wrapper';
 
 		@import 'partials/molecules/add-this';
-		@import 'partials/molecules/banner-communicate';
 		@import 'partials/molecules/blogs-portlet';
 		@import 'partials/molecules/comments-form';
 		@import 'partials/molecules/content-box';

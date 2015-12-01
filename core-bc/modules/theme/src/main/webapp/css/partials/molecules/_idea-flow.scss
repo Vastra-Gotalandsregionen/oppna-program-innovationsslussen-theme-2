@@ -13,10 +13,10 @@ ul.idea-flow-list {
     position: relative;
 
     span {
-      background: #fff;
-      border: 1px solid #bf3434;
+      background: $is-white;
+      border: 1px solid $is-red;
       @include border-radius(12px);
-      color: #bf3434;
+      color: $is-red;
       display: block;
       font-size: 13px;
       font-weight: bold;
@@ -28,8 +28,8 @@ ul.idea-flow-list {
 
     &.done {
       span {
-        background: #bf3434;
-        color: #fff;
+        background: $is-red;
+        color: $is-white;
       }
     }
 
@@ -44,15 +44,15 @@ ul.idea-flow-list {
 
     li {
       span {
-        background: #fff;
-        color: #bf3434;
-        border-color: #bf3434;
+        background: $is-white;
+        color: $is-red;
+        border-color: $is-red;
       }
 
       &.done {
         span {
-          background: #bf3434;
-          color: #fff;
+          background: $is-red;
+          color: $is-white;
         }
       }
     }

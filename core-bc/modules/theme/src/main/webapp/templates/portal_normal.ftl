@@ -33,32 +33,36 @@ ${theme.include(body_top_include)}
 
 		<header id="banner" role="banner">
 
-			<div class="container-fluid">
-				<div id="heading" class="clearfix">
+			<div class="banner-nav">
 
-						<h1 class="site-title">
-							<a class="" href="${site_default_url}">
-								${site_name}
-							</a>
-						</h1>
+				<div class="container-fluid">
+					<div id="heading" class="clearfix">
+							<h1 class="site-title">
+								<a class="" href="${site_default_url}">
+									${site_name}
+								</a>
+							</h1>
 
-				  <div class="top-wrap">
-					  <div class="top-navigation-wrap">
-									<#include "${full_templates_path}/top_navigation.ftl" />
+					  <div class="top-wrap">
+						  <div class="top-navigation-wrap">
+										<#include "${full_templates_path}/top_navigation.ftl" />
+						  </div>
 					  </div>
-				  </div>
 
-					<a href="#navigationTrigger" id="navigationTrigger">
-						<span class="sr-only">Meny</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
+						<a href="#navigationTrigger" id="navigationTrigger">
+							<span class="sr-only">Meny</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+					</div>
 				</div>
 
 				<#if has_navigation || is_signed_in>
 					<div class="navigation-wrapper">
-						<#include "${full_templates_path}/navigation.ftl" />
+						<div class="container-fluid">
+							<#include "${full_templates_path}/navigation.ftl" />
+						</div>
 					</div>
 				</#if>
 			</div>

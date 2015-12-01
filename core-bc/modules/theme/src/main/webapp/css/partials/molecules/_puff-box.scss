@@ -5,8 +5,8 @@
 	margin: 0;
 
   .puff-box-inner {
-    background: #eef5fa;
-    border: 1px solid #e5e5e5;
+    background: $is-linkwater;
+    border: 1px solid $is-linkwater;
     @include border-radius(6px);
     margin: 0;
     padding: 20px;
@@ -14,7 +14,7 @@
   }
 
   h2 {
-    color: #327cb4;
+    color: $is-blue;
     font-size: 1.8em;
     font-weight: normal;
     margin: 0 0 10px 0;
@@ -35,9 +35,9 @@
     text-align: center;
 
     a {
-      background: #2f6ea1 url(../images/theme/articles/puff-box-link-sprite.png) 0 0 repeat-x;
+      background: shade($is-blue, 20%) url(../images/theme/articles/puff-box-link-sprite.png) 0 0 repeat-x;
       @include border-radius(3px);
-      color: #fff;
+      color: $is-white;
       display: inline-block;
       font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
       font-size: 1.3em;
@@ -45,7 +45,7 @@
       text-decoration: none;
 
       &:hover {
-        background-color: #3685c2;
+        background-color: $is-blue;
         background-position: 0 -100px;
         text-decoration: none;
       }
@@ -78,21 +78,21 @@
 .puff-box-alt2 {
 
   .puff-box-inner {
-    background: #f0faeb;
+    background: $is-frost;
   }
 
   h2 {
-    color: #456c29;
+    color: $is-woodland;
   }
 
   .puff-box-link-wrap {
     a {
-      background-color: #548332;
+      background-color: $is-crete;
       background-position: 0 -200px;
-      color: #fff;
+      color: $is-white;
 
       &:hover {
-        background-color: #5b8b38;
+        background-color: $is-apple;
         background-position: 0 -300px;
       }
     }
@@ -105,21 +105,21 @@
 .puff-box-alt3 {
 
   .puff-box-inner {
-    background: #fef6db;
+    background: $is-half-spanishwhite;
   }
 
   h2 {
-    color: #af8602;
+    color: $is-pirategold;
   }
 
   .puff-box-link-wrap {
     a {
-      background-color: #d7a702;
+      background-color: $is-buddhagold;
       background-position: 0 -400px;
-      color: #5e4a11;
+      color: $is-horsesneck;
 
       &:hover {
-        background-color: #e2b002;
+        background-color: $is-corn;
         background-position: 0 -500px;
       }
     }

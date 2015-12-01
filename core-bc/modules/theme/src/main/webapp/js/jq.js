@@ -1,5 +1,22 @@
-// Maps
 
+// Sticky Navigation
+initStickyNavigation();
+
+function initStickyNavigation() {
+  var navWrapper = $('.navigation-wrapper');
+  var navScrolledCssClass = 'navigation-wrapper-scrolled';
+  var scrollHeightLimit = $('.banner-nav').height();
+
+  $(window).scroll(function() {
+    if( $(this).scrollTop() > scrollHeightLimit ) {
+      navWrapper.addClass(navScrolledCssClass);
+    } else {
+      navWrapper.removeClass(navScrolledCssClass);
+    }
+  });
+}
+
+// Maps
 var geocoder = new google.maps.Geocoder();
 
 $('.map-container').each(function(index) {

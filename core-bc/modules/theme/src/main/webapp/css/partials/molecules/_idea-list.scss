@@ -20,10 +20,10 @@
       padding-bottom: 5%;
 
       a {
-        background: #3583bf;
+        background: $is-blue;
         border: 0;
         @include border-radius(3px);
-        color: #555;
+        color: $is-emperor;
         display: block;
         margin: 0;
         padding: 3px;
@@ -31,7 +31,7 @@
         text-decoration: none;
 
         .idea-content {
-          background: #fff;
+          background: $is-white;
           @include border-radius(3px);
           height: 120px;
           overflow: hidden;
@@ -39,7 +39,7 @@
 
           .idea-content-1,
           .idea-content-2 {
-            background: #fff;
+            background: $is-white;
             height: 100%;
             left: 0;
             position: absolute;
@@ -56,7 +56,7 @@
           }
 
           .idea-content-2 {
-            background: #fcfcfc;
+            background: $is-linkwater;
             filter: alpha(opacity=0);
             opacity: 0;
           }
@@ -66,7 +66,7 @@
           }
 
           h3 {
-            color: #555;
+            color: $is-emperor;
             font-size: 1.1em;
             margin: 0 0 10px 0;
           }
@@ -74,7 +74,7 @@
         }
 
         &:hover {
-          color: #555;
+          color: $is-emperor;
           text-decoration: none;
 
           .idea-content {
@@ -93,7 +93,7 @@
         }
 
         .idea-label {
-          color: #fff;
+          color: $is-white;
           font-size: 0.9em;
           font-weight: bold;
           margin: 3px 6px 0 6px;
@@ -107,22 +107,22 @@
 
 
     &.done a {
-      background: #5e9237;
-      border-color: #426627;
+      background: $is-apple;
+      border-color: $is-woodland;
     }
 
     &.active-innovationsslussen a {
-      background: #bfb331;
-      border-color: #948b2a;
+      background: $is-earlsgreen;
+      border-color: $is-luxorgold;
     }
 
     &.active-innovationsslussen .idea-label {
-      color: #444011;
+      color: $is-camouflage;
     }
 
     &.private a {
-      background: #bf3434;
-      border-color: #8b2626;
+      background: $is-red;
+      border-color: $is-burntumber;
     }
 
 
@@ -143,7 +143,7 @@
     right: 6%;
 
     li {
-      color: #777;
+      color: $is-boulder;
       display: block;
       float: left;
       font-size: 12px;

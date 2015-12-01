@@ -9,7 +9,7 @@
     width: 74%;
 
     label {
-      color: #555;
+      color: $is-emperor;
       float: left;
       font-weight: bold;
       position: relative;
@@ -22,8 +22,8 @@
       width: 70%;
 
       textarea {
-        background: #fff;
-        border: 1px dashed #c4ced5;
+        background: $is-white;
+        border: 1px dashed $is-loblolly;
         min-height: 60px;
         width: 100%;
       }
@@ -40,14 +40,14 @@
   }
 
   .notice {
-    color: #424242;
+    color: $is-tundora;
     font-weight: bold;
     margin: 10px 0 0 0;
   }
 
   .rp-button {
     input[type="submit"] {
-      background: #778289;
+      background: $is-blue;
       border: 0;
       margin: 0 10px 10px 10px;
       padding: 10px 20px;

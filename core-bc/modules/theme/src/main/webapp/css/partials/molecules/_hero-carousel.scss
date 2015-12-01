@@ -80,7 +80,20 @@
   .slide {
 
     // Use media query with height to control height
-    max-height: 500px;
+    max-height: 300px;
+
+    @include height-small {
+      max-height: 350px;
+    }
+
+    @include height-medium {
+      max-height: 400px;
+    }
+
+    @include height-large {
+      max-height: 500px;
+    }
+
     overflow: hidden;
 
     margin: 0;
@@ -96,15 +109,23 @@
     .content-area-wrap {
 
       position: absolute;
-      bottom: 50px;
+      bottom: 30px;
       width: 100%;
       z-index: 2;
+
+      @include height-small {
+        bottom: 50px;
+      }
 
       .content-area {
         background: rgba($is-white, 0.8);
         float: right;
         max-width: 400px;
-        padding: 40px;
+        padding: 20px;
+
+        @include height-small {
+          padding: 40px;
+        }
 
         @include border-radius(3px);
 
@@ -127,8 +148,8 @@
           padding: 0.6em 2.0em;
 
           &:hover {
-            background: $is-blue;
-            border-color: $is-blue;
+            background: shade($is-blue, 10%);
+            border-color: shade($is-blue, 10%);
             color: $is-white;
 
           }
@@ -138,11 +159,14 @@
 
     }
 
-
   }
 
+}
 
 
-
-
+// Edit view
+.page-edit.controls-visible {
+  .hero-carousel-ctn {
+    margin-bottom: 0;
+  }
 }

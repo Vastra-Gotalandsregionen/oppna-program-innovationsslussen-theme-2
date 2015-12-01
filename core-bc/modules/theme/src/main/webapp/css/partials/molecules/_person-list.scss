@@ -18,7 +18,7 @@ ul.persons-list {
       padding-bottom: 15px;
 
       .person-inner {
-        border: 1px solid #ddd;
+        border: 1px solid $is-alto;
       }
 
       .person-image-ctn {
@@ -26,7 +26,7 @@ ul.persons-list {
         width: 120px;
 
         .person-image {
-          background: #eee;
+          background: $is-gallery;
           overflow: hidden;
 
           img {
@@ -36,7 +36,7 @@ ul.persons-list {
           }
 
           .image-placeholder {
-              background: #ccc url(../images/theme/articles/person-default.jpg) top center no-repeat;
+              background: $is-silver url(../images/theme/articles/person-default.jpg) top center no-repeat;
               display: block;
               min-height: 140px;
           }
@@ -50,7 +50,7 @@ ul.persons-list {
           padding: 20px;
 
           h3 {
-            color: #222;
+            color: $is-mineshaft;
             font-size: 1.2em;
             margin: 0 0 0.3em 0;
           }
