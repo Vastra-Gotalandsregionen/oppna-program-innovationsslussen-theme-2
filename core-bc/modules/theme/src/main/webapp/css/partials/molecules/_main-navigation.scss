@@ -71,8 +71,7 @@
           	display: block;
           	min-height: 16px;
           	padding: 10px 14px;
-
-            transition: all 0.4s ease;
+            @include transition(all 0.4s ease-in-out);
           }
         }
 

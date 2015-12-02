@@ -45,9 +45,9 @@
             position: absolute;
             top: 0;
             padding: 10px;
-            padding: 0;
-            transition: opacity .25s;
+            padding: 0;          
             width: 100%;
+            @include transition(opacity 0.3s ease-in-out);
           }
 
           .idea-content-1 {
