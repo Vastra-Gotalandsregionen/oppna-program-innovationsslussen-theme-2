@@ -42,11 +42,17 @@
 </#if>
 
 <#-- Hero -->
-<#assign show_hero = true />
+<#assign show_hero = false />
 
-<#if theme_display.getThemeSetting("show-hero") == "false">
+<#if theme_display.getThemeSetting("show-hero") == "true">
+	<#assign show_hero = true />
+</#if>
+
+<#-- Do not show hero when page is maximized (for example login page) -->
+<#if is_maximized>
 	<#assign show_hero = false />
 </#if>
+
 
 <#------ Layouts ----------------------------------------------------------------------------------------------------------------->
 

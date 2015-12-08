@@ -1,4 +1,74 @@
 
+// Flex-box Fixes
+
+// Init Flex-box fix
+;( function( $, window, document, undefined ) {
+  'use strict';
+
+  var s = document.body || document.documentElement, s = s.style;
+  if( s.webkitFlexWrap == '' || s.msFlexWrap == '' || s.flexWrap == '' ) {
+    return true;
+  }
+
+  var flexUsages = [];
+
+  // Teaser blocks
+  var teaserBlocks = $('.teaser-blocks');
+  teaserBlocks.each(function() {
+    var wrapper = $(this);
+    var items = $(this).find('.teaser-block');
+
+    flexUsages.push({
+      wrapper: wrapper,
+      items: items
+    });
+  });
+
+  setFlexHeights(flexUsages);
+
+  $( window ).on( 'resize', function() {
+    setFlexHeights(flexUsages);
+  });
+
+  $.each(flexUsages, function() {
+    this.items.find('img').on('load', function() {
+    setFlexHeights(flexUsages);
+    });
+  });
+
+
+})( jQuery, window, document );
+
+function setFlexHeights (flexUsages) {
+
+  $.each(flexUsages, function() {
+    setFlexHeight(this.wrapper, this.items);
+  });
+
+}
+
+function setFlexHeight (wrapper, items) {
+     items.css( 'height', 'auto' );
+
+     var perRow = Math.floor( wrapper.width() / items.width() );
+     if( perRow == null || perRow < 2 ) return true;
+
+     for( var i = 0, j = items.length; i < j; i += perRow ) {
+       var maxHeight   = 0;
+       var row = items.slice( i, i + perRow );
+
+       row.each(function() {
+         var itemHeight = parseInt( $( this ).outerHeight() );
+         if ( itemHeight > maxHeight ) {
+           maxHeight = itemHeight;
+         }
+       });
+
+       row.css( 'height', maxHeight );
+     }
+};
+
+
 // Sticky Navigation
 initStickyNavigation();
 
@@ -34,7 +104,30 @@ $('.map-container').each(function(index) {
     city: currentElement.data('city')
   }
 
-  var address = location.streetAddress + ', ' + location.zipCode + ' ' + location.city;
+  var address = '';
+  if(location.title != '') {
+    address = address + location.title;
+  }
+  if(location.streetAddress != '') {
+    if(address != '') {
+      address = address + ', ';
+    }
+    address = address + location.streetAddress;
+  }
+  if(location.zipCode != '') {
+    if(address != '') {
+      address = address + ', ';
+    }
+    address = address + location.zipCode;
+  }
+  if(location.city != '') {
+    if(address != '') {
+      address = address + ', ';
+    }
+    address = address + location.city;
+  }
+
+  console.log('address:' + address);
 
   geocoder.geocode({ 'address': address}, function(results, status) {
     if (status == google.maps.GeocoderStatus.OK) {
@@ -82,11 +175,7 @@ function renderMap(node, location, latLng) {
   infoWindow.open(map, marker);
 
 }
-
-
-
 // Hero Carousel
-
 var heroCarousel = $('.hero-carousel');
 heroCarousel.addClass('owl-carousel')
 var heroCarouselWrap = $(heroCarousel).parents('.hero-carousel-wrap')[0];
@@ -114,95 +203,3 @@ heroCarousel.owlCarousel({
   singleItem: 1
 
 });
-
-
-
-// heroCarousel.on('change.owl.carousel', function(event) {
-//
-//   console.log(event);
-//
-//   var activeItem = $(heroCarousel).find('.owl-item.active')[0];
-//   var nextItem = $(activeItem).next();
-//   var nextItemSlide = $(nextItem).find('.slide')[0];
-//   var nextSkin = $(nextItemSlide).data('skin');
-//
-//   $(heroCarouselWrap).removeClass();
-//   $(heroCarouselWrap).addClass('hero-carousel-wrap hero-carousel-wrap-' + nextSkin)
-// })
-
-heroCarousel.on('translate.owl.carousel', function(event) {
-
-  console.log(event);
-
-  var pageIndex = event.page.index;
-
-  return false;
-
-  var activeItem = $(heroCarousel).find('.owl-item.active')[0];
-  var activeItemSlide = $(activeItem).find('.slide')[0];
-  var skin = $(activeItemSlide).data('skin');
-
-  $(heroCarouselWrap).removeClass();
-  $(heroCarouselWrap).addClass('hero-carousel-wrap hero-carousel-wrap-' + skin)
-})
-
-
-/*
-$(document).ready(function() {
-
-  // Add custom navigation
-  //http://owlgraphic.com/owlcarousel/demos/custom.html
-
-  $(".owl-carousel").owlCarousel({
-
-    items : 1,
-    itemsDesktop : false,
-    itemsDesktopSmall : false,
-    itemsTablet: false,
-    itemsMobile : false,
-
-    //Basic Speeds
-    slideSpeed : 200,
-    paginationSpeed : 800,
-    rewindSpeed : 1000,
-
-    //Autoplay
-    autoPlay : 5000,
-    stopOnHover : true,
-
-    // Navigation
-    navigation : true,
-    navigationText : [
-      '<i class="icon-chevron-left"><span class="label">Next</span>',
-      '<i class="icon-chevron-right"><span class="label">Previous</span>'
-    ],
-    rewindNav : true,
-    scrollPerPage : false,
-
-    //Pagination
-    pagination : true,
-    paginationNumbers: false,
-
-    // Responsive
-    responsive: true,
-    responsiveRefreshRate : 200,
-    responsiveBaseWidth: window,
-
-    beforeMove: onBeforeMove
-
-
-  });
-
-  var ticker = 0;
-
-  function onBeforeMove(a, b, c) {
-    if(ticker == 0) {
-      console.log('a, ', a);
-      console.log('b, ', b);
-      console.log('c, ', c);
-    }
-    ticker++;
-  }
-
-});
-*/

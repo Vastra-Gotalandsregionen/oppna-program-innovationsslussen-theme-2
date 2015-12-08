@@ -1,5 +1,6 @@
 // ----------------- VARIABLES OVERRIDING DEFAULT DEFAULT VALUES IN /aui/_variables.scss -----------------
 $is-blue: #327cb4;
+$is-mineshaft:	#222;
 
 // Typography
 // -------------------------
@@ -8,7 +9,7 @@ $baseLineHeight:        26px;
 
 $linkColor: $is-blue;
 $linkColorHover: shade($is-blue, 20%);
-$textColor: #333;
+$textColor: $is-mineshaft;
 
 
 // ---------------------------------- LIFERAY ORIGINAL BOOTSTRAP THEME -----------------------------------

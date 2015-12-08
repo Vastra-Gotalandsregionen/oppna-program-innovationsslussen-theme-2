@@ -1,0 +1,72 @@
+.event-listing {
+
+  .entry-item {
+    border: 1px solid shade($is-linkwater, 5%);
+    margin: 0 0 20px 0;
+    padding: 20px;
+    @include border-radius(3px);
+  }
+
+  .entry-title {
+    font-size: 1.4em;
+    margin: 0;
+
+    a {
+      color: $is-tundora;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .meta-wrap {
+
+    //border-bottom: 1px solid shade($is-linkwater, 5%);
+
+    margin: 5px 0;
+    padding: 5px 0;
+
+    .meta-item {
+      border-right: 1px solid shade($is-linkwater, 5%);
+      display: inline-block;
+      margin: 3px 0;
+      padding: 3px 10px;
+
+      i {
+        color: $is-blue;
+      }
+
+      &:first-child {
+        //padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .entry-teaser {
+
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+
+    @include clearfix();
+
+    .entry-summary {
+      float: left;
+      width: 70%;
+    }
+
+    .entry-readmore {
+      float: right;
+      text-align: right;
+      width: 25%;
+    }
+
+  }
+
+}

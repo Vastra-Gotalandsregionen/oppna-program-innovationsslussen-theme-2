@@ -1,3 +1,9 @@
+.persons-wrap {
+	> h2 {
+		margin: 0 0 10px 0;
+	}
+}
+
 ul.persons-list {
 	list-style: none;
 	margin: 0;
@@ -16,6 +22,10 @@ ul.persons-list {
     .person {
       margin: 0 10px 0 0;
       padding-bottom: 15px;
+
+			&:last-child {
+				margin-right: 0;
+			}
 
       .person-inner {
         border: 1px solid $is-alto;

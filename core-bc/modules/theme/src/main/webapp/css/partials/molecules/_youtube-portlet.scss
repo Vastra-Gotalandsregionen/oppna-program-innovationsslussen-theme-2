@@ -1,0 +1,24 @@
+.youtube-portlet {}
+
+// When in portlet column only
+.portlet-column-only {
+  .youtube-portlet {
+
+    .portlet-borderless-container {
+      .portlet-body {
+
+          background: $is-black;
+          padding: 30px;
+          overflow-x: hidden; //needed to make edgetoedge work
+          @extend %edgetoedge;
+
+
+        .swf-content {
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+    }
+
+  }
+}
