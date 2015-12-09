@@ -1,4 +1,9 @@
-
 #content {
   padding-top: 3em;
+
+  // Node info (shown on Test and Stage)
+  .alert-info {
+    display: none;
+  }
+
 }
