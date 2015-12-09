@@ -15,7 +15,6 @@
     width: 32.55%;
 
     .idea-item {
-      background: url(../images/theme/bg/box-shadow-24.png) bottom center no-repeat;
       margin: 0 5% 0 0;
       padding-bottom: 5%;
 
@@ -29,6 +28,7 @@
         padding: 3px;
         position: relative;
         text-decoration: none;
+				@include transition(all 0.3s ease-in-out);
 
         .idea-content {
           background: $is-white;
@@ -45,9 +45,9 @@
             position: absolute;
             top: 0;
             padding: 10px;
-            padding: 0;          
+            padding: 0;
             width: 100%;
-            @include transition(opacity 0.3s ease-in-out);
+            @include transition(all 0.3s ease-in-out);
           }
 
           .idea-content-1 {
@@ -56,7 +56,7 @@
           }
 
           .idea-content-2 {
-            background: $is-linkwater;
+            //background: $is-linkwater;
             filter: alpha(opacity=0);
             opacity: 0;
           }
@@ -74,6 +74,7 @@
         }
 
         &:hover {
+					background: darken($is-blue, 10);
           color: $is-emperor;
           text-decoration: none;
 
@@ -96,33 +97,47 @@
           color: $is-white;
           font-size: 0.9em;
           font-weight: bold;
-          margin: 3px 6px 0 6px;
+          margin: 0;
+					padding: 5px;
         }
-
 
       }
 
-
     }
 
 
-    &.done a {
-      background: $is-apple;
-      border-color: $is-woodland;
+    &.done {
+			a {
+				background: $is-apple;
+
+				&:hover {
+					background: darken($is-apple, 10);
+				}
+			}
     }
 
-    &.active-innovationsslussen a {
-      background: $is-earlsgreen;
-      border-color: $is-luxorgold;
+    &.active-innovationsslussen {
+			a {
+				background: $is-earlsgreen;
+
+				&:hover {
+					background: darken($is-earlsgreen, 10);
+				}
+			}
+			.idea-label {
+	      color: $is-camouflage;
+	    }
     }
 
-    &.active-innovationsslussen .idea-label {
-      color: $is-camouflage;
-    }
 
     &.private a {
-      background: $is-red;
-      border-color: $is-burntumber;
+			a {
+				background: darken($is-red, 10);
+
+				&:hover {
+
+				}
+			}
     }
 
 

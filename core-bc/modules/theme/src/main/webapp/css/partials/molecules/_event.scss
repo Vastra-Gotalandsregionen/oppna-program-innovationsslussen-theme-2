@@ -2,8 +2,8 @@
 
   .meta-wrap {
 
-    background: $is-linkwater;
-    border: 1px solid $is-silver;
+    background: $is-white;
+    border: 1px solid shade($is-linkwater, 10);
     color: $is-tundora;
     font-size: 1.0em;
     margin: 0 0px 20px 0;
@@ -12,13 +12,12 @@
     @include border-radius(3px);
 
     .meta-item {
-      border-right: 1px solid $is-silver;
+      border-right: 1px solid shade($is-linkwater, 10);
       display: inline-block;
       margin: 10px 0;
       padding: 5px 10px;
 
       &:first-child {
-        //padding-left: 0;
       }
 
       &:last-child {

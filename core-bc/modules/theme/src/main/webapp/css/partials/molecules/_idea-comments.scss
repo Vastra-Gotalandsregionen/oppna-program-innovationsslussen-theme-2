@@ -2,9 +2,9 @@
 	margin: 10px 0;
 
   > h2 {
-    border-bottom: 1px solid $is-boticelli;
-    color: $is-graydusty;
-    font-size: 1.6em;
+    border-bottom: 1px solid shade($is-linkwater, 10);
+    color: $is-boulder;
+    font-size: 1.2em;
     margin: 0 0 15px 0;
     padding: 0 0 2px 0;
     text-transform: uppercase;
@@ -12,14 +12,14 @@
 
   .comment {
     background: $is-white;
-    border: 1px solid $is-boticelli;
+    border: 1px solid shade($is-linkwater, 10);
     @include border-radius(3px);
     margin: 10px 0;
     padding: 15px;
 
     &.comment-innovationsslussen {
       background: $is-linkwater;
-      border-color: $is-loblolly;
+      border: 1px solid shade($is-linkwater, 15);
     }
 
     .comment-author {
@@ -131,8 +131,6 @@
 .idea-outer-private {
 	.idea-comments {
 		.comment {
-			background: $is-white;
-			border-color: $is-boticelli;
 
 			&.comment-innovationsslussen {
 				background: $is-vistawhite;

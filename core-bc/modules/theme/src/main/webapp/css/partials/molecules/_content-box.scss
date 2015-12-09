@@ -1,11 +1,11 @@
 .content-box {
-  border: 1px solid $is-linkwater;
+  border: 1px solid darken($is-linkwater, 5);
   margin: 0;
-  padding: 0 1em 1em 1em;
+  padding: 0;
   position: relative;
 
   @include border-radius(2px);
-  @include box-sizing('border-box');
+  //@include box-sizing('border-box');
 
   > h2 {
     background: $is-linkwater;
@@ -13,14 +13,14 @@
     border-left: 10px solid $is-blue;
     color: $is-tundora;
     font-size: 1.2em;
-    margin: 0 -1em 0 -1em;
+    margin: 0;
     padding: 0.6em;
     @include border-radius(2px 2px 0 0);
   }
 
   .content-box-bd {
+    padding: 1em;
 
-    padding-top: 1em;
     position: relative;
 
     .entry-item {

@@ -21,14 +21,14 @@ ul.persons-list {
 
     .person {
       margin: 0 10px 0 0;
-      padding-bottom: 15px;
+      padding-bottom: 30px;
 
 			&:last-child {
 				margin-right: 0;
 			}
 
       .person-inner {
-        border: 1px solid $is-alto;
+        //border: 1px solid $is-alto;
       }
 
       .person-image-ctn {
@@ -36,19 +36,21 @@ ul.persons-list {
         width: 120px;
 
         .person-image {
-          background: $is-gallery;
+          //background: $is-gallery;
           overflow: hidden;
 
           img {
             border: 0;
             vertical-align: top;
             width: 100%;
+						@include border-radius(100%);
           }
 
           .image-placeholder {
               background: $is-silver url(../images/theme/articles/person-default.jpg) top center no-repeat;
               display: block;
               min-height: 140px;
+							@include border-radius(100%);
           }
         }
       }
@@ -75,8 +77,18 @@ ul.persons-list {
       }
 
       &.person-no-image {
+				//background: $is-linkwater;
+				//padding: 10px;
+				//@include border-radius(3px);
+				padding-bottom: 10px;
+
         .person-info-ctn {
           margin-left: 0;
+
+					.person-info {
+						padding: 0;
+					}
+
         }
       }
     }

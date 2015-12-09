@@ -54,7 +54,7 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
           var instance = this;
 
   				var width = 350;
-  				var height = 200;
+  				var height = 220;
 
   				var signinUrl = instance.get(SIGNIN_URL);
 
@@ -63,7 +63,7 @@ AUI().add('innovationsslussen-signin-prompt',function(A) {
   				bodyContent += '<p>';
   				bodyContent += instance.get(PROMPT_MSG);
   				bodyContent += '</p>';
-  				bodyContent += '<p><a href="'+  signinUrl + '">Logga in h&auml;r &raquo; </a></p>';
+  				bodyContent += '<div class="link-btn-wrap"><a class="link-btn link-btn-link" href="'+  signinUrl + '"><span>Logga in h&auml;r</span></a></div>';
 
   				var dialog = new A.Modal({
   					bodyContent: bodyContent,

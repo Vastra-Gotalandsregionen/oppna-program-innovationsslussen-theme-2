@@ -82,7 +82,7 @@
           &.selected.hover,
           &.selected:hover {
             > a {
-              background: shade($is-blue, 10);
+              background: darken($is-blue, 10);
               color: $is-white;
             }
 
@@ -259,7 +259,6 @@
   }
 
   &.navigation-wrapper-scrolled {
-    //border-bottom: 10px solid $is-white;
     position: fixed;
     top: 0;
     width: 100%;

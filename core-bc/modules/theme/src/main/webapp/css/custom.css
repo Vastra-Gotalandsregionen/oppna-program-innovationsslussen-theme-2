@@ -26,6 +26,7 @@ body {
     @import 'partials/utilities/portlet-overrides';
 
     @import 'partials/atoms/paragraphs';
+		@import 'partials/atoms/buttons';
 		@import 'partials/atoms/container';
     @import 'partials/atoms/headings';
 		@import 'partials/atoms/intro';

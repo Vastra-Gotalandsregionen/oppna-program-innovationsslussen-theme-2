@@ -1,5 +1,7 @@
 #footer {
-  background: $is-linkwater url(../images/theme/bg/footer-bg.png) top left repeat-x;
+  border-top: 1px solid darken($is-linkwater, 10);
+  //background: $is-linkwater url(../images/theme/bg/footer-bg.png) top left repeat-x;
+  background: $is-linkwater;
   bottom: 0;
   height: 91px;
   padding: 0;
@@ -11,7 +13,7 @@
 
 
   .footer-inner {
-    background: transparent url(../images/theme/bg/footer-bg-shadow.png) top center no-repeat;
+    //background: transparent url(../images/theme/bg/footer-bg-shadow.png) top center no-repeat;
     color: $is-blue-dark;
     padding: 20px 0;
 

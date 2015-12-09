@@ -15,41 +15,58 @@
   }
 
   .select-to-dropdown-list {
-      background: $is-athensgray;
-      border: 1px solid $is-loblolly;
-      border-top: none;
+      background: $is-white;
+      border: 1px solid shade($is-linkwater, 10);
       display: none;
       list-style: none;
       margin: 0;
       padding: 0;
       position: absolute;
-      top: 19px;
+      top: 35px;
       width: 200px;
       z-index: 498;
-
-      &.select-to-dropdown-list-active {
-        display: block;
-      }
+      @include border-radius(3px);
 
       li {
-          background: $is-athensgray;
-          border-bottom: 1px solid $is-alto;
-          color: $is-blue;
-          cursor: pointer;
-          padding: 10px;
+          background: transparent;
+          border-bottom: 1px solid shade($is-linkwater, 10);
+          display: block;
+          padding: 0;
+
+          span {
+            background: $is-white;
+            color: $is-blue;
+            cursor: pointer;
+            display: block;
+            padding: 10px;
+            //@include transition(all 0.3s ease-in-out);
+          }
 
           &:hover,
           &.hover {
-              background: tint($is-blue, 20%) url(../images/navigation/theme/navigation-bg-hover.png) top left repeat-x;
+            span {
+              background: $is-blue;
               color: $is-white;
+            }
+          }
+
+          &:first-child,
+          &.first {
+            @include border-radius(3px 3px 0 0);
           }
 
           &:last-child,
           &.last {
               border-bottom: none;
+              @include border-radius(0 0 3px 3px);
           }
 
       }
+
+      &.select-to-dropdown-list-active {
+        display: block;
+      }
+
 
   }
 
@@ -59,4 +76,9 @@
   .select-to-dropdown-list-active {
       zoom: 1;
   }
+}
+
+// Hide when js is avaiable to prevent content flashing
+.js select.select-to-dropdown {
+  display: none;
 }

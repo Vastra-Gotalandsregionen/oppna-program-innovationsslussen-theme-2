@@ -1,6 +1,5 @@
 
 .idea-outer {
-  background: url(../images/theme/ideas/idea-shadow-24.png) bottom center no-repeat;
   padding: 0 0 27px 0;
 }
 
@@ -13,7 +12,6 @@
 
   .idea-inner {
     background: $is-white;
-    border: 1px solid $is-caspar;
     @include border-radius(3px);
     padding: 15px;
   }
@@ -133,9 +131,9 @@
     }
 
     h2 {
-      border-bottom: 1px solid $is-boticelli;
-      color: $is-graydusty;
-      font-size: 1.6em;
+      border-bottom: 1px solid shade($is-linkwater, 10);
+      color: $is-boulder;
+      font-size: 1.2em;
       margin: 0 0 5px 0;
       padding: 0 0 5px 0;
       text-transform: uppercase;
@@ -143,6 +141,10 @@
       span {
         padding: 0 5px;
       }
+    }
+
+    .link-button-wrap {
+      margin-top: 10px;
     }
 
     .documents-list {
@@ -195,6 +197,8 @@
     }
 
   }
+
+
 }
 
 
@@ -228,6 +232,18 @@
     .idea-creator-name {
       color: $is-emperor;
     }
+
+    .btn-primary {
+      border: 1px solid $is-red;
+      color: $is-red;
+
+      &:hover {
+        background: $is-red;
+        color: $is-white;
+      }
+    }
+
+
   }
 }
 
@@ -235,10 +251,6 @@
 .active-innovationsslussen {
   .idea {
     background: $is-earlsgreen;
-
-    .idea-inner {
-      border-color: $is-luxorgold;
-    }
 
     h1 {
       color: $is-pirategold;
@@ -256,6 +268,17 @@
         }
       }
     }
+
+    .btn-primary {
+      border: 1px solid $is-pirategold;
+      color: $is-pirategold;
+
+      &:hover {
+        background: $is-pirategold;
+        color: $is-white;
+      }
+    }
+
   }
 }
 
@@ -263,10 +286,6 @@
 .done {
   .idea {
     background: $is-apple;
-
-    .idea-inner {
-      border-color: $is-woodland;
-    }
 
     h1 {
       color: $is-apple;
@@ -284,5 +303,16 @@
         }
       }
     }
+
+    .btn-primary {
+      border: 1px solid $is-apple;
+      color: $is-apple;
+
+      &:hover {
+        background: $is-apple;
+        color: $is-white;
+      }
+    }
+
   }
 }

@@ -1,7 +1,7 @@
 .event-listing {
 
   .entry-item {
-    border: 1px solid shade($is-linkwater, 5%);
+    border: 1px solid shade($is-linkwater, 10);
     margin: 0 0 20px 0;
     padding: 20px;
     @include border-radius(3px);
@@ -23,13 +23,11 @@
 
   .meta-wrap {
 
-    //border-bottom: 1px solid shade($is-linkwater, 5%);
-
     margin: 5px 0;
     padding: 5px 0;
 
     .meta-item {
-      border-right: 1px solid shade($is-linkwater, 5%);
+      border-right: 1px solid shade($is-linkwater, 10);
       display: inline-block;
       margin: 3px 0;
       padding: 3px 10px;
@@ -39,7 +37,6 @@
       }
 
       &:first-child {
-        //padding-left: 0;
       }
 
       &:last-child {
