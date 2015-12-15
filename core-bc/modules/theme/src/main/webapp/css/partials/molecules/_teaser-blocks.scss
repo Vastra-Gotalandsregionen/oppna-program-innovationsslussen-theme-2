@@ -40,11 +40,11 @@
     h2 {
       font-size: 1.2em;
       margin: 10px 0;
-      padding: 0 10px;
+      padding: 0;
     }
 
     .teaser-block-content {
-      padding: 0 10px;
+      padding: 0;
     }
 
 
@@ -58,6 +58,7 @@
     .teaser-block-content {
       color: $is-mineshaft;
       text-decoration: none;
+      padding: 0 10px;
     }
 
     &:hover {
