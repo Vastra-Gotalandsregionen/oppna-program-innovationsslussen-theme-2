@@ -1,5 +1,4 @@
 ul.rp-toolbar {
-  //background: $is-white url(../images/theme/toolbar/toolbar-bg.png) bottom left repeat-x;
   background: $is-white;
   border: 1px solid shade($is-linkwater, 10);
   @include border-radius(3px);

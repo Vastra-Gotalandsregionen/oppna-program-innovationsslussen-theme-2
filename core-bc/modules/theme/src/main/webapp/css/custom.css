@@ -40,9 +40,9 @@ body {
 		@import 'partials/atoms/wrapper';
 
 		@import 'partials/molecules/add-this';
-		@import 'partials/molecules/blogs-portlet';
 		@import 'partials/molecules/comments-form';
 		@import 'partials/molecules/content-box';
+		@import 'partials/molecules/discussions';
     @import 'partials/molecules/dockbar';
 		@import 'partials/molecules/event';
 		@import 'partials/molecules/event-listing';
@@ -76,6 +76,7 @@ body {
 		@import 'partials/molecules/owl-carousel';
 		@import 'partials/molecules/owl-theme';
 
+		@import 'partials/organisms/blogs-portlet';
 		@import 'partials/organisms/content';
 		@import 'partials/organisms/create-idea';
     @import 'partials/organisms/sticky-footer';
