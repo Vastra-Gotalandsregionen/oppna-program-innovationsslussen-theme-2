@@ -3,6 +3,7 @@
   border: 1px solid $is-blue;
   color: $is-blue;
   display: inline-block;
+  margin-bottom: 1px;//Fixes issue with bottom border being cut off
   padding: 0.4em 1.2em;
   text-decoration: none;
   text-shadow: none;

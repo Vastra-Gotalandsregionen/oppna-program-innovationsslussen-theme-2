@@ -39,7 +39,7 @@
 	.portlet-content {
 
 		background: $is-white;
-		border: 1px solid $is-geyser;
+		border: 1px solid shade($is-linkwater, 10);
 		border-width: 0 1px 1px 1px;
 		@include border-radius(0 0 3px 3px);
 		@include box-shadow(none);

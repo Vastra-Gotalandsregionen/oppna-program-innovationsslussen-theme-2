@@ -23,7 +23,7 @@
 
       textarea {
         background: $is-white;
-        border: 1px dashed $is-loblolly;
+				border: 1px dashed shade($is-linkwater, 10);
         min-height: 60px;
         width: 100%;
       }

@@ -108,34 +108,31 @@
 
     &.done {
 			a {
-				background: $is-apple;
+				background: $is-green;
 
 				&:hover {
-					background: darken($is-apple, 10);
+					background: $is-green-dark;
 				}
 			}
     }
 
     &.active-innovationsslussen {
 			a {
-				background: $is-earlsgreen;
+				background: $is-yellow;
 
 				&:hover {
-					background: darken($is-earlsgreen, 10);
+					background: darken($is-yellow, 10);
 				}
 			}
-			.idea-label {
-	      color: $is-camouflage;
-	    }
     }
 
 
     &.private a {
 			a {
-				background: darken($is-red, 10);
+				background: $is-red;
 
 				&:hover {
-
+					background: $is-red-dark;
 				}
 			}
     }

@@ -250,31 +250,31 @@
 // Public - Active at Innovationsslussen
 .active-innovationsslussen {
   .idea {
-    background: $is-earlsgreen;
+    background: $is-yellow;
 
     h1 {
-      color: $is-pirategold;
+      color: $is-yellow-shade;
     }
 
     .idea-toolbar-wrap {
       li.icon {
         a {
           background-image: url(../images/theme/toolbar/idea-toolbar-icon-sprite-active.png);
-          color: $is-pirategold;
+          color: $is-yellow-shade;
 
           span {
-            color: $is-pirategold;
+            color: $is-yellow-shade;
           }
         }
       }
     }
 
     .btn-primary {
-      border: 1px solid $is-pirategold;
-      color: $is-pirategold;
+      border: 1px solid $is-yellow-shade;
+      color: $is-yellow-shade;
 
       &:hover {
-        background: $is-pirategold;
+        background: $is-yellow-shade;
         color: $is-white;
       }
     }
@@ -285,31 +285,31 @@
 // Public - Done
 .done {
   .idea {
-    background: $is-apple;
+    background: $is-green;
 
     h1 {
-      color: $is-apple;
+      color: $is-green;
     }
 
     .idea-toolbar-wrap {
       li.icon {
         a {
           background-image: url(../images/theme/toolbar/idea-toolbar-icon-sprite-done.png);
-          color: $is-apple;
+          color: $is-green;
 
           span {
-            color: $is-apple;
+            color: $is-green;
           }
         }
       }
     }
 
     .btn-primary {
-      border: 1px solid $is-apple;
-      color: $is-apple;
+      border: 1px solid $is-green;
+      color: $is-green;
 
       &:hover {
-        background: $is-apple;
+        background: $is-green;
         color: $is-white;
       }
     }

@@ -60,9 +60,8 @@ body {
 		@import 'partials/molecules/map';
 		@import 'partials/molecules/mobile-navigation';
 		@import 'partials/molecules/person-list';
+		@import 'partials/molecules/person-listing-rich';
 		@import 'partials/molecules/portlet-navigation';
-		@import 'partials/molecules/puff-box';
-		@import 'partials/molecules/rp-button';
 		@import 'partials/molecules/rp-paging';
 		@import 'partials/molecules/rp-toolbar';
 		@import 'partials/molecules/select-to-dropdown';

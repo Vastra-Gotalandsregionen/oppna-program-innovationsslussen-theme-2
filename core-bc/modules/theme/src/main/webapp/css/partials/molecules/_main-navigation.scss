@@ -1,7 +1,7 @@
 .navigation-wrapper {
   background: $is-blue;
-  border: 1px solid $is-blue-dark;
-  border-width: 1px 0 1px 0;
+  border: 1px solid shade($is-blue, 20);
+  border-width: 1px 0;
 
   #navigation {
 
@@ -172,7 +172,6 @@
         .nav-list-sub-wrap {
 
           ul {
-            background: $is-crete;
             border: none;
             list-style: none;
             margin: 0;
@@ -187,8 +186,8 @@
               padding: 0;
 
               a {
-                background: $is-athensgray url(../images/theme/navigation/nav-bg-gray.png) top left repeat-x;
-                border-bottom: 1px solid $is-loblolly;
+                background: $is-linkwater;
+                border-bottom: 1px solid shade($is-linkwater, 10);
                 color: $is-blue;
                 display: block;
                 font-size: 1.0em;
@@ -197,7 +196,7 @@
                 text-decoration: none;
 
                 &:hover {
-                  background: $is-athensgray url(../images/theme/navigation/nav-bg-gray.png) top left repeat-x;
+                  background: $is-linkwater;
                   color: $is-blue;
                 }
 
@@ -258,29 +257,32 @@
 
   }
 
-  &.navigation-wrapper-scrolled {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 2000;
+  @include small {
+    &.navigation-wrapper-scrolled {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 2000;
 
-    #navigation {
-      ul.nav-list {
-        li {
-          a {
-            span {
-              padding: 16px 20px;
-            }
-          }
-          &.add-idea {
+      #navigation {
+        ul.nav-list {
+          li {
             a {
               span {
-                padding-left: 35px;
+                padding: 16px 20px;
+              }
+            }
+            &.add-idea {
+              a {
+                span {
+                  padding-left: 35px;
+                }
               }
             }
           }
         }
       }
+
     }
 
   }
@@ -334,28 +336,18 @@
             z-index: 2598;
 
             ul {
-              background: $is-athensgray;
-              border: 1px solid $is-loblolly;
+              background: $is-linkwater;
+              border: 1px solid shade($is-linkwater, 10);
               border-top: 0;
               margin: 0;
               padding: 0;
               z-index: 2598;
 
               li {
-                background: $is-athensgray;
-                border-bottom: 1px solid $is-alto;
+                background: $is-linkwater;
+                border-bottom: 1px solid shade($is-linkwater, 10);
               }
             }
-          }
-        }
-
-        li.add-idea, li.add-idea:hover {
-          float: right;
-
-          a {
-            background: $is-concrete url(../images/theme/navigation/navigation-bg-highlight.png) 0 0 repeat-x;
-            color: $is-blue;
-            font-weight: bold;
           }
         }
 

@@ -121,7 +121,16 @@
         background: rgba($is-white, 0.8);
         float: right;
         max-width: 400px;
-        padding: 20px;
+        padding: 30px;
+
+        &.left {
+          float: left;
+        }
+
+        &.center {
+          float: none;
+          margin: 0 auto;
+        }
 
         @include height-small {
           padding: 40px;

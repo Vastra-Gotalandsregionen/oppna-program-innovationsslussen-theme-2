@@ -20,43 +20,26 @@ $bp-height-large : 1400px;
 
 
 // B&W
-$is-white:      #fff;
-$is-black: 		  #000;
+$is-white:        #fff;
+$is-black: 		    #000;
 
 // Blues
-$is-blue:       #327cb4;
-//$is-blue-alt:   #0088bd;
-$is-blue-dark:  #075d80;
-$is-bluematte:	#56a0d9;
+$is-blue:         #327cb4;
 
 // Reds
-$is-red:        #bf3434;
-$is-burntumber: #8b2626;
+$is-red:          #bf3434;
+$is-red-dark:     darken($is-red, 10);
 
 // Greens
-$is-green:      #008c4d;
-$is-crete:      #548332;
-$is-apple:      #5e9237;
-$is-woodland:   #426627;
-$is-frost:      #f0faeb;
+$is-green:        #5e9237;
+$is-green-dark:   darken($is-green, 10);
 
 // Yellows
-$is-earlsgreen:     #bfb331;
-$is-buddhagold:     #d7a702;
-$is-luxorgold:      #948b2a;
-$is-camouflage:     #444011;
-$is-pirategold:     #af8602;
-$is-corn:           #e2b002;
-$is-horsesneck:     #5e4a11;
-$is-half-spanishwhite: #fef6db;
+$is-yellow:       #bfb331;
+$is-yellow-shade: shade($is-yellow, 30);
 
 // Gray/white with color tinted
-$is-linkwater:  #eef5fa;
-$is-vistawhite: #fcf7f7;
-$is-geyser:     #cad5de;
-$is-loblolly:   #bdc9ce;
-$is-caspar:     #a9bdcf;
-$is-boticelli:  #d5e3ee;
+$is-linkwater:    #eef5fa;
 
 // Grayscale
 $is-mineshaft:	#222;
@@ -65,14 +48,9 @@ $is-emperor:		#555;
 $is-graydove:		#666;
 $is-boulder:		#777;
 $is-graydusty:	#999;
-$is-cloudy:     #aca59f;
-$is-cloud:      #c7c4bf;
 $is-silver:		  #ccc;
 $is-alto:		    #ddd;
-$is-graylight:	#ececec;
 $is-gallery:		#eee;
-$is-athensgray: #f0f1f5;
-$is-concrete:   #f2f2f2;
 $is-alabaster:  #f7f7f7;
 
 // Colors
@@ -89,7 +67,7 @@ $link-hover-color:		$linkColorHover; //From _aui_variables
 $top-bar-bg:			$is-mineshaft;
 $top-bar-color:			$is-white;
 
-$token-bg: 				$is-bluematte;
+$token-bg: 				lighten($is-blue, 20);
 $token-color: 			$is-white;
 $token-icon-color: 		$is-blue;
 

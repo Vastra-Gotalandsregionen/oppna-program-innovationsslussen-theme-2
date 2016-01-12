@@ -1,0 +1,47 @@
+.person-listing-rich {
+
+  .person {
+
+    border-bottom: 1px solid shade($is-linkwater, 10);
+
+    margin: 20px 0;
+    padding: 20px 0;
+
+    @include clearfix();
+
+    .person-image {
+      float: left;
+      width: 25%;
+
+      img {
+        background: $is-linkwater;
+        width: 100%;
+        @include border-radius(50%);
+      }
+
+    }
+
+    .person-info {
+      float: right;
+      width: 70%;
+
+      h2 {
+        margin: 0 0 0.5em 0;
+        padding: 0;
+      }
+
+      .person-contact {
+        .person-contact-method {
+          color: $is-blue;
+          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+
+    }
+
+
+  }
+
+
+}

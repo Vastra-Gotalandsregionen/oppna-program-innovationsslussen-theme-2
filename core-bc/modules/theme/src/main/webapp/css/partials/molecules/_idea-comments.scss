@@ -133,7 +133,7 @@
 		.comment {
 
 			&.comment-innovationsslussen {
-				background: $is-vistawhite;
+				background: tint($is-red, 95);
 				border-color: $is-red;
 			}
 

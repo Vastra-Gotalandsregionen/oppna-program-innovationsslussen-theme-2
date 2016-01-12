@@ -41,7 +41,7 @@
       &.next a,
       &.last a {
         background: $is-linkwater url(../images/theme/paginator/rp-paginator-sprite.png) no-repeat 0 0;
-        border-color: $is-boticelli;
+        border-color: shade($is-linkwater, 10);
         color: $is-blue;
         font-size: 0;
         position: relative;
