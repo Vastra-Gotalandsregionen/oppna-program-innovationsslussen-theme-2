@@ -14,7 +14,11 @@
     display: flex;
     margin: 0 0 20px 0;
     padding: 0 0 10px 0;
-    width: 50.0%;
+    width: 100.0%;
+
+    @include small {
+        width: 50.0%;
+    }
 
     .teaser-block-inner {
       border-top: 5px solid transparent;
@@ -45,6 +49,12 @@
 
     .teaser-block-content {
       padding: 0;
+    }
+
+    .image-wrap {
+      img {
+        width: 100%;
+      }
     }
 
 

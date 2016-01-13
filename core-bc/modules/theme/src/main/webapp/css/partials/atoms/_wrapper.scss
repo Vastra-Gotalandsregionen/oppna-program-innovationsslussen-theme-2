@@ -1,8 +1,11 @@
 #wrapper {
   min-height: 100%;
-  padding: 0;
+  margin: 0;
+  padding: 0 1em;
   position: relative;
-	@include medium {
+
+  @include small {
 		padding: 0;
 	}
+
 }

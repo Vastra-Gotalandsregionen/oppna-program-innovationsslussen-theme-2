@@ -14,29 +14,28 @@
       margin: 0;
       overflow: hidden;
       position: relative;
-      width: 410px;
+      width: 203px;
 
       a {
-
         background: transparent url(../images/theme/logo/logo-vgr-innovationsslussen.png) 0 -50px no-repeat;
-
-        height: 24px;
-        width: 203px;
-
-        @include small {
-          background-position: 0 0;
-
-        }
-
-
-
         display: block;
         font-size: 0;
-        height: 72px;
+        height: 24px;
         text-indent: -9999em;
+        width: 203px;
+      }
+
+      @include small {
         width: 410px;
 
+        a {
+          background-position: 0 0;
+          height: 72px;
+          width: 410px;
+        }
       }
+
+
     }
 
     .top-navigation {

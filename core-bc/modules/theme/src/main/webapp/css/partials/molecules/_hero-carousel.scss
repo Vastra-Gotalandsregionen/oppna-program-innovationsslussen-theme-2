@@ -22,6 +22,13 @@
         position: absolute;
 
         .owl-dot {
+
+          display: none;
+
+          @include small {
+            display: block;
+          }
+
           span {
             background: transparent;
             border: 1px solid $is-tundora;
@@ -43,11 +50,15 @@
           background: transparent;
           border: none;
           color: $is-tundora;
-          font-size: 2.5em;
+          font-size: 2.0em;
           position: absolute;
           top:40%;
           @include border-radius(0);
           @include opacity(0.8);
+
+          @include small {
+            font-size: 2.5em;
+          }
 
           &:hover {
             background: transparent;
@@ -55,11 +66,19 @@
           }
 
           &.owl-prev {
-            left: 50px;
+            left: 0px;
+
+            @include small {
+              left: 40px;
+            }
           }
 
           &.owl-next {
-            right: 50px;
+            right: 0px;
+
+            @include small {
+              right: 40px;
+            }
           }
 
           .label {
@@ -109,9 +128,13 @@
     .content-area-wrap {
 
       position: absolute;
-      bottom: 30px;
+      bottom: 10px;
       width: 100%;
       z-index: 2;
+
+      @include small {
+        bottom: 30px;
+      }
 
       @include height-small {
         bottom: 50px;
@@ -119,17 +142,28 @@
 
       .content-area {
         background: rgba($is-white, 0.8);
-        float: right;
-        max-width: 400px;
-        padding: 30px;
+        float: none;
+        margin: 0 auto;
+        max-width: 250px;
+        padding: 10px;
+        text-align: center;
 
-        &.left {
-          float: left;
-        }
+        @include small {
+          float: right;
+          margin: 0;
+          max-width: 400px;
+          padding: 30px;
+          text-align: left;
 
-        &.center {
-          float: none;
-          margin: 0 auto;
+          &.left {
+            float: left;
+          }
+
+          &.center {
+            float: none;
+            margin: 0 auto;
+          }
+
         }
 
         @include height-small {
@@ -140,28 +174,43 @@
 
         h2 {
           color: $is-blue;
-          font-size: 1.8em;
-          margin: 0 0 0.5em 0;
+          font-size: 1.3em;
+          margin: 0 0 0.3em 0;
+
+          @include small {
+            font-size: 1.8em;
+            margin: 0 0 0.5em 0;
+          }
         }
 
         p {
           color: $is-blue;
+          display: none;
           font-size: 1.1em;
           margin: 0 0 0.5 0;
+
+          @include small {
+            display: block;
+          }
         }
 
         .link-btn {
           background: $is-blue;
           border-color: $is-blue;
           color: $is-white;
-          padding: 0.6em 2.0em;
+          padding: 0.3em 1.0em;
+
+          @include small {
+
+            padding: 0.6em 2.0em;
+          }
 
           &:hover {
             background: shade($is-blue, 10%);
             border-color: shade($is-blue, 10%);
             color: $is-white;
-
           }
+
         }
 
       }

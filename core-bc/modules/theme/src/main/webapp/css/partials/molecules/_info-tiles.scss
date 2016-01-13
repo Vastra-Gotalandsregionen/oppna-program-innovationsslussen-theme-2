@@ -1,7 +1,20 @@
 .info-tiles-wrap {
   background: $is-linkwater;
   overflow-x: hidden; //needed to make edgetoedge work
-  @extend %edgetoedge;
+  //@extend %edgetoedge;
+
+
+  @include small {
+    overflow-x: hidden;//needed to make edgetoedge work
+
+    // edgetoedge seems not to work properly when included in macro.
+    // adding settings manually instead
+    margin-left: -9999px;
+    padding-left: 9999px;
+    margin-right: -9999px;
+    padding-right: 9999px;
+
+  }
 
   .info-tiles-ctn {
     padding: 30px 20px;
@@ -16,8 +29,6 @@
       margin-left: percentage(2.5641/2/100);
       margin-right: percentage(2.5641/2/100);
 
-      border-right: 1px solid darken($is-linkwater, 10);
-
       &:first-child {
         margin-left: 0;
       }
@@ -25,6 +36,11 @@
         border-right: 0;
         margin-right: 0;
       }
+
+      @include small {
+        border-right: 1px solid darken($is-linkwater, 10);
+      }
+
     }
 
     h2 {
