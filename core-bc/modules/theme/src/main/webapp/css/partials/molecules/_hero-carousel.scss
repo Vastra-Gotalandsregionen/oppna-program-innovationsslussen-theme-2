@@ -1,3 +1,13 @@
+.hero-wrap {
+
+  margin-top: 1em;
+
+  @include small {
+    margin-top: 0;
+  }
+
+}
+
 .hero-carousel-ctn {
 
   margin-bottom: -20px - 19px - 30px; // offset portlet-boundary journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2) + content 30px
@@ -137,7 +147,10 @@
       }
 
       @include height-small {
-        bottom: 50px;
+        bottom: 0;
+        @include small {
+          bottom: 50px;
+        }
       }
 
       .content-area {
@@ -167,7 +180,10 @@
         }
 
         @include height-small {
-          padding: 40px;
+          padding: 10px;
+          @include small {
+            padding: 40px;
+          }
         }
 
         @include border-radius(3px);
