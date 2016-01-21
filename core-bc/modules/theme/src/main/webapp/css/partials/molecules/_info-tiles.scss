@@ -1,7 +1,9 @@
 .info-tiles-wrap {
-  background: $is-linkwater;
-  overflow-x: hidden; //needed to make edgetoedge work
-  //@extend %edgetoedge;
+  background: transparent;
+
+  @include small {
+    background: $is-linkwater;
+  }
 
 
   @include small {
@@ -17,28 +19,38 @@
   }
 
   .info-tiles-ctn {
-    padding: 30px 20px;
+    padding: 0;
+
+    @include small {
+      padding: 30px 20px;
+    }
   }
 
   .tile {
-    color: $is-blue;
-    padding: 20px 0;
-    text-align: center;
 
     &[class*="span"] {
-      margin-left: percentage(2.5641/2/100);
-      margin-right: percentage(2.5641/2/100);
+      background: $is-linkwater;
+      color: $is-blue;
+      margin: 0 0 1em 0;
+      padding: 30px 20px;
+      text-align: center;
 
       &:first-child {
         margin-left: 0;
       }
       &:last-child {
         border-right: 0;
+        margin-bottom: 0;
         margin-right: 0;
       }
 
       @include small {
+        background: transparent;
         border-right: 1px solid darken($is-linkwater, 10);
+        margin-bottom: 0;
+        margin-left: percentage(2.5641/2/100);
+        margin-right: percentage(2.5641/2/100);
+        padding: 20px 0;
       }
 
     }

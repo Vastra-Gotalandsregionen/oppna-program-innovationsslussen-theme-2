@@ -9,8 +9,14 @@
 
           background: $is-black;
           padding: 30px;
-          overflow-x: hidden; //needed to make edgetoedge work
-          @extend %edgetoedge;
+
+          @include small {
+            overflow-x: hidden; //needed to make edgetoedge work
+            margin-left: -9999px;
+            padding-left: 9999px;
+            margin-right: -9999px;
+            padding-right: 9999px;
+          }
 
 
         .swf-content {

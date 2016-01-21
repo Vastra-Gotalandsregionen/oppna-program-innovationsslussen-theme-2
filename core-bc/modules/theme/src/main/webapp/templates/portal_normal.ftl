@@ -37,24 +37,29 @@ ${theme.include(body_top_include)}
 
 				<div class="container-fluid">
 					<div id="heading" class="clearfix">
+
+						<div class="heading-inner">
 							<h1 class="site-title">
 								<a class="" href="${site_default_url}">
 									${site_name}
 								</a>
 							</h1>
 
-					  <div class="top-wrap">
-						  <div class="top-navigation-wrap">
-										<#include "${full_templates_path}/top_navigation.ftl" />
+						  <div class="top-wrap">
+							  <div class="top-navigation-wrap">
+											<#include "${full_templates_path}/top_navigation.ftl" />
+							  </div>
 						  </div>
-					  </div>
 
-						<a href="#navigationTrigger" id="navigationTrigger">
-							<span class="sr-only">Meny</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</a>
+							<a href="#navigationTrigger" id="navigationTrigger">
+								<span class="sr-only">Meny</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</a>
+
+						</div>
+
 					</div>
 				</div>
 

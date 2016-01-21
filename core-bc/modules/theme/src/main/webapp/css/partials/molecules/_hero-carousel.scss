@@ -1,18 +1,25 @@
 .hero-wrap {
 
-  margin-top: 1em;
+  margin: 1em 0;
+  padding: 0 1em;
+
 
   @include small {
-    margin-top: 0;
+    margin: 0;
+    padding: 0;
   }
 
 }
 
 .hero-carousel-ctn {
+  margin-bottom: -20px - 30px;// offset portlet-boundary,  + portlet-borderless-bar-padding-top/bottom (2+2) + content 30px
 
-  margin-bottom: -20px - 19px - 30px; // offset portlet-boundary journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2) + content 30px
   padding: 0;
   position: relative;
+
+  @include small {
+    margin-bottom: -20px - 19px - 30px; // offset portlet-boundary journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2) + content 30px
+  }
 
 
   .owl-carousel {
@@ -31,12 +38,14 @@
         padding: 0;
         position: absolute;
 
+
+
         .owl-dot {
 
           display: none;
 
           @include small {
-            display: block;
+            display: inline-block;
           }
 
           span {
@@ -108,8 +117,15 @@
 
   .slide {
 
+    margin: 0;
+    padding: 0;
     // Use media query with height to control height
     max-height: 300px;
+    overflow: hidden;
+
+    @include small {
+      //height: auto;
+    }
 
     @include height-small {
       max-height: 350px;
@@ -122,12 +138,6 @@
     @include height-large {
       max-height: 500px;
     }
-
-    overflow: hidden;
-
-    margin: 0;
-    padding: 0;
-
 
     img {
       vertical-align: middle;

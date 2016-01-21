@@ -7,6 +7,9 @@
 @import 'compass/typography/vertical_rhythm';
 @import 'partials/utilities/variables';
 
+// Liferay
+@import "mixins";
+
 @include establish-baseline; //Uses variables $base-font-size & $base-line-height
 
 body {

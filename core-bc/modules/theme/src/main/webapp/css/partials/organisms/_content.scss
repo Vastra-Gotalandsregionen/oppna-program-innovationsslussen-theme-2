@@ -1,5 +1,12 @@
 #content {
+  padding-left: 1em;
+  padding-right: 1em;
   padding-top: 3em;
+
+  @include small {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   // Node info (shown on Test and Stage)
   .alert-info {

@@ -1,17 +1,30 @@
 #banner {
 
-  #heading {
-    margin: 0 1.3em;
+  .container-fluid {
     padding: 0;
+  }
 
+  #heading {
     background: $is-blue;
-    margin: 0 -1em;
-    padding: 1.3em 1em;
+    height: 80px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 1em;
+
+    .heading-inner {
+      padding: 1.3em 0;
+    }
 
     @include small {
       background: transparent;
       margin: 0;
-      padding: 1.3em 0;
+      height: auto;
+      overflow: visible;
+
+      .heading-inner {
+        padding: 1.3em 0;
+        @include clearfix();
+      }
     }
 
 
