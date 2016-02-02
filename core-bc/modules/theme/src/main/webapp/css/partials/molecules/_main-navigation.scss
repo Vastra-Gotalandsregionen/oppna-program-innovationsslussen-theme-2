@@ -1,40 +1,22 @@
+
 .navigation-wrapper {
   background: $is-blue;
-  //border-right: 1px solid $is-white;
-  //border-right: 1px solid rgba($is-linkwater, 0.3);
   display: block;
-  height: 100%;
   position: fixed;
   left: -265px;
   top: 0;
   padding-top: 0px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  z-index: 100;
+  z-index: 2;
   width: 265px;
   top: 80px;
 
-
   @include transition(left 0.3s ease-in-out);
-
-  @include small {
-    background: $is-blue;
-    border: 1px solid shade($is-blue, 20);
-    border-width: 1px 0;
-    display: block;
-    height: auto;
-    padding-top: 0;
-    position: relative;
-    left: auto;
-    top: auto;
-    width: auto;
-    z-index: 1;
-    @include transition(none);
-  }
 
   #navigation {
     background: transparent;
-    position: relative;
+    position: static;
     margin: 0;
     padding: 0;
 
@@ -51,13 +33,6 @@
 
       @include pie-clearfix();
 
-      @include small {
-        border-left: 1px solid $is-linkwater;
-        border-left-color: rgba($is-linkwater, 0.5);
-        padding: 1px 2px;
-      }
-
-
       li {
         background: transparent;
         border-bottom: 1px solid rgba($is-linkwater, 0.3);
@@ -65,16 +40,6 @@
         line-height: 1.0;
         overflow: hidden;
         position: relative;
-
-        @include small {
-          border-bottom: 0;
-          border-right: 1px solid $is-linkwater;
-          border-right-color: rgba($is-linkwater, 0.5);
-          float: left;
-          overflow: auto;
-          padding: 0;
-          zoom: 1;
-        }
 
         a {
           background: transparent;
@@ -92,25 +57,12 @@
 
           @include pie-clearfix();
 
-          @include small {
-            border-bottom: none;
-            font-size: 1.0em;
-            text-transform: none;
-          }
-
           .nav-text,
           .toggle-sub-nav {
             display: block;
             min-height: 16px;
           	padding: 20px 14px;
             position: relative;
-          }
-
-          .nav-text {
-            @include small {
-              @include transition(all 0.4s ease-in-out);
-              padding: 10px 14px;
-            }
           }
 
           .toggle-sub-nav {
@@ -140,13 +92,6 @@
 
             }
 
-            @include small {
-              display: none;
-              &.active {
-                display: none;
-              }
-            }
-
           }
 
         }
@@ -158,24 +103,6 @@
                 content: $content-chevron-up;
               }
             }
-          }
-        }
-
-        // Hover
-        @include small {
-          &.hover,
-          &:hover,
-          &.selected.hover,
-          &.selected:hover {
-            > a {
-              background: darken($is-blue, 10);
-              color: $is-white;
-            }
-
-            > .nav-list-sub-wrap {
-              display: block;
-            }
-
           }
         }
 
@@ -197,67 +124,17 @@
 
         }
 
-        @include small {
-
-          &:first-child {
-            > a {
-              > span {
-               background: url(../images/theme/navigation/nav-home-icon.png) 50% 50% no-repeat;
-               padding-left: 30px;
-               font-size: 0;
-               text-indent: -9999em;
-              }
-            }
-          }
-
-          &.add-idea {
-            float: right;
-
-            a {
-              background: $is-linkwater;
-              color: $is-blue;
-              font-weight: bold;
-
-              span {
-                background: transparent url(../images/theme/icons/icon-add-24.png) 10px 50% no-repeat;
-                min-height: 16px;
-                padding-left: 32px;
-              }
-            }
-
-            &.hover,
-            &:hover,
-            &.selected.hover,
-            &.selected:hover {
-              > a {
-                background: shade($is-linkwater, 5);
-              }
-          }
-        }
-
-          &.login,
-          &.logout {
-            display: none;
-          }
-
-
-        }
-
-
         // Dropdown
         &.selected {
           .nav-list-sub-wrap {
             display: block;
-
-            @include small {
-              display: none;
-            }
           }
         }
 
         .nav-list-sub-wrap {
-
-          display: none;
+          max-height: 0;
+          overflow: hidden;
+          @include transition(max-height 0.3s ease-in-out);
 
           ul {
             border: none;
@@ -292,15 +169,132 @@
             }
           }
 
-          @include small {
+        }
+
+        &.show-sub-nav {
+          .nav-list-sub-wrap {
+            display: block;
+            max-height: 1000px;
+          }
+        }
+
+      }
+
+    }
+
+  }
+
+  @include small {
+    background: $is-blue;
+    border: 1px solid shade($is-blue, 20);
+    border-width: 1px 0;
+    display: block;
+    height: auto;
+    padding-top: 0;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    z-index: 1;
+    @include transition(none);
+
+    #navigation {
+
+      ul.nav-list {
+        border-left: 1px solid $is-linkwater;
+        border-left-color: rgba($is-linkwater, 0.5);
+        padding: 1px 2px;
+
+        li {
+          border-bottom: 0;
+          border-right: 1px solid $is-linkwater;
+          border-right-color: rgba($is-linkwater, 0.5);
+          float: left;
+          overflow: auto;
+          padding: 0;
+          zoom: 1;
+
+          a {
+            border-bottom: none;
+            font-size: 1.0em;
+            text-transform: none;
+
+            .nav-text {
+              @include transition(all 0.4s ease-in-out);
+              padding: 10px 14px;
+            }
+
+            .toggle-sub-nav {
+            	display: none;
+            	&.active {
+            		display: none;
+            	}
+            }
+
+
+          }
+
+          &:first-child {
+            > a {
+              > span {
+               background: url(../images/theme/navigation/nav-home-icon.png) 50% 50% no-repeat;
+               padding-left: 30px;
+               font-size: 0;
+               text-indent: -9999em;
+              }
+            }
+          }
+
+          &.add-idea {
+            float: right;
+
+            a {
+              background: $is-linkwater;
+              color: $is-blue;
+              font-weight: bold;
+
+              span {
+                background: transparent url(../images/theme/icons/icon-add-24.png) 10px 50% no-repeat;
+                min-height: 16px;
+                padding-left: 32px;
+              }
+            }
+
+            &.hover,
+            &:hover,
+            &.selected.hover,
+            &.selected:hover {
+              > a {
+                background: shade($is-linkwater, 5);
+              }
+            }
+          }
+
+          &.login,
+          &.logout {
+            display: none;
+          }
+
+          &:hover,
+          &.hover {
+            a {
+              background-color: darken($is-blue, 10);
+            }
+          }
+
+
+          .nav-list-sub-wrap {
             background: transparent url(../images/theme/navigation/navigation-sub-bg-arrow.png) top left no-repeat;
             display: none;
+            max-height: auto;
             left: 0;
+            overflow: visible;
             padding: 11px 0 0 0;
             position: absolute;
             top: 100%;
             width: 200px;
             z-index: 2598;
+            @include transition(none);
 
             ul {
               background: $is-linkwater;
@@ -329,28 +323,51 @@
                   }
                 }
 
-
               }
 
             }
-
           }
 
-        }
-
-        &.show-sub-nav {
-          .nav-list-sub-wrap {
-            display: block;
+          &.selected {
+            .nav-list-sub-wrap {
+              display: none;
+            }
           }
+
+          &:hover,
+          &.hover,
+          &.selected:hover,
+          &.selected.hover {
+            .nav-list-sub-wrap {
+              display: block;
+            }
+          }
+
+          // 2016-02-02. Subnav bugging. Hide for all cases on desktop
+          &,
+          &:hover,
+          &.hover,
+          &.selected:hover,
+          &.selected.hover {
+            .nav-list-sub-wrap {
+              display: none;
+            }
+          }
+
+
+
+          // &.show-sub-nav {
+          //   .nav-list-sub-wrap {
+          //     max-height: auto;
+          //   }
+          // }
+
         }
 
       }
 
     }
 
-  }
-
-  @include small {
     &.navigation-wrapper-scrolled {
       position: fixed;
       top: 0;
@@ -359,12 +376,15 @@
 
       #navigation {
         ul.nav-list {
+
           li {
+
             a {
               span {
                 padding: 16px 20px;
               }
             }
+
             &.add-idea {
               a {
                 span {
@@ -372,7 +392,25 @@
                 }
               }
             }
+
+            // Hover
+            &.hover,
+            &:hover,
+            &.selected.hover,
+            &.selected:hover {
+              > a {
+                background: darken($is-blue, 10);
+                color: $is-white;
+              }
+
+              > .nav-list-sub-wrap {
+                display: block;
+              }
+
+            }
+
           }
+
         }
       }
 
@@ -382,32 +420,26 @@
 
 }
 
-#heading,
-.hero-wrap,
-#content,
-#footer
-{
-  //@include transition(transform 0.30s ease-in-out);
-
-  @include small {
-    @include transition(none);
-  }
-}
-
-
 // Mobile navigation toggle navigation
 .show-navigation {
 
-  .navigation-wrapper {
-    left: 0;
-  }
+  #banner {
+    .banner-nav {
+      margin-bottom: 100px;
 
-  #heading,
-  .hero-wrap,
-  #content,
-  #footer
-  {
-    //transform: translateX(265px);
+      #heading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+      }
+
+      .navigation-wrapper {
+        left: 0;
+      }
+
+    }
   }
 
 }

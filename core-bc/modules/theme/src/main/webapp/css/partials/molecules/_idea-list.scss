@@ -3,20 +3,32 @@
 	margin: 0;
 	padding: 0;
 
+	@include clearfix();
+
   > li {
-    display: -moz-inline-stack;
-    display: inline-block;
 		line-height: 1.1;
     list-style: none;
     margin: 0;
     min-width: 230px;
     padding: 0;
     vertical-align: top;
-    width: 32.55%;
+
+		width: 100%;
+
+		@include small {
+			display: block;
+			float: left;
+			width: 33.32%;
+		}
 
     .idea-item {
-      margin: 0 5% 0 0;
+      margin: 0;
       padding-bottom: 5%;
+			position: relative;
+
+			@include small {
+				margin-right: 5%;
+			}
 
       a {
         background: $is-blue;
@@ -104,6 +116,15 @@
       }
 
     }
+
+		&:nth-child(3n) {
+			.idea-item {
+				@include small {
+						margin-right: 0;
+				}
+			}
+		}
+
 
 
     &.done {

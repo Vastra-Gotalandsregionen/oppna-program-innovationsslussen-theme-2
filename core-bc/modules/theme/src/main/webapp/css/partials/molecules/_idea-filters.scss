@@ -1,5 +1,6 @@
 .idea-filters-wrap {
     width: 96.65%;
+    width: 100%;
 
   .idea-filters-toolbar {
       //background: $is-linkwater;
@@ -14,27 +15,42 @@
 
       .filter-item {
           background: transparent;
+
           border-right: 1px solid darken($is-linkwater, 5%);
           float: left;
           padding-right: 15px;
           margin-right: 15px;
 
+
+          @include small {
+          }
+
           &:last-child,
-          &.last {
+          &.filter-item-last {
             border-right: none;
           }
 
           .filter-item-label {
               color: $is-blue;
-              float: left;
+
               line-height: 20px;
-              margin-right: 5px;
+
               font-weight: bold;
               font-weight: normal;
+
+              @include small {
+                float: left;
+                margin-right: 5px;
+              }
+
           }
 
           .filter-item-element {
-              float: left;
+
+              @include small {
+                float: left;
+              }
+
           }
 
       }
