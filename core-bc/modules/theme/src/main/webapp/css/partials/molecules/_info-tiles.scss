@@ -49,43 +49,8 @@
       }
 
     }
-
-    &.span12 {}
-
-    &.span6 {
-
-      // padding: 30px 20px;
-      //
-      // &:first-child {
-      //   margin-left: 0;
-      // }
-      // &:last-child {
-      //   border-right: 0;
-      //   margin-bottom: 0;
-      //   margin-right: 0;
-      // }
-      //
-      // @include small {
-      //   margin-left: percentage(2.5641/2/100);
-      //   margin-right: percentage(2.5641/2/100);
-      //   padding: 20px 10px;
-      // }
-
-
-    }
-
-    &.span4 {}
-
     .tile-content {
-      //background: gray;
-
-
       text-align: center;
-
-      @include small {
-
-      }
-
     }
 
     h2 {
@@ -112,15 +77,9 @@
     }
 
     .tile {
-      &.span6 {
-        background: $is-blue;
-        color: $is-white;
-
-        @include small {
-          border-right-color: lighten($is-blue, 10);
-        }
-
-      }
+      background: $is-blue;
+      border-color: lighten($is-blue, 10);
+      color: $is-white;
 
       h2 {
         color: $is-white;
@@ -150,15 +109,9 @@
     }
 
     .tile {
-      &.span6 {
-        background: $is-green;
-        color: $is-white;
-
-        @include small {
-          border-right-color: lighten($is-green, 10);
-        }
-
-      }
+      background: $is-green;
+      border-color: lighten($is-green, 10);
+      color: $is-white;
 
       h2 {
         color: $is-white;
