@@ -27,30 +27,63 @@
   }
 
   .tile {
+    background: $is-linkwater;
+    border: 0px solid darken($is-linkwater, 10);
+    color: $is-blue;
+    margin: 0 0 1em 0;
 
-    &[class*="span"] {
-      background: $is-linkwater;
-      color: $is-blue;
-      margin: 0 0 1em 0;
-      padding: 30px 20px;
-      text-align: center;
+    @include small {
+      border-right-width: 1px;
+      margin-bottom: 0;
+
+      padding-left: percentage(2.5641/2/100);
+      padding-right: percentage(2.5641/2/100);
 
       &:first-child {
-        margin-left: 0;
-      }
-      &:last-child {
-        border-right: 0;
-        margin-bottom: 0;
-        margin-right: 0;
+        padding-left: 0;
       }
 
+      &:last-child {
+        border-right-width: 0;
+        padding-right: 0;
+      }
+
+    }
+
+    &.span12 {}
+
+    &.span6 {
+
+      // padding: 30px 20px;
+      //
+      // &:first-child {
+      //   margin-left: 0;
+      // }
+      // &:last-child {
+      //   border-right: 0;
+      //   margin-bottom: 0;
+      //   margin-right: 0;
+      // }
+      //
+      // @include small {
+      //   margin-left: percentage(2.5641/2/100);
+      //   margin-right: percentage(2.5641/2/100);
+      //   padding: 20px 10px;
+      // }
+
+
+    }
+
+    &.span4 {}
+
+    .tile-content {
+      //background: gray;
+
+
+      text-align: center;
+
       @include small {
-        background: transparent;
-        border-right: 1px solid darken($is-linkwater, 10);
-        margin-bottom: 0;
-        margin-left: percentage(2.5641/2/100);
-        margin-right: percentage(2.5641/2/100);
-        padding: 20px 0;
+
       }
 
     }
@@ -58,6 +91,91 @@
     h2 {
       color: $is-blue;
       margin: 0 0 0.5em 0;
+    }
+  }
+
+  &.adjust-top-portlet-margin {
+    margin-top: -20px; // Same as portlet boundary
+  }
+
+  &.adjust-top-content-margin {
+    margin-top: -$content-padding-top;
+  }
+
+  // Skins
+  // Skin Heavy Blue
+  &.blue-heavy {
+    background: transparent;
+
+    @include small {
+      background: $is-blue;
+    }
+
+    .tile {
+      &.span6 {
+        background: $is-blue;
+        color: $is-white;
+
+        @include small {
+          border-right-color: lighten($is-blue, 10);
+        }
+
+      }
+
+      h2 {
+        color: $is-white;
+      }
+
+      .link-btn {
+        background: transparent;
+        border-color: $is-white;
+        color: $is-white;
+
+        &:hover {
+          background: $is-white;
+          color: $is-blue;
+        }
+
+      }
+
+    }
+  }
+
+  // Skin Heavy Green
+  &.green-heavy {
+    background: transparent;
+
+    @include small {
+      background: $is-green;
+    }
+
+    .tile {
+      &.span6 {
+        background: $is-green;
+        color: $is-white;
+
+        @include small {
+          border-right-color: lighten($is-green, 10);
+        }
+
+      }
+
+      h2 {
+        color: $is-white;
+      }
+
+      .link-btn {
+        background: transparent;
+        border-color: $is-white;
+        color: $is-white;
+
+        &:hover {
+          background: $is-white;
+          color: $is-green;
+        }
+
+      }
+
     }
   }
 

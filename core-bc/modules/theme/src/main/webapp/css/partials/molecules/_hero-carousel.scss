@@ -9,16 +9,25 @@
     padding: 0;
   }
 
+  .portlet-boundary {
+    margin-bottom: 0;
+
+    .journal-content-article {
+      margin-bottom: 0;
+    }
+
+  }
+
 }
 
 .hero-carousel-ctn {
-  margin-bottom: -20px - 30px;// offset portlet-boundary,  + portlet-borderless-bar-padding-top/bottom (2+2) + content 30px
+  margin-bottom: -$content-padding-top;
 
   padding: 0;
   position: relative;
 
   @include small {
-    margin-bottom: -20px - 19px - 30px; // offset portlet-boundary journal-content-article margin bottom (15px) + portlet-borderless-bar-padding-top/bottom (2+2) + content 30px
+    margin-bottom: -$content-padding-top;
   }
 
 
