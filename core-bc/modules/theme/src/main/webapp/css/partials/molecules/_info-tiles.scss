@@ -22,14 +22,14 @@
     padding: 0;
 
     @include small {
-      padding: 30px 20px;
+      padding: 20px 20px;
     }
   }
 
   .tile {
     background: $is-linkwater;
     border: 0px solid darken($is-linkwater, 10);
-    color: $is-blue;
+    color: $is-mineshaft;
     margin: 0 0 1em 0;
 
     @include small {
@@ -48,6 +48,13 @@
         padding-right: 0;
       }
 
+      &:first-child {
+        &:last-child {
+          padding-left: 200px;
+          padding-right: 200px;
+        }
+      }
+
     }
     .tile-content {
       text-align: center;
@@ -57,6 +64,15 @@
       color: $is-blue;
       margin: 0 0 0.5em 0;
     }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .link-btn {}
+
   }
 
   &.adjust-top-portlet-margin {
@@ -125,6 +141,38 @@
         &:hover {
           background: $is-white;
           color: $is-green;
+        }
+
+      }
+
+    }
+  }
+
+  // Skin Heavy Purple
+  &.purple-heavy {
+    background: transparent;
+
+    @include small {
+      background: $is-purple;
+    }
+
+    .tile {
+      background: $is-purple;
+      border-color: lighten($is-purple, 10);
+      color: $is-white;
+
+      h2 {
+        color: $is-white;
+      }
+
+      .link-btn {
+        background: transparent;
+        border-color: $is-white;
+        color: $is-white;
+
+        &:hover {
+          background: $is-white;
+          color: $is-purple;
         }
 
       }

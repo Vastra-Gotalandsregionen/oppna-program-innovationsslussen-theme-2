@@ -65,6 +65,8 @@ body {
 		@import 'partials/molecules/person-list';
 		@import 'partials/molecules/person-listing-rich';
 		@import 'partials/molecules/portlet-navigation';
+		@import 'partials/molecules/project';
+		@import 'partials/molecules/project-listing';
 		@import 'partials/molecules/rp-paging';
 		@import 'partials/molecules/rp-toolbar';
 		@import 'partials/molecules/select-to-dropdown';

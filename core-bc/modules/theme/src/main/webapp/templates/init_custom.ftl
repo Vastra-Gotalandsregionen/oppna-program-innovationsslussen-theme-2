@@ -56,9 +56,11 @@
 
 <#------ Layouts ----------------------------------------------------------------------------------------------------------------->
 
+<#--
 <#if create_idea_friendly_url != "">
 	<#assign add_idea_layout = layoutLocalService.getFriendlyURLLayout(group_id, page.isPrivateLayout(), create_idea_friendly_url) />
 </#if>
+-->
 
 <#------ Permissions Checker ----------------------------------------------------------------------------------------------------------------->
 

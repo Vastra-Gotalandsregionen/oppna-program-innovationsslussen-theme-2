@@ -59,6 +59,7 @@
 			</#list>
 		</#if>
 
+		<#--
 		<#if add_idea_layout?has_content>
 			<li class="add-idea">
           <#assign add_idea_link_css_class = "innovationsslussen-signin-prompt" />
@@ -70,6 +71,7 @@
 				</a>
 			</li>
 		</#if>
+		-->
 
     <#if is_signed_in>
         <li class="logout">

@@ -63,4 +63,16 @@
     }
   }
 
+  &.spot-box-purple {
+    background: $is-purple;
+
+    .link-btn {
+      &:hover {
+        background: $is-white;
+        border-color: $is-white;
+        color: $is-purple;
+      }
+    }
+  }
+
 }
