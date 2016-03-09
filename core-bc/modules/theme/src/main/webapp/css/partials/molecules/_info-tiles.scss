@@ -27,12 +27,13 @@
   }
 
   .tile {
-    background: $is-linkwater;
+    background: transparent;
     border: 0px solid darken($is-linkwater, 10);
     color: $is-mineshaft;
     margin: 0 0 1em 0;
 
     @include small {
+      background: $is-linkwater;
       border-right-width: 1px;
       margin-bottom: 0;
 
@@ -74,13 +75,16 @@
     .link-btn {}
 
   }
+  @include small {
 
-  &.adjust-top-portlet-margin {
-    margin-top: -20px; // Same as portlet boundary
-  }
+    &.adjust-top-portlet-margin {
+      margin-top: -20px; // Same as portlet boundary
+    }
 
-  &.adjust-top-content-margin {
-    margin-top: -$content-padding-top;
+    &.adjust-top-content-margin {
+        margin-top: -$content-padding-top;
+    }
+    
   }
 
   // Skins

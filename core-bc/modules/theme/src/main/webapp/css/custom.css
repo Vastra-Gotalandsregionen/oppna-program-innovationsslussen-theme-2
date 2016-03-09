@@ -43,6 +43,7 @@ body {
 		@import 'partials/atoms/wrapper';
 
 		@import 'partials/molecules/add-this';
+		@import 'partials/molecules/block-navigation';
 		@import 'partials/molecules/comments-form';
 		@import 'partials/molecules/content-box';
 		@import 'partials/molecules/discussions';

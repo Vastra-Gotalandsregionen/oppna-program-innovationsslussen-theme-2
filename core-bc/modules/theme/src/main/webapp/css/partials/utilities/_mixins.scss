@@ -57,7 +57,21 @@
 	}
 }
 
-
+// Icon font
+// --------
+// For making icon fonts with font awesome
+@mixin iconfont($font-size:1.2em) {
+  font-family: 'fontawesome-alloy';
+  speak: none;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-indent: 0;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
 
 
 // Clearfix

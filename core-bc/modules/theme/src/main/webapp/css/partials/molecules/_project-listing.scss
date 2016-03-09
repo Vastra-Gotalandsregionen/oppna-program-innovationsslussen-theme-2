@@ -4,7 +4,12 @@
     @include clearfix();
 
     .entry-item {
+      margin: 2% 0;
       width: 100%;
+
+      &:first-child {
+        margin-top: 0;
+      }
 
       @include small {
         float: left;
@@ -29,6 +34,21 @@
 
       .entry-item-inner {
         border: 1px solid darken($is-linkwater, 5);
+
+        @include small {
+          height: 365px;
+          overflow: hidden;
+        }
+      }
+
+      .image-wrap {
+        overflow: hidden;
+        max-height: 150px;
+        padding: 2px 2px 0 2px;
+
+        img {
+          width: 100%;
+        }
       }
 
       .entry-item-content {
