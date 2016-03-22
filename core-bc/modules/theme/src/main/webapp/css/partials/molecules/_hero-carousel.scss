@@ -2,6 +2,8 @@
 
   margin: 1em 0;
   padding: 0 1em;
+  padding: 0;
+  margin: 0 0 1em 0;
 
 
   @include small {
@@ -125,15 +127,17 @@
   }
 
   .slide {
-
+    background: $is-linkwater;
     margin: 0;
     padding: 0;
     // Use media query with height to control height
     max-height: 300px;
+    min-height: 150px;
     overflow: hidden;
 
     @include small {
-      //height: auto;
+      background: transparent;
+      min-height: inherit;
     }
 
     @include height-small {
@@ -176,8 +180,8 @@
         background: rgba($is-white, 0.8);
         float: none;
         margin: 0 auto;
-        max-width: 250px;
-        padding: 10px;
+        max-width: 310px;
+        padding: 10px 20px;
         text-align: center;
 
         @include small {
@@ -233,6 +237,8 @@
           background: $is-blue;
           border-color: $is-blue;
           color: $is-white;
+          line-height: 1.2;
+          max-width: 80%;
           padding: 0.3em 1.0em;
 
           @include small {
