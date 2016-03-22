@@ -1,15 +1,16 @@
+$navigationWidth: 320px;
 
 .navigation-wrapper {
   background: $is-blue;
   display: block;
   position: fixed;
-  left: -265px;
+  left: -$navigationWidth;
   top: 0;
   padding-top: 0px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   z-index: 2;
-  width: 265px;
+  width: $navigationWidth;
   top: 80px;
 
   @include transition(left 0.3s ease-in-out);

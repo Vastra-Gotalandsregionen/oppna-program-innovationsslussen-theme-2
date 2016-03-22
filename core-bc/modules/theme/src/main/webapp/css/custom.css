@@ -58,6 +58,7 @@ body {
 		@import 'partials/molecules/idea-list';
 		@import 'partials/molecules/idea-msg';
 		@import 'partials/molecules/info-box';
+		@import 'partials/molecules/info-card';
 		@import 'partials/molecules/info-tiles';
 		@import 'partials/molecules/innovationsslussen-dialog';
 		@import 'partials/molecules/main-navigation';

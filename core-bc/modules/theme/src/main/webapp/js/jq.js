@@ -76,6 +76,8 @@ function initStickyNavigation() {
   var navWrapper = $('.navigation-wrapper');
   var navScrolledCssClass = 'navigation-wrapper-scrolled';
   var scrollHeightLimit = $('.banner-nav').height();
+  scrollHeightLimit = scrollHeightLimit*0.7;
+
 
   $(window).scroll(function() {
     if( $(this).scrollTop() > scrollHeightLimit ) {

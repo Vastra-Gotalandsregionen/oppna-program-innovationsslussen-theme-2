@@ -1,0 +1,106 @@
+.info-card {
+  background: $is-white;
+  border: 1px solid $is-blue;
+  color: $is-blue;
+  padding: 15px;
+  @include border-radius(3px);
+
+  a,
+  a:visited {
+    color: $is-blue;
+    text-decoration: underline;
+  }
+
+  h3 {
+    color: $is-blue;
+  }
+
+  .info-card-hd {
+    height: 30px;
+    position: relative;
+
+    .info-card-label {
+      background: $is-blue;
+      color: $is-white;
+      font-size: 1em;
+      margin: 0;
+      padding: 5px 10px;
+      position: absolute;
+      text-transform: uppercase;
+      top: -16px;
+      left: -15px;
+      @include border-radius(3px 0 0 0);
+    }
+  }
+
+  .info-card-bd {
+
+    h3 {
+      font-size: 1.2em;
+      margin: 0 0 0.5em 0;
+    }
+
+    .contact-info {
+      margin: 0.3em 0;
+    }
+
+  }
+
+  // Skin green
+  &.green {
+    border-color: $is-green;
+    color: $is-green;
+
+    a,
+    a:visited {
+      color: $is-green;
+    }
+    h3 {
+      color: $is-green;
+    }
+    .info-card-hd {
+      .info-card-label {
+        background: $is-green;
+      }
+    }
+  }
+
+  // Skin red
+  &.red {
+    border-color: $is-red;
+    color: $is-red;
+
+    a,
+    a:visited {
+      color: $is-red;
+    }
+    h3 {
+      color: $is-red;
+    }
+    .info-card-hd {
+      .info-card-label {
+        background: $is-red;
+      }
+    }
+  }
+
+  // Skin purple
+  &.purple {
+    border-color: $is-purple;
+    color: $is-purple;
+
+    a,
+    a:visited {
+      color: $is-purple;
+    }
+    h3 {
+      color: $is-purple;
+    }
+    .info-card-hd {
+      .info-card-label {
+        background: $is-purple;
+      }
+    }
+  }
+
+}
