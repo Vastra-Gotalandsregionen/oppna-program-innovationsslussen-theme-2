@@ -114,4 +114,14 @@
       border: none;
   }
 
+  &.twitter-listing {
+    .twitter-iframe-wrap {
+      padding: 0 2em 0 0;
+
+      @include small {
+        padding: 0;
+      }
+    }
+  }
+
 }

@@ -44,6 +44,10 @@
         padding-right: 0.5em;
       }
 
+      &.ico-default a span:before {
+        content: $content-hand-right;
+      }
+
       &.ico-play a span:before {
         content: $content-play;
       }

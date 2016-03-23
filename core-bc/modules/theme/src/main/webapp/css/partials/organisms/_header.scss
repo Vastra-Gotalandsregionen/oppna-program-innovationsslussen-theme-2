@@ -9,7 +9,7 @@
     height: 80px;
     margin: 0;
     overflow: hidden;
-    padding: 0 1em;
+    padding: 0 0.5em;
 
     .heading-inner {
       padding: 1.3em 0;
@@ -39,14 +39,20 @@
       overflow: hidden;
       position: relative;
       width: 203px;
+      width: 297px;
 
       a {
         background: transparent url(../images/theme/logo/logo-vgr-innovationsslussen.png) 0 -50px no-repeat;
+
+        background: transparent url(../images/theme/logo/logo.png) 0 -47px no-repeat;
+
         display: block;
         font-size: 0;
         height: 24px;
+        height: 25px;
         text-indent: -9999em;
         width: 203px;
+        width: 297px;
       }
 
       @include small {
@@ -55,11 +61,13 @@
         margin: 0;
         height: 41px;
         width: 410px;
+        width: 460px;
 
         a {
           background-position: 0 0;
           height: 72px;
           width: 410px;
+          width: 460px;
         }
       }
 

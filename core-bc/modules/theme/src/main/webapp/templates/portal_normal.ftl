@@ -12,6 +12,8 @@
 
 	<script type="text/javascript" src="${javascript_folder}/pojs.js"></script>
 
+	<#include "${full_templates_path}/twitter.ftl" />
+
 	<script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
 	<link href="https://code.google.com/apis/maps/documentation/javascript/examples/standard.css" rel="stylesheet" type="text/css" />
 	<link href='//fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
@@ -40,7 +42,7 @@ ${theme.include(body_top_include)}
 
 						<div class="heading-inner">
 							<h1 class="site-title">
-								<a class="" href="${site_default_url}">
+								<a class="" href="${url_site_home}">
 									${site_name}
 								</a>
 							</h1>

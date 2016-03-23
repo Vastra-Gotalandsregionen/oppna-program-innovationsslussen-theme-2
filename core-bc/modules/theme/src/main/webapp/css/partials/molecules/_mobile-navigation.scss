@@ -1,6 +1,5 @@
 #navigationTrigger {
 
-  //display: none;
   display: block;
   visibility: hidden;
 
@@ -21,7 +20,7 @@
   @include border-radius(4px);
 	border: 1px solid shade($is-blue, 20%);
 	color: $is-white;
-	float: left;
+	float: right;
 	font-size: 1.3em;
 	font-weight: normal;
 	line-height: 1.0;

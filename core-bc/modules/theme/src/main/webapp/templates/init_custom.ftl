@@ -8,6 +8,7 @@
 
 <#assign expandoValueLocalService = serviceLocator.findService("com.liferay.portlet.expando.service.ExpandoValueLocalService") />
 <#assign layoutLocalService = serviceLocator.findService("com.liferay.portal.service.LayoutLocalService") />
+<#assign layoutSetLocalService = serviceLocator.findService("com.liferay.portal.service.LayoutSetLocalService") />
 <#assign journalArticleLocalService = serviceLocator.findService("com.liferay.portlet.journal.service.JournalArticleLocalService") />
 
 <#assign portletItemLocalService = serviceLocator.findService("com.liferay.portal.service.PortletItemLocalService") />
@@ -53,6 +54,27 @@
 	<#assign show_hero = false />
 </#if>
 
+<#------ Virtual Host ----------------------------------------------------------------------------------------------------------------->
+
+<#assign hasPublicSiteVirtualHost =  false />
+<#assign publicSiteLayoutSet =  layoutSetLocalService.getLayoutSet(group_id, false) />
+
+<#if publicSiteLayoutSet.getVirtualHostname() != "">
+	<#assign hasPublicSiteVirtualHost =  true />
+</#if>
+
+<#------ URL prefix ----------------------------------------------------------------------------------------------------------------->
+
+<#assign url_prefix_public = "/" />
+
+<#if !hasPublicSiteVirtualHost>
+	<#assign url_prefix_public =  "/web" />
+	<#assign url_prefix_public =  url_prefix_public + page_group.getFriendlyURL() />
+</#if>
+
+<#------ Home URL ----------------------------------------------------------------------------------------------------------------->
+
+<#assign url_site_home = url_prefix_public />
 
 <#------ Layouts ----------------------------------------------------------------------------------------------------------------->
 
@@ -118,6 +140,5 @@
 
 		${theme.runtime(portlet_id, "", freeMarkerPortletPreferences)}
 		${freeMarkerPortletPreferences.reset()}
-
 
 </#macro>

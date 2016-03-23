@@ -134,6 +134,7 @@
     max-height: 300px;
     min-height: 150px;
     overflow: hidden;
+    position: relative;
 
     @include small {
       background: transparent;
@@ -153,26 +154,33 @@
     }
 
     img {
-      vertical-align: middle;
-      z-index: 1;
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
       width: 100%;
+      z-index: 1;
+
+      @include small {
+        position: static;
+      }
     }
 
     .content-area-wrap {
-
       position: absolute;
-      bottom: 10px;
+      top: 20px;
       width: 100%;
       z-index: 2;
 
       @include small {
         bottom: 30px;
+        top: auto;
       }
 
       @include height-small {
         bottom: 0;
         @include small {
-          bottom: 50px;
+          bottom: 30px;
         }
       }
 

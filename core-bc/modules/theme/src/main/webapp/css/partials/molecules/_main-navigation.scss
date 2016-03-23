@@ -4,7 +4,8 @@ $navigationWidth: 320px;
   background: $is-blue;
   display: block;
   position: fixed;
-  left: -$navigationWidth;
+  right: -$navigationWidth;
+  right: -100%;
   top: 0;
   padding-top: 0px;
   overflow-y: auto;
@@ -12,8 +13,9 @@ $navigationWidth: 320px;
   z-index: 2;
   width: $navigationWidth;
   top: 80px;
+  width: 100%;
 
-  @include transition(left 0.3s ease-in-out);
+  @include transition(right 0.3s ease-in-out);
 
   #navigation {
     background: transparent;
@@ -193,7 +195,7 @@ $navigationWidth: 320px;
     height: auto;
     padding-top: 0;
     position: relative;
-    left: auto;
+    right: auto;
     top: auto;
     width: auto;
     z-index: 1;
@@ -429,6 +431,7 @@ $navigationWidth: 320px;
       margin-bottom: 100px;
 
       #heading {
+        box-sizing: border-box;
         position: fixed;
         top: 0;
         left: 0;
@@ -437,7 +440,7 @@ $navigationWidth: 320px;
       }
 
       .navigation-wrapper {
-        left: 0;
+        right: 0;
       }
 
     }

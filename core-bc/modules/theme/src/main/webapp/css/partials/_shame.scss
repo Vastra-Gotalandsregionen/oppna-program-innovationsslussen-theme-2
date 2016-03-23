@@ -17,56 +17,15 @@
 // http://csswizardry.com/2013/04/shame-css/
 // --------
 
-// Hide "Add new" button on Asset Publisher
-// --------
-.add-asset-selector {
-	//display: none;
-}
+// Hide background for portlet-borderless-bar
 
-// Hides the portlet titles
-// --------
-.aui {
-	/*
+.signed-out,
+.signed-in.controls-hidden {
 
-	.portlet-title {
-		display: none;
-	}
-
-	header.portlet-topper,
-	.portlet-topper {
-		display: none;
-	}
-
-	.signed-in.page-edit.controls-visible .portlet-topper {
-		display: block !important;
-
-		.portlet-title {
-			display: block !important;
-		}
-	}
-	*/
-
-	// If administrator is setting custom css-class '.show-title' on portlet. Make sure it's visible
-	.show-title {
-		.portlet-title {
-			display: block !important;
+		.portlet-borderless-bar{
+			background: transparent;
 		}
 
-		.portlet-topper {
-			display: block !important;
-		}
-	}
-
-	.portlet-site-map,
-	.portlet-sites-directory {
-		.portlet-title {
-			display: block !important;
-		}
-
-		.portlet-topper {
-			display: block !important;
-		}
-	}
 }
 
 // For some reason, this image does not exist in the _styled theme

@@ -76,3 +76,13 @@
   }
 
 }
+
+// When on 50-50 layout
+
+.span6 {
+  .spot-box {
+    @include small {
+      padding: 30px 60px;  
+    }
+  }
+}
