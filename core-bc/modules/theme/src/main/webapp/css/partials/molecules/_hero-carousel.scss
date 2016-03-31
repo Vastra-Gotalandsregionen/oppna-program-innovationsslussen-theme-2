@@ -169,7 +169,7 @@
 
     .content-area-wrap {
       position: absolute;
-      top: 20px;
+      bottom: 10px;
       width: 100%;
       z-index: 2;
 
@@ -189,7 +189,7 @@
         background: rgba($is-white, 0.8);
         float: none;
         margin: 0 auto;
-        max-width: 310px;
+        max-width: 220px;
         padding: 10px 20px;
         text-align: center;
 
