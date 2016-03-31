@@ -1,12 +1,24 @@
 @import 'compass/typography/vertical_rhythm';
 
-@each $value in $font-list {
+@each $value in $font-list-small {
   #{nth($value, 1)} {
 	  	@include adjust-font-size-to(nth($value, 2));
 	    font-weight: nth($value, 3);
 	    letter-spacing: nth($value, 4);
 	    color: nth($value, 5);
     }
+
+}
+
+@include small {
+  @each $value in $font-list {
+    #{nth($value, 1)} {
+  	  	@include adjust-font-size-to(nth($value, 2));
+  	    font-weight: nth($value, 3);
+  	    letter-spacing: nth($value, 4);
+  	    color: nth($value, 5);
+      }
+  }
 }
 
 h1 {

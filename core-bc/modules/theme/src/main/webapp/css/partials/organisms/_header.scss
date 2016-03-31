@@ -38,21 +38,15 @@
       margin: 10px 0 0 10px;
       overflow: hidden;
       position: relative;
-      width: 203px;
-      width: 297px;
+      width: 237px;
 
       a {
-        background: transparent url(../images/theme/logo/logo-vgr-innovationsslussen.png) 0 -50px no-repeat;
-
         background: transparent url(../images/theme/logo/logo.png) 0 -47px no-repeat;
-
         display: block;
         font-size: 0;
-        height: 24px;
         height: 25px;
         text-indent: -9999em;
-        width: 203px;
-        width: 297px;
+        width: 237px;
       }
 
       @include small {
@@ -60,13 +54,11 @@
         float: left;
         margin: 0;
         height: 41px;
-        width: 410px;
         width: 460px;
 
         a {
           background-position: 0 0;
           height: 72px;
-          width: 410px;
           width: 460px;
         }
       }
