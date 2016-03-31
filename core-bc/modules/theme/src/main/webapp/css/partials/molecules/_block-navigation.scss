@@ -10,9 +10,14 @@
         background: $is-linkwater;
         display: block;
         color: $is-blue;
-        font-size: 1.1em;
-        padding: 1em;
+        font-size: 1.0em;
+        padding: 0.7em;
         text-decoration: none;
+
+        @include small {
+          font-size: 1.1em;
+          padding: 1em;
+        }
 
         span {
 
