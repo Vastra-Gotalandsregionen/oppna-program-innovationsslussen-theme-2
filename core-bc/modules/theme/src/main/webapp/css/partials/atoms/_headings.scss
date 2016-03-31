@@ -2,10 +2,10 @@
 
 @each $value in $font-list-small {
   #{nth($value, 1)} {
-	  	@include adjust-font-size-to(nth($value, 2));
+	  	@include adjust-font-size-to(nth($value, 2), 1.3);
+      color: nth($value, 5);
 	    font-weight: nth($value, 3);
 	    letter-spacing: nth($value, 4);
-	    color: nth($value, 5);
     }
 
 }
