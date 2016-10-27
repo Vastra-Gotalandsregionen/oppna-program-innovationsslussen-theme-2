@@ -1,0 +1,34 @@
+.link-icon {
+
+  display: inline-block;
+
+  &.link-icon-left:before {
+    @include iconfont();
+    content: $content-file-o;
+    padding-right: 0.4em;
+  }
+
+  &.link-icon-pdf:before {
+    content: $content-pdf-o;
+  }
+
+  &.link-icon-doc:before,
+  &.link-icon-docx:before {
+    content: $content-word-o;
+  }
+
+  &.link-icon-xls:before,
+  &.link-icon-xlsx:before {
+    content: $content-excel-o;
+  }
+
+  &.link-icon-ppt:before,
+  &.link-icon-pptx:before {
+    content: $content-powerpoint-o;
+  }
+
+  &.link-icon-txt:before {
+    content: $content-text-o;
+  }
+
+}

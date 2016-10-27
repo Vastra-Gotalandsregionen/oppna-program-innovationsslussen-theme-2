@@ -1,0 +1,12 @@
+.iframe-content-wrap {
+  iframe {
+    width: 100%;
+  }
+
+  &.iframe-content-wrap-application {
+      iframe {
+        border-top: 40px solid #eaeaea; // Color should match bg color in iFrame (Barium)
+      }
+  }
+
+}

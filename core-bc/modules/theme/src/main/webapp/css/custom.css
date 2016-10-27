@@ -12,6 +12,9 @@
 
 @include establish-baseline; //Uses variables $base-font-size & $base-line-height
 
+// Import font awesome since Liferay's version is old.
+@import 'partials/utilities/font-awesome';
+
 body {
 	font-weight: $base-font-weight;
 	-webkit-font-smoothing: antialiased;
@@ -48,6 +51,7 @@ body {
 		@import 'partials/molecules/content-box';
 		@import 'partials/molecules/discussions';
     @import 'partials/molecules/dockbar';
+		@import 'partials/molecules/document-list';
 		@import 'partials/molecules/event';
 		@import 'partials/molecules/event-listing';
 		@import 'partials/molecules/faq';
@@ -57,10 +61,12 @@ body {
 		@import 'partials/molecules/idea-flow';
 		@import 'partials/molecules/idea-list';
 		@import 'partials/molecules/idea-msg';
+		@import 'partials/molecules/iframe-content';
 		@import 'partials/molecules/info-box';
 		@import 'partials/molecules/info-card';
 		@import 'partials/molecules/info-tiles';
 		@import 'partials/molecules/innovationsslussen-dialog';
+		@import 'partials/molecules/link-icon';
 		@import 'partials/molecules/main-navigation';
 		@import 'partials/molecules/map';
 		@import 'partials/molecules/mobile-navigation';
