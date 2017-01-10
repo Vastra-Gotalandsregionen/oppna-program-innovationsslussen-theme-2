@@ -1,0 +1,75 @@
+.block-navigation {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 10px 0;
+      padding: 0;
+      a {
+        background: $is-linkwater;
+        display: block;
+        color: $is-blue;
+        font-size: 1.0em;
+        padding: 0.7em;
+        text-decoration: none;
+
+        @include small {
+          font-size: 1.1em;
+          padding: 1em;
+        }
+
+        span {
+
+          display: inline-block;
+
+          &:after {
+            @include iconfont(0.9em);
+            content: $content-chevron-right;
+            padding-left: 0.2em;
+          }
+        }
+
+        &:hover {
+          background: darken($is-linkwater, 10);
+        }
+
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.ico a span:before {
+        @include iconfont(1.2em);
+        padding-right: 0.5em;
+      }
+
+      &.ico-default a span:before {
+        content: $content-hand-right;
+      }
+
+      &.ico-play a span:before {
+        content: $content-play;
+      }
+
+      &.ico-bulb a span:before {
+        content: $content-bulb;
+      }
+
+      &.ico-envelope a span:before {
+        content: $content-envelope;
+      }
+
+      &.ico-phone a span:before {
+        content: $content-phone;
+      }
+
+
+    }
+  }
+}

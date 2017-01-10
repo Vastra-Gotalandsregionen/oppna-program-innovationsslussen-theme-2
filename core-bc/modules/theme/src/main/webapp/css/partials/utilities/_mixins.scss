@@ -29,6 +29,52 @@
   }
 }
 
+
+
+
+
+@mixin height-xsmall {
+  @media screen and (min-height : $bp-height-xsmall) {
+    @content;
+  }
+}
+
+@mixin height-small {
+	@media screen and (min-height : $bp-height-small) {
+		@content;
+	}
+}
+
+@mixin height-medium {
+	@media screen and (min-height : $bp-height-medium) {
+		@content;
+	}
+}
+
+@mixin height-large {
+	@media screen and (min-height : $bp-height-large) {
+		@content;
+	}
+}
+
+// Icon font
+// --------
+// For making icon fonts with font awesome
+@mixin iconfont($font-size:1.2em) {
+  //font-family: 'fontawesome-alloy';
+  font-family: 'FontAwesome';
+  speak: none;
+  font-size: $font-size;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-indent: 0;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+
 // Clearfix
 // --------
 // For clearing floats like a boss h5bp.com/q
@@ -63,9 +109,9 @@
 }
 
 
-// Edge to edge. 
+// Edge to edge.
 // Used if we want to put background color edge to edge of the screen, even
-// to the left/right of the grid, without having to close the grid. 
+// to the left/right of the grid, without having to close the grid.
 // Most commonly used together with background-color.
 // --------
 %edgetoedge {
@@ -128,7 +174,7 @@
 // Underline. For creating beautiful underlining (commonly of links)
 // Read more https://github.com/Team-Sass/toolkit
 // --------
-@mixin underline($background: #fff, $color: #000, $clear-descenders: true, $distance: 1, $width: 2, $extend: false) {
+@mixin underline($background: $is-white, $color: $is-black, $clear-descenders: true, $distance: 1, $width: 2, $extend: false) {
 
   $px: .0625em;
 
@@ -164,3 +210,47 @@
   }
 }
 
+
+// Animation
+// Read more http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
+// --------
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+@include keyframes(fade-in) {
+  0% { opacity: 0; }
+  90% { opacity: 1; }
+}
+
+
+
+
+// Fade in on hover
+// Time is optional
+@mixin hover-fade-in ($time:$default-transition-time) {
+  @include transition(background #{$time} ease);
+}

@@ -1,0 +1,188 @@
+.info-tiles-wrap {
+  background: transparent;
+
+  @include small {
+    background: $is-linkwater;
+  }
+
+
+  @include small {
+    overflow-x: hidden;//needed to make edgetoedge work
+
+    // edgetoedge seems not to work properly when included in macro.
+    // adding settings manually instead
+    margin-left: -9999px;
+    padding-left: 9999px;
+    margin-right: -9999px;
+    padding-right: 9999px;
+
+  }
+
+  .info-tiles-ctn {
+    padding: 0;
+
+    @include small {
+      padding: 20px 20px;
+    }
+  }
+
+  .tile {
+    background: transparent;
+    border: 0px solid darken($is-linkwater, 10);
+    color: $is-mineshaft;
+    margin: 0 0 1em 0;
+
+    @include small {
+      background: $is-linkwater;
+      border-right-width: 1px;
+      margin-bottom: 0;
+
+      padding-left: percentage(2.5641/2/100);
+      padding-right: percentage(2.5641/2/100);
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right-width: 0;
+        padding-right: 0;
+      }
+
+      &:first-child {
+        &:last-child {
+          padding-left: 200px;
+          padding-right: 200px;
+        }
+      }
+
+    }
+    .tile-content {
+      text-align: center;
+    }
+
+    h2 {
+      color: $is-blue;
+      margin: 0 0 0.5em 0;
+    }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .link-btn {}
+
+  }
+  @include small {
+
+    &.adjust-top-portlet-margin {
+      margin-top: -20px; // Same as portlet boundary
+    }
+
+    &.adjust-top-content-margin {
+        margin-top: -$content-padding-top;
+    }
+
+  }
+
+  // Skins
+  // Skin Heavy Blue
+  &.blue-heavy {
+    background: transparent;
+
+    @include small {
+      background: $is-blue;
+    }
+
+    .tile {
+      background: $is-blue;
+      border-color: lighten($is-blue, 10);
+      color: $is-white;
+
+      h2 {
+        color: $is-white;
+      }
+
+      .link-btn {
+        background: transparent;
+        border-color: $is-white;
+        color: $is-white;
+
+        &:hover {
+          background: $is-white;
+          color: $is-blue;
+        }
+
+      }
+
+    }
+  }
+
+  // Skin Heavy Green
+  &.green-heavy {
+    background: transparent;
+
+    @include small {
+      background: $is-green;
+    }
+
+    .tile {
+      background: $is-green;
+      border-color: lighten($is-green, 10);
+      color: $is-white;
+
+      h2 {
+        color: $is-white;
+      }
+
+      .link-btn {
+        background: transparent;
+        border-color: $is-white;
+        color: $is-white;
+
+        &:hover {
+          background: $is-white;
+          color: $is-green;
+        }
+
+      }
+
+    }
+  }
+
+  // Skin Heavy Purple
+  &.purple-heavy {
+    background: transparent;
+
+    @include small {
+      background: $is-purple;
+    }
+
+    .tile {
+      background: $is-purple;
+      border-color: lighten($is-purple, 10);
+      color: $is-white;
+
+      h2 {
+        color: $is-white;
+      }
+
+      .link-btn {
+        background: transparent;
+        border-color: $is-white;
+        color: $is-white;
+
+        &:hover {
+          background: $is-white;
+          color: $is-purple;
+        }
+
+      }
+
+    }
+  }
+
+
+}

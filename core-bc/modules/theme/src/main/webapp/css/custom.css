@@ -2,12 +2,18 @@
 @import url(//fonts.googleapis.com/css?family=Lato);
 
 // Vendor
-// --------
+// ---------
 @import 'compass';
 @import 'compass/typography/vertical_rhythm';
 @import 'partials/utilities/variables';
 
+// Liferay
+@import "mixins";
+
 @include establish-baseline; //Uses variables $base-font-size & $base-line-height
+
+// Import font awesome since Liferay's version is old.
+@import 'partials/utilities/font-awesome';
 
 body {
 	font-weight: $base-font-weight;
@@ -26,39 +32,64 @@ body {
     @import 'partials/utilities/portlet-overrides';
 
     @import 'partials/atoms/paragraphs';
+		@import 'partials/atoms/buttons';
+		@import 'partials/atoms/container';
     @import 'partials/atoms/headings';
+		@import 'partials/atoms/intro';
     @import 'partials/atoms/links';
+		@import 'partials/atoms/link-btn';
     @import 'partials/atoms/lists';
     @import 'partials/atoms/inputs';
     @import 'partials/atoms/images';
     @import 'partials/atoms/quotes';
     @import 'partials/atoms/tokens';
+		@import 'partials/atoms/wrapper';
 
 		@import 'partials/molecules/add-this';
-		@import 'partials/molecules/banner-communicate';
-		@import 'partials/molecules/blogs-portlet';
+		@import 'partials/molecules/block-navigation';
 		@import 'partials/molecules/comments-form';
+		@import 'partials/molecules/content-box';
+		@import 'partials/molecules/discussions';
     @import 'partials/molecules/dockbar';
+		@import 'partials/molecules/document-list';
+		@import 'partials/molecules/event';
+		@import 'partials/molecules/event-listing';
 		@import 'partials/molecules/faq';
+		@import 'partials/molecules/hero-carousel';
 		@import 'partials/molecules/idea-comments';
 		@import 'partials/molecules/idea-filters';
 		@import 'partials/molecules/idea-flow';
 		@import 'partials/molecules/idea-list';
 		@import 'partials/molecules/idea-msg';
+		@import 'partials/molecules/iframe-content';
 		@import 'partials/molecules/info-box';
+		@import 'partials/molecules/info-card';
+		@import 'partials/molecules/info-tiles';
 		@import 'partials/molecules/innovationsslussen-dialog';
+		@import 'partials/molecules/link-icon';
 		@import 'partials/molecules/main-navigation';
+		@import 'partials/molecules/map';
 		@import 'partials/molecules/mobile-navigation';
 		@import 'partials/molecules/person-list';
-		@import 'partials/molecules/puff-box';
-		@import 'partials/molecules/rp-button';
+		@import 'partials/molecules/person-listing-rich';
+		@import 'partials/molecules/portlet-navigation';
+		@import 'partials/molecules/project';
+		@import 'partials/molecules/project-listing';
 		@import 'partials/molecules/rp-paging';
 		@import 'partials/molecules/rp-toolbar';
 		@import 'partials/molecules/select-to-dropdown';
+		@import 'partials/molecules/spot-box';
+		@import 'partials/molecules/teaser-blocks';
 		@import 'partials/molecules/top-navigation';
 		@import 'partials/molecules/vgr-boxed-content';
 		@import 'partials/molecules/vgr-list-view';
+		@import 'partials/molecules/youtube-portlet';
 
+		@import 'partials/molecules/owl-carousel';
+		@import 'partials/molecules/owl-theme';
+
+		@import 'partials/organisms/blogs-portlet';
+		@import 'partials/organisms/content';
 		@import 'partials/organisms/create-idea';
     @import 'partials/organisms/sticky-footer';
     @import 'partials/organisms/footer';

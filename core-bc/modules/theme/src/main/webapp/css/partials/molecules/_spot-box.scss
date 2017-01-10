@@ -1,0 +1,88 @@
+.spot-box {
+  background: $is-blue;
+  padding: 15px;
+  text-align: center;
+  @include border-radius(3px);
+
+  h3 {
+    color: $is-white;
+    margin: 0 0 3px 0;
+  }
+
+  p {
+    color: $is-white;
+    margin: 0 0 15px 0;
+  }
+
+  .link-btn {
+    background: transparent;
+    border-color: $is-white;
+    color: $is-white;
+
+    &:hover {
+      background: $is-white;
+      border-color: $is-white;
+      color: $is-blue;
+    }
+  }
+
+  &.spot-box-blue {
+    background: $is-blue;
+
+    .link-btn {
+      &:hover {
+        background: $is-white;
+        border-color: $is-white;
+        color: $is-blue;
+      }
+    }
+
+  }
+
+  &.spot-box-green {
+    background: $is-green;
+
+    .link-btn {
+      &:hover {
+        background: $is-white;
+        border-color: $is-white;
+        color: $is-green;
+      }
+    }
+  }
+
+  &.spot-box-red {
+    background: $is-red;
+
+    .link-btn {
+      &:hover {
+        background: $is-white;
+        border-color: $is-white;
+        color: $is-red;
+      }
+    }
+  }
+
+  &.spot-box-purple {
+    background: $is-purple;
+
+    .link-btn {
+      &:hover {
+        background: $is-white;
+        border-color: $is-white;
+        color: $is-purple;
+      }
+    }
+  }
+
+}
+
+// When on 50-50 layout
+
+.span6 {
+  .spot-box {
+    @include small {
+      padding: 30px 60px;  
+    }
+  }
+}

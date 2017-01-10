@@ -1,8 +1,150 @@
 // User image blows up in mobile view
-.dockbar {
+.dockbar-split {
+	.dockbar {
 
-	ul.nav-account-controls {
-		background: #333;
+		.navbar-inner {
+			.nav-account-controls {
+				right: 2em;
+			}
+		}
+
+		.nav {
+
+			> li {
+
+				> a {
+					line-height: 1.0;
+					padding: 2px 10px 2px;
+				}
+
+				&.dockbar-user-notifications {
+					a {
+						padding-top: 3px;
+						padding-bottom: 3px;
+
+						.user-notifications-count {
+							line-height: 1.0;
+							margin: 1px 0;
+						}
+
+					}
+				}
+
+			}
+
+		}
+
+		.user-avatar-image {
+			display: none;
+
+			@include medium {
+				display: inherit;
+			}
+		}
+
+	}
+}
+
+.navbar-fixed-top,
+.navbar-static-top {
+
+	.navbar-inner {
+		background: $is-tundora;
+		border: none;
+		color: $is-white;
+		font-size: 0.9em;
+		min-height: 30px;
+
+		@include box-shadow(none);
+
+	}
+
+	.btn-navbar {
+		background: transparent;
+
+		@include box-shadow(none);
+		@include text-shadow(none);
+	}
+
+	.divider-vertical {
+		display: none;
+	}
+
+	.nav {
+		> li {
+
+			//line-height: 1;
+
+			> a,
+			> a:visited {
+				color: $is-white;
+				padding: 5px 10px;
+				@include text-shadow(none);
+
+				&:hover {
+					background: $is-white;
+					color: $is-tundora;
+					text-decoration: none;
+
+					span {
+						text-decoration: underline;
+						text-decoration: none;
+					}
+				}
+
+			}
+		}
+
+	}
+
+}
+
+/*
+*/
+.navbar-fixed-top,
+.navbar-static-top {
+
+	.navbar-inner {
+		background: $is-white;
+		color: $is-tundora;
+		border-bottom: 1px solid $is-mineshaft;
+	}
+
+	.nav {
+		> li {
+			> a,
+			> a:visited {
+				color: $is-tundora;
+
+				&:hover {
+					background: $is-tundora;
+					color: $is-white;
+				}
+
+			}
+		}
+
+		.dockbar-user-notifications {
+			//display: none;
+			a.user-notification-link,
+			a.user-notification-link:visited {
+				color: $is-white;
+			}
+		}
+
+	}
+
+	.user-avatar-image {
+		//display: none;
+		max-width: 24px;
+		height: 24px;
+		width: auto;
+
+		@include medium {
+			display: inherit;
+			height: auto;
+			max-width: 100%;
+		}
 	}
 
 }

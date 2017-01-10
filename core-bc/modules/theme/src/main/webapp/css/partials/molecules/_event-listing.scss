@@ -1,0 +1,96 @@
+.event-listing {
+
+  .entry-item {
+    border: 1px solid shade($is-linkwater, 10);
+    margin: 0 0 10px 0;
+    padding: 10px;
+    @include border-radius(3px);
+
+    @include small {
+      margin: 0 0 20px 0;
+      padding: 20px;
+    }
+
+  }
+
+  .entry-title {
+    font-size: 1.3em;
+    margin: 0;
+
+    @include small {
+      font-size: 1.4em;
+    }
+
+    a {
+      color: $is-tundora;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .meta-wrap {
+
+    margin: 5px 0;
+    padding: 5px 0;
+
+    .meta-item {
+      border-right: 1px solid shade($is-linkwater, 10);
+      display: inline-block;
+      margin: 3px 0;
+      padding: 3px 10px;
+
+      i {
+        color: $is-blue;
+      }
+
+      &:first-child {
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+  }
+
+  .entry-teaser {
+
+    margin: 5px 0 0 0;
+    padding: 5px 0 0 0;
+
+    @include small {
+      margin: 10px 0 0 0;
+      padding: 10px 0 0 0;
+    }
+
+    @include clearfix();
+
+    .entry-summary {
+      margin-bottom: 1em;
+    }
+
+    .entry-readmore {
+      text-align: center;
+    }
+
+    @include small {
+      .entry-summary {
+        float: left;
+        margin-bottom: 0;
+        width: 70%;
+      }
+
+      .entry-readmore {
+        float: right;
+        text-align: right;
+        width: 25%;
+      }
+    }
+
+
+  }
+
+}

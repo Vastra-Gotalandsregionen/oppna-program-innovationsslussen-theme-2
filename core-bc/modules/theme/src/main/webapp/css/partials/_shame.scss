@@ -17,53 +17,15 @@
 // http://csswizardry.com/2013/04/shame-css/
 // --------
 
-// Hide "Add new" button on Asset Publisher
-// --------
-.add-asset-selector {
-	//display: none;
-}
+// Hide background for portlet-borderless-bar
 
-// Hides the portlet titles
-// --------
-.aui {
-	/*.portlet-title {
-		display: none;
-	}
+.signed-out,
+.signed-in.controls-hidden {
 
-	header.portlet-topper,
-	.portlet-topper {
-		display: none;
-	}
-
-	.signed-in.page-edit.controls-visible .portlet-topper {
-		display: block !important;
-
-		.portlet-title {
-			display: block !important;
-		}
-	}*/
-
-	// If administrator is setting custom css-class '.show-title' on portlet. Make sure it's visible
-	.show-title {
-		.portlet-title {
-			display: block !important;
+		.portlet-borderless-bar{
+			background: transparent;
 		}
 
-		.portlet-topper {
-			display: block !important;
-		}
-	}
-
-	.portlet-site-map,
-	.portlet-sites-directory {
-		.portlet-title {
-			display: block !important;
-		}
-
-		.portlet-topper {
-			display: block !important;
-		}
-	}
 }
 
 // For some reason, this image does not exist in the _styled theme
@@ -110,55 +72,6 @@ body>.alert {
 // Navigation List styled as nav portlet.
 // --------
 
-.aui {
-
-  .nav-menu {
-    margin: 0;
-    width: 250px;
-
-    h2 {
-      margin-bottom: 0;
-
-      a {
-        background: #2f6ea1 url(../images/theme/navigation/navigation-bg-normal.png) top left repeat-x;
-        -moz-border-radius: 3px 3px 0 0;
-        -webkit-border-radius: 3px 3px 0 0;
-        border-radius: 3px 3px 0 0;
-        color: #fff;
-        display: block;
-        font-size: 1.0em;
-        margin: 0;
-        padding: 7px 15px;
-        text-decoration: none;
-      }
-    }
-
-    ul {
-      list-style: none;
-      background: #fff;
-      border: 1px solid #e5e2db;
-      -moz-border-radius: 0 0 3px 3px;
-      -webkit-border-radius: 0 0 3px 3px;
-      border-radius: 0 0 3px 3px;
-      margin: 0;
-      padding: 0;
-
-      li {
-        border-bottom: 1px solid #eee;
-        margin: 0;
-        padding: 0;
-
-        a {
-          display: block;
-          margin: 0;
-          padding: 7px 15px;
-        }
-      }
-    }
-  }
-
-}
-
 // To get "Visa fler nyheter" closer to the blogs aggregator
 .journal-content-article .blogs-show-more {
   margin: -50px 0 20px 0;
@@ -185,28 +98,5 @@ body>.alert {
     max-width: 1100px;
     width: 90%;
   }
-
-  .banner-communicate {
-    background: #3073a7 url(../images/theme/articles/banner-communicate-bg.png) top left repeat-x;
-    border: 1px solid #265a84;
-
-    .banner-communicate-view-wrap {
-      padding: 30px;
-      position: relative;
-
-      .banner-communicate-layout {
-        display: block;
-
-        .banner-communicate-column-1 {
-          display: block;
-        }
-      }
-
-      .back-link-wrap .action-link {
-        color: #fff;
-      }
-    }
-  }
-
 
 }

@@ -3,35 +3,47 @@
 	margin: 0;
 	padding: 0;
 
+	@include clearfix();
+
   > li {
-    display: -moz-inline-stack;
-    display: inline-block;
 		line-height: 1.1;
     list-style: none;
     margin: 0;
     min-width: 230px;
     padding: 0;
     vertical-align: top;
-    width: 32.55%;
+
+		width: 100%;
+
+		@include small {
+			display: block;
+			float: left;
+			width: 33.32%;
+		}
 
     .idea-item {
-      background: url(../images/theme/bg/box-shadow-24.png) bottom center no-repeat;
-      margin: 0 5% 0 0;
+      margin: 0;
       padding-bottom: 5%;
+			position: relative;
+
+			@include small {
+				margin-right: 5%;
+			}
 
       a {
-        background: #3583bf;
+        background: $is-blue;
         border: 0;
         @include border-radius(3px);
-        color: #555;
+        color: $is-emperor;
         display: block;
         margin: 0;
         padding: 3px;
         position: relative;
         text-decoration: none;
+				@include transition(all 0.3s ease-in-out);
 
         .idea-content {
-          background: #fff;
+          background: $is-white;
           @include border-radius(3px);
           height: 120px;
           overflow: hidden;
@@ -39,15 +51,15 @@
 
           .idea-content-1,
           .idea-content-2 {
-            background: #fff;
+            background: $is-white;
             height: 100%;
             left: 0;
             position: absolute;
             top: 0;
             padding: 10px;
             padding: 0;
-            transition: opacity .25s;
             width: 100%;
+            @include transition(all 0.3s ease-in-out);
           }
 
           .idea-content-1 {
@@ -56,7 +68,7 @@
           }
 
           .idea-content-2 {
-            background: #fcfcfc;
+            //background: $is-linkwater;
             filter: alpha(opacity=0);
             opacity: 0;
           }
@@ -66,7 +78,7 @@
           }
 
           h3 {
-            color: #555;
+            color: $is-emperor;
             font-size: 1.1em;
             margin: 0 0 10px 0;
           }
@@ -74,7 +86,8 @@
         }
 
         &:hover {
-          color: #555;
+					background: darken($is-blue, 10);
+          color: $is-emperor;
           text-decoration: none;
 
           .idea-content {
@@ -93,45 +106,59 @@
         }
 
         .idea-label {
-          color: #fff;
+          color: $is-white;
           font-size: 0.9em;
           font-weight: bold;
-          margin: 3px 6px 0 6px;
+          margin: 0;
+					padding: 5px;
         }
-
 
       }
 
-
     }
 
+		&:nth-child(3n) {
+			.idea-item {
+				@include small {
+						margin-right: 0;
+				}
+			}
+		}
 
-    &.done a {
-      background: #5e9237;
-      border-color: #426627;
+
+
+    &.done {
+			a {
+				background: $is-green;
+
+				&:hover {
+					background: $is-green-dark;
+				}
+			}
     }
 
-    &.active-innovationsslussen a {
-      background: #bfb331;
-      border-color: #948b2a;
+    &.active-innovationsslussen {
+			a {
+				background: $is-yellow;
+
+				&:hover {
+					background: darken($is-yellow, 10);
+				}
+			}
     }
 
-    &.active-innovationsslussen .idea-label {
-      color: #444011;
-    }
 
     &.private a {
-      background: #bf3434;
-      border-color: #8b2626;
+			a {
+				background: $is-red;
+
+				&:hover {
+					background: $is-red-dark;
+				}
+			}
     }
 
 
-  }
-
-  &.idea-list-closed {
-    > li {
-      width: 24.25%;
-    }
   }
 
   .idea-stats {
@@ -143,7 +170,7 @@
     right: 6%;
 
     li {
-      color: #777;
+      color: $is-boulder;
       display: block;
       float: left;
       font-size: 12px;

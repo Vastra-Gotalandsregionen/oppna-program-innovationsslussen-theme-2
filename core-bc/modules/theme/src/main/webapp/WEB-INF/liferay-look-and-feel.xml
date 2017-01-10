@@ -10,8 +10,9 @@
 		<template-extension>ftl</template-extension>
 
 		<settings>
-			<setting key="portlet-setup-show-borders-default" value="false" configurable="true" type="checkbox" />
-			<setting key="show-breadcrumbs" value="false" configurable="true" type="checkbox" />
+			<setting key="portlet-setup-show-borders-default" configurable="true" type="select" value="false" options="true,false"  />
+			<setting key="show-breadcrumbs" configurable="true" type="select" value="false" options="true,false" />
+			<setting key="show-hero" configurable="true" type="select" value="false" options="true,false" />
 		</settings>
 
 	</theme>

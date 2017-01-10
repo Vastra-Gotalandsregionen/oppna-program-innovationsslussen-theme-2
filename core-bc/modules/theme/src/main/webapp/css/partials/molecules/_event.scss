@@ -1,0 +1,49 @@
+.event {
+
+  .meta-wrap {
+
+    background: $is-white;
+    border: 1px solid shade($is-linkwater, 10);
+    color: $is-tundora;
+    font-size: 1.0em;
+    margin: 0 0px 20px 0;
+    padding: 0;
+
+    @include border-radius(3px);
+
+    .meta-item {
+      border-right: 1px solid shade($is-linkwater, 10);
+      display: inline-block;
+      margin: 10px 0;
+      padding: 5px 10px;
+
+      &:first-child {
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      &.time {}
+      &.date {}
+      &.location {}
+
+    }
+
+  }
+
+  .signup {
+    .link-btn {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .map-container {
+    margin: 20px 0;
+    height: 250px;
+    height: 300px;
+  }
+
+}

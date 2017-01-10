@@ -1,0 +1,164 @@
+.content-box {
+  border: 1px solid darken($is-linkwater, 5);
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  @include border-radius(2px);
+  //@include box-sizing('border-box');
+
+  > h2 {
+    background: $is-linkwater;
+    border: none;
+    border-left: 10px solid $is-blue;
+    color: $is-tundora;
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0.6em;
+    @include border-radius(2px 2px 0 0);
+  }
+
+  .content-box-bd {
+    padding: 1em;
+
+    position: relative;
+
+    .entry-item {
+
+      @include pie-clearfix();
+
+      padding: 0;
+      margin: 0.7em 0;
+
+      a {
+        background: transparent;
+        color: $text-color;
+        display: block;
+        text-decoration: none;
+
+        @include pie-clearfix();
+        @include hover-fade-in();
+
+        &:hover {
+          background: $is-linkwater;
+          color: $text-color;
+          text-decoration: none;
+        }
+      }
+
+      .entry-date {
+        float: left;
+        line-height: 1.0;
+        width: 50px;
+
+        .entry-date-inner {
+          background: $is-linkwater;
+          color: $is-blue;
+          font-weight: normal;
+          padding: 10px;
+          text-align: center;
+
+          .entry-date-day {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+          }
+
+          .entry-date-month {
+            font-size: 0.9em;
+            text-transform: uppercase;
+          }
+
+        }
+
+      }
+
+      .entry-content {
+        margin-left: 60px;
+        padding: 0;
+
+        h3 {
+          margin: 0 0 0.2em 0;
+        }
+
+        .time,
+        .place {
+          display: inline-block;
+          margin-right: 10px;
+        }
+
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+
+
+  .more-link-wrap {
+
+    padding-top: 2em;
+
+    a {
+      display: inline-block;
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+    }
+  }
+
+  &.content-box-simple {
+      border: none;
+  }
+
+  &.content-box-tighter {
+    > h2 {
+      font-size: 1.1em;
+      padding: 0.3em 0.6em;
+    }
+  }
+
+  &.twitter-listing {
+    .twitter-iframe-wrap {
+      padding: 0 2em 0 0;
+
+      @include small {
+        padding: 0;
+      }
+    }
+  }
+
+  &.blogs-box-listing {
+    .content-box-bd {
+      .entry-item {
+          border-bottom: 1px solid $is-linkwater;
+          margin: 0;
+          padding: 0;
+
+          a {
+            padding: 0.6em 0.1em;
+            position: relative;
+          }
+
+
+
+          .entry-date {
+            background: transparent;
+            color: $is-graydusty;
+            float: none;
+            font-size: 0.8em;
+            padding: 0;
+            text-align: left;
+            width: auto;
+          }
+          .entry-content {
+            margin: 0;
+          }
+      }
+    }
+  }
+
+}

@@ -8,11 +8,15 @@ html, body {
 .aui body {
 	background: $bg;
 	color: $text-color;
-	font-family: Arial,Verdana,Helvetica,sans-serif;
-	font-size: 12px;
+	//font-family: Arial,Verdana,Helvetica,sans-serif;
+  //font-size: 14px;
+  font-family: 'Lato', Helvetica, Arial,sans-serif;
+	font-size: 16px;
+  line-height: $base-line-height;
 	margin: 0;
 	padding: 0;
-    line-height: normal;
+
+  overflow-x: hidden; //needed to make edgetoedge work
 
 	&.font-large {
 		font-size: 18px;
@@ -22,9 +26,4 @@ html, body {
 		font-size: 20px;
 	}
 
-}
-
-.container-wrapper {
-  min-height: 100%;
-  position: relative;
 }

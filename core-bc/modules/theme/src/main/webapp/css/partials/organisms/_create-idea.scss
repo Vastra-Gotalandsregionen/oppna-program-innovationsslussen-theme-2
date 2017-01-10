@@ -5,7 +5,7 @@
   }
 
   p.sub-heading {
-    color: #666;
+    color: $is-graydove;
     font-size: 1.4em;
     font-weight: normal;
     margin: 0 0 0.8em 0;
@@ -14,7 +14,7 @@
 
   .intro {
     background: transparent url(../images/theme/ideas/create-idea.png) top right no-repeat;
-    color: #555;
+    color: $is-emperor;
     font-size: 1.2em;
     font-weight: normal;
     margin: 0 20px 10px 0;
@@ -42,7 +42,7 @@
   .create-confirmation {
     .content {
       background: transparent url(../images/theme/ideas/idea-created.png) top right no-repeat;
-      color: #333;
+      color: $is-tundora;
       font-size: 1.1em;
       min-height: 136px;
       padding: 10px 360px 0 0;
@@ -66,14 +66,14 @@
     }
 
     .aui-fieldset-legend {
-      color: #666;
+      color: $is-graydove;
       font-family: Ubuntu, Arial, Verdana, Helvetica, sans-serif;
       font-size: 1.4em;
       font-weight: normal;
     }
 
     .aui-legend {
-      border-bottom: 1px solid #d5e3ee;
+      border-bottom: 1px solid shade($is-linkwater, 10);
       padding-bottom: 5px;
       width: 100%;
     }
@@ -116,7 +116,7 @@
 
     label {
       span {
-        color: #555;
+        color: $is-emperor;
         display: inline-block;
         font-size: 1em;
         font-weight: normal;
@@ -140,13 +140,13 @@
         input[type="text"],
         textarea,
         select {
-          border-color: #f00;
+          border-color: $is-red;
         }
       }
     }
 
     span.element-mandatory {
-      color: #af2222;
+      color: shade($is-red, 30%);
       font-size: 1.2em;
       font-weight: bold;
 

@@ -1,0 +1,58 @@
+
+$youtube-ratio-hw: 3/4;
+
+$youtube-width-xsmall: 300px;
+$youtube-height-xsmall: $youtube-width-xsmall * $youtube-ratio-hw;
+
+$youtube-width-small: 500px;
+$youtube-height-small: $youtube-width-small * $youtube-ratio-hw;
+
+$youtube-width-medium: 600px;
+$youtube-height-medium: $youtube-width-medium * $youtube-ratio-hw;
+
+.youtube-portlet {}
+
+// When in portlet column only
+.portlet-column-only {
+  .youtube-portlet {
+
+    .portlet-borderless-container {
+      .portlet-body {
+
+          background: $is-black;
+          padding: 30px;
+
+          @include small {
+            overflow-x: hidden; //needed to make edgetoedge work
+            margin-left: -9999px;
+            padding-left: 9999px;
+            margin-right: -9999px;
+            padding-right: 9999px;
+          }
+
+
+        .swf-content {
+          margin: 0 auto;
+          text-align: center;
+
+          height: $youtube-height-xsmall !important;
+          width: $youtube-width-xsmall !important;
+
+
+          @include small {
+            height: $youtube-height-small !important;
+            width: $youtube-width-small !important;
+          }
+
+          @include medium {
+            height: $youtube-height-medium !important;
+            width: $youtube-width-medium !important;
+          }
+
+
+        }
+      }
+    }
+
+  }
+}

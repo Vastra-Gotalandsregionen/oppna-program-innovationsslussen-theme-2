@@ -1,0 +1,55 @@
+.portlet-navigation {
+
+  .nav-menu {
+    margin: 0;
+    max-width: 250px;
+
+    h2 {
+      font-size: 1.1em;
+      margin: 0;
+
+      a {
+        background: $is-blue;
+        color: $is-white;
+        display: block;
+        margin: 0;
+        padding: 4px 15px;
+        text-decoration: none;
+        @include border-radius(3px 3px 0 0);
+      }
+    }
+
+    ul {
+      list-style: none;
+      background: $is-white;
+      border: 1px solid shade($is-linkwater, 10);
+      margin: 0;
+      padding: 0;
+      @include border-radius(0 0 3px 3px);
+
+      li {
+        border-bottom: 1px solid shade($is-linkwater, 10);
+        margin: 0;
+        padding: 0;
+
+        a {
+          background: $is-white;
+          display: block;
+          margin: 0;
+          padding: 7px 15px;
+
+          &:hover {
+            background: $is-linkwater;
+            text-decoration: none;
+          }
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+      }
+    }
+  }
+
+}

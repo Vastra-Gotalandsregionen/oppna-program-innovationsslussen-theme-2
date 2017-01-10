@@ -6,6 +6,7 @@ function onWindowLoad() {
 	// Body
 	addCssClass(document.body, 'js');
 	bindNavigationTrigger(document.getElementById('navigationTrigger'));
+	bindToggleSubNav(document.getElementById('navigation'));
 }
 
 function hasCssClass(elem, className) {
@@ -43,10 +44,28 @@ function toggleCssClass(elem, className) {
 
 function bindNavigationTrigger(navigationTrigger) {
 	if(navigationTrigger) {
+
 		navigationTrigger.onclick = function(e) {
 			toggleCssClass(document.body, 'show-navigation')
 			return false;
 		}
 		addCssClass(navigationTrigger, 'navigation-trigger-ready');
+	}
+}
+
+function bindToggleSubNav(navMenu) {
+	if(navMenu) {
+		var toggleSubNavLinks = navMenu.getElementsByClassName('toggle-sub-nav');
+
+		for (i = 0; i < toggleSubNavLinks.length; i++) {
+			toggleSubNavLinks[i].onclick = function(e) {
+
+				var parentListItem = this.parentElement.parentElement;
+
+				toggleCssClass(parentListItem, 'show-sub-nav');
+				return false;
+			}
+		}
+
 	}
 }

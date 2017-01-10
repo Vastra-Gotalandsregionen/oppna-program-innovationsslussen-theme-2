@@ -1,42 +1,69 @@
 #banner {
-  background: transparent;
+
+  .container-fluid {
+    padding: 0;
+  }
 
   #heading {
-    margin: 0 0 1em 0;
-    padding: 0;
+    background: $is-blue;
+    height: 80px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0.5em;
+
+    .heading-inner {
+      padding: 1.3em 0;
+    }
+
+    @include small {
+      background: transparent;
+      margin: 0;
+      height: auto;
+      overflow: visible;
+
+      .heading-inner {
+        padding: 1.3em 0;
+        @include clearfix();
+      }
+    }
+
+
+
     @include pie-clearfix();
 
     .site-title {
 
-      display: block;
-      height: 41px;
-      float: left;
-      margin: 0;
+      display: inline-block;
+      height: 24px;
+      margin: 10px 0 0 10px;
       overflow: hidden;
       position: relative;
-      width: 410px;
+      width: 237px;
 
       a {
-
-        background: transparent url(../images/theme/logo/logo-vgr-innovationsslussen.png) 0 -50px no-repeat;
-
-        height: 24px;
-        width: 203px;
-
-        @include small {
-          background-position: 0 0;
-
-        }
-
-
-
+        background: transparent url(../images/theme/logo/logo.png) 0 -47px no-repeat;
         display: block;
         font-size: 0;
-        height: 72px;
+        height: 25px;
         text-indent: -9999em;
-        width: 410px;
-
+        width: 237px;
       }
+
+      @include small {
+        display: block;
+        float: left;
+        margin: 0;
+        height: 41px;
+        width: 460px;
+
+        a {
+          background-position: 0 0;
+          height: 72px;
+          width: 460px;
+        }
+      }
+
+
     }
 
     .top-navigation {

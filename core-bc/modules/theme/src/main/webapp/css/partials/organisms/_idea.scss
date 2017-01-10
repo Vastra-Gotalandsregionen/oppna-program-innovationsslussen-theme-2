@@ -1,19 +1,17 @@
 
 .idea-outer {
-  background: url(../images/theme/ideas/idea-shadow-24.png) bottom center no-repeat;
   padding: 0 0 27px 0;
 }
 
 .idea {
-  background: #3583bf;
+  background: $is-blue;
   border: 0;
   @include border-radius(3px);
   padding: 5px;
   position: relative;
 
   .idea-inner {
-    background: #fff;
-    border: 1px solid #a9bdcf;
+    background: $is-white;
     @include border-radius(3px);
     padding: 15px;
   }
@@ -33,15 +31,15 @@
       li.icon {
         a {
           background: url(../images/theme/toolbar/idea-toolbar-icon-sprite.png) 4px  1000px no-repeat;
-          color: #3583bf;
+          color: $is-blue;
           padding-left: 26px;
 
           &:hover {
-            background-color: #f7f7f7;
+            background-color: $is-alabaster;
           }
 
           span {
-            color: #3583bf;
+            color: $is-blue;
 
             &.label {
               background: transparent;
@@ -91,12 +89,12 @@
   }
 
   h1 {
-    color: #3583bf;
+    color: $is-blue;
     margin: 0.6em 0 0.2em 0;
   }
 
   .idea-creator {
-    color: #555;
+    color: $is-emperor;
     margin: 0.2em 0 0.7em 0;
   }
 
@@ -106,7 +104,7 @@
   }
 
   .idea-creator-name {
-    color: #555;
+    color: $is-emperor;
   }
 
   .idea-content-item {
@@ -114,14 +112,14 @@
   }
 
   .label {
-    color: #555;
+    color: $is-emperor;
     background-color: transparent;
     padding: 0px 0px;
     text-shadow: none;
   }
 
   .intro {
-    color: #555;
+    color: $is-emperor;
     font-size: 1.2em;
     font-weight: bold;
   }
@@ -133,9 +131,9 @@
     }
 
     h2 {
-      border-bottom: 1px solid #d5e3ee;
-      color: #999;
-      font-size: 1.6em;
+      border-bottom: 1px solid shade($is-linkwater, 10);
+      color: $is-boulder;
+      font-size: 1.2em;
       margin: 0 0 5px 0;
       padding: 0 0 5px 0;
       text-transform: uppercase;
@@ -143,6 +141,10 @@
       span {
         padding: 0 5px;
       }
+    }
+
+    .link-button-wrap {
+      margin-top: 10px;
     }
 
     .documents-list {
@@ -155,7 +157,7 @@
 
         a {
           background: url(../images/file_system/small/txt.png) left center no-repeat;
-          color: #777;
+          color: $is-boulder;
           display: block;
           line-height: 16px;
           min-height: 16px;
@@ -163,7 +165,7 @@
           text-decoration: underline;
 
           &:hover {
-            color: #222;
+            color: $is-mineshaft;
             text-decoration: none;
           }
         }
@@ -195,19 +197,21 @@
     }
 
   }
+
+
 }
 
 
 // Private view
 .idea-outer-private {
   .idea {
-    background: #bf3434;
+    background: $is-red;
 
     h1 {
-      color: #bf3434;
+      color: $is-red;
 
       span {
-      	color: #555;
+      	color: $is-emperor;
       	font-size: 0.6em;
       }
     }
@@ -216,73 +220,99 @@
       li.icon {
         a {
           background-image: url(../images/theme/toolbar/idea-toolbar-icon-sprite-private.png);
-          color: #bf3434;
+          color: $is-red;
 
           span {
-            color: #bf3434;
+            color: $is-red;
           }
         }
       }
     }
 
     .idea-creator-name {
-      color: #555;
+      color: $is-emperor;
     }
+
+    .btn-primary {
+      border: 1px solid $is-red;
+      color: $is-red;
+
+      &:hover {
+        background: $is-red;
+        color: $is-white;
+      }
+    }
+
+
   }
 }
 
 // Public - Active at Innovationsslussen
 .active-innovationsslussen {
   .idea {
-    background: #bfb331;
-
-    .idea-inner {
-      border-color: #948b2a;
-    }
+    background: $is-yellow;
 
     h1 {
-      color: #b08700;
+      color: $is-yellow-shade;
     }
 
     .idea-toolbar-wrap {
       li.icon {
         a {
           background-image: url(../images/theme/toolbar/idea-toolbar-icon-sprite-active.png);
-          color: #b08700;
+          color: $is-yellow-shade;
 
           span {
-            color: #b08700;
+            color: $is-yellow-shade;
           }
         }
       }
     }
+
+    .btn-primary {
+      border: 1px solid $is-yellow-shade;
+      color: $is-yellow-shade;
+
+      &:hover {
+        background: $is-yellow-shade;
+        color: $is-white;
+      }
+    }
+
   }
 }
 
 // Public - Done
 .done {
   .idea {
-    background: #5e9237;
-
-    .idea-inner {
-      border-color: #426627;
-    }
+    background: $is-green;
 
     h1 {
-      color: #5e9237;
+      color: $is-green;
     }
 
     .idea-toolbar-wrap {
       li.icon {
         a {
           background-image: url(../images/theme/toolbar/idea-toolbar-icon-sprite-done.png);
-          color: #5e9237;
+          color: $is-green;
 
           span {
-            color: #5e9237;
+            color: $is-green;
           }
         }
       }
     }
+
+    .btn-primary {
+      border: 1px solid $is-green;
+      color: $is-green;
+
+      &:hover {
+        background: $is-green;
+        color: $is-white;
+      }
+    }
+
   }
 }

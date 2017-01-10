@@ -1,0 +1,85 @@
+.teaser-blocks {
+
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  .teaser-block {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+    width: 100.0%;
+
+    @include small {
+        width: 50.0%;
+    }
+
+    .teaser-block-inner {
+      border-top: 5px solid transparent;
+      margin-left: 20px;
+      margin-right: 20px;
+
+      @include border-radius(3px);
+      @include transition(all 0.2s ease-in-out);
+    }
+
+    &:nth-child(odd) {
+      .teaser-block-inner {
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(even) {
+      .teaser-block-inner {
+        margin-right: 0;
+      }
+    }
+
+    h2 {
+      font-size: 1.2em;
+      margin: 10px 0;
+      padding: 0;
+    }
+
+    .teaser-block-content {
+      padding: 0;
+    }
+
+    .image-wrap {
+      img {
+        width: 100%;
+      }
+    }
+
+
+  }
+
+  a.teaser-block {
+    text-decoration: none;
+
+    h2,
+    p,
+    .teaser-block-content {
+      color: $is-mineshaft;
+      text-decoration: none;
+      padding: 0 10px;
+    }
+
+    &:hover {
+      .teaser-block-inner {
+        background: $is-linkwater;
+        border-top-color: $is-blue;
+      }
+    }
+
+
+  }
+
+
+}

@@ -1,0 +1,280 @@
+.hero-wrap {
+
+  margin: 1em 0;
+  padding: 0 1em;
+  padding: 0;
+  margin: 0 0 1em 0;
+
+
+  @include small {
+    margin: 0;
+    padding: 0;
+  }
+
+  .portlet-boundary {
+    margin-bottom: 0;
+
+    .journal-content-article {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+.hero-carousel-ctn {
+  margin-bottom: -$content-padding-top;
+
+  padding: 0;
+  position: relative;
+
+  @include small {
+    margin-bottom: -$content-padding-top;
+  }
+
+
+  .owl-carousel {
+
+    .owl-controls {
+
+      margin: 0;
+      padding: 0;
+
+      .owl-dots {
+        background: rgba($is-white, 0.5);
+        bottom: 5px;
+        left: 50%;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+
+
+
+        .owl-dot {
+
+          display: none;
+
+          @include small {
+            display: inline-block;
+          }
+
+          span {
+            background: transparent;
+            border: 1px solid $is-tundora;
+            height: 8px;
+            width: 8px;
+            @include border-radius(50%);
+          }
+          &.active {
+            span {
+              background: $is-tundora;
+            }
+          }
+        }
+      }
+
+      .owl-nav {
+
+        div {
+          background: transparent;
+          border: none;
+          color: $is-tundora;
+          font-size: 2.0em;
+          position: absolute;
+          top:40%;
+          @include border-radius(0);
+          @include opacity(0.8);
+
+          @include small {
+            font-size: 2.5em;
+          }
+
+          &:hover {
+            background: transparent;
+            @include opacity(1.0);
+          }
+
+          &.owl-prev {
+            left: 0px;
+
+            @include small {
+              left: 40px;
+            }
+          }
+
+          &.owl-next {
+            right: 0px;
+
+            @include small {
+              right: 40px;
+            }
+          }
+
+          .label {
+            background: transparent;
+            font-size: 0;
+            height: 0;
+            width: 0;
+            text-indent: -9999em;
+          }
+
+        }
+      }
+
+    }
+
+  }
+
+  .slide {
+    background: $is-linkwater;
+    margin: 0;
+    padding: 0;
+    // Use media query with height to control height
+    max-height: 300px;
+    min-height: 150px;
+    overflow: hidden;
+    position: relative;
+
+    @include small {
+      background: transparent;
+      min-height: inherit;
+    }
+
+    @include height-small {
+      max-height: 350px;
+    }
+
+    @include height-medium {
+      max-height: 400px;
+    }
+
+    @include height-large {
+      max-height: 500px;
+    }
+
+    img {
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      min-width: 800px;
+      width: 100%;
+      z-index: 1;
+
+      @include small {
+        position: static;
+      }
+    }
+
+    .content-area-wrap {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      z-index: 2;
+
+      @include small {
+        bottom: 30px;
+        top: auto;
+      }
+
+      @include height-small {
+        bottom: 0;
+        @include small {
+          bottom: 30px;
+        }
+      }
+
+      .content-area {
+        background: rgba($is-white, 0.8);
+        float: none;
+        margin: 0 auto;
+        max-width: 220px;
+        padding: 10px 20px;
+        text-align: center;
+
+        @include small {
+          float: right;
+          margin: 0;
+          max-width: 400px;
+          padding: 30px;
+          text-align: left;
+
+          &.left {
+            float: left;
+          }
+
+          &.center {
+            float: none;
+            margin: 0 auto;
+          }
+
+        }
+
+        @include height-small {
+          padding: 10px;
+          @include small {
+            padding: 40px;
+          }
+        }
+
+        @include border-radius(3px);
+
+        h2 {
+          color: $is-blue;
+          font-size: 1.3em;
+          margin: 0 0 0.3em 0;
+
+          @include small {
+            font-size: 1.8em;
+            margin: 0 0 0.5em 0;
+          }
+        }
+
+        p {
+          color: $is-blue;
+          display: none;
+          font-size: 1.1em;
+          margin: 0 0 0.5 0;
+
+          @include small {
+            display: block;
+          }
+        }
+
+        .link-btn {
+          background: $is-blue;
+          border-color: $is-blue;
+          color: $is-white;
+          line-height: 1.2;
+          max-width: 80%;
+          padding: 0.3em 1.0em;
+
+          @include small {
+
+            padding: 0.6em 2.0em;
+          }
+
+          &:hover {
+            background: shade($is-blue, 10%);
+            border-color: shade($is-blue, 10%);
+            color: $is-white;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+// Edit view
+.page-edit.controls-visible {
+  .hero-carousel-ctn {
+    margin-bottom: 0;
+  }
+}

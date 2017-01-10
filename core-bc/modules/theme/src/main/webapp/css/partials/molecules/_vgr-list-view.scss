@@ -4,15 +4,15 @@ ul.vgr-list-view {
   padding: 0;
 
   > li {
-    background: #eef5fa;
-    border: 1px solid #c4ced5;
+    background: $is-linkwater;
+    border: 1px solid shade($is-linkwater, 10);
     @include border-radius(3px);
     margin: 7px 0;
     padding: 10px;
     position: relative;
 
     &.vgr-list-view-item-odd {
-        background: #fff;
+        background: $is-white;
     }
 
     .bd {
@@ -27,19 +27,19 @@ ul.vgr-list-view {
       position: absolute;
       bottom: 40px;
       left: 0;
-      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, #eef5fa 100%);
-      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, #eef5fa 100%);
-      background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, #eef5fa 100%);
-      background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, #eef5fa 100%);
-      background: linear-gradient(top, rgba(255,255,255,0) 0%, #eef5fa 100%);
+      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, $is-linkwater 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, $is-linkwater 100%);
+      background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, $is-linkwater 100%);
+      background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, $is-linkwater 100%);
+      background: linear-gradient(top, rgba(255,255,255,0) 0%, $is-linkwater 100%);
     }
 
     &.vgr-list-view-item-odd .bd:after {
-      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, #fff 100%);
-      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, #fff 100%);
-      background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, #fff 100%);
-      background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, #fff 100%);
-      background: linear-gradient(top, rgba(255,255,255,0) 0%, #fff 100%);
+      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, $is-white 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, $is-white 100%);
+      background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, $is-white 100%);
+      background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, $is-white 100%);
+      background: linear-gradient(top, rgba(255,255,255,0) 0%, $is-white 100%);
     }
 
     .hd,
@@ -59,11 +59,11 @@ ul.vgr-list-view {
         padding: 0;
 
         a {
-            color: #2f72a9;
+            color: $is-blue;
             text-decoration: none;
 
             &:hover {
-              color: #2f72a9;
+              color: $is-blue;
               text-decoration: underline;
             }
         }
@@ -75,11 +75,11 @@ ul.vgr-list-view {
     .bd {
 
       a {
-        color: #2f72a9;
+        color: $is-blue;
         text-decoration: none;
 
         &:hover {
-          color: #2f72a9;
+          color: $is-blue;
           text-decoration: underline;
         }
 

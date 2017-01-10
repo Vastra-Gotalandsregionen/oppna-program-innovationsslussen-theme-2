@@ -2,24 +2,24 @@
 	margin: 10px 0;
 
   > h2 {
-    border-bottom: 1px solid #d5e3ee;
-    color: #999;
-    font-size: 1.6em;
+    border-bottom: 1px solid shade($is-linkwater, 10);
+    color: $is-boulder;
+    font-size: 1.2em;
     margin: 0 0 15px 0;
     padding: 0 0 2px 0;
     text-transform: uppercase;
   }
 
   .comment {
-    background: #fff;
-    border: 1px solid #d5e3ee;
+    background: $is-white;
+    border: 1px solid shade($is-linkwater, 10);
     @include border-radius(3px);
     margin: 10px 0;
     padding: 15px;
 
     &.comment-innovationsslussen {
-      background: #eef5fa;
-      border-color: #c4ced5;
+      background: $is-linkwater;
+      border: 1px solid shade($is-linkwater, 15);
     }
 
     .comment-author {
@@ -30,19 +30,19 @@
     }
 
     .comment-author-name {
-      color: #555;
+      color: $is-emperor;
       margin-bottom: 0.2em;
       font-weight: bold;
     }
 
     .comment-author-title {
-      color: #555;
+      color: $is-emperor;
       font-weight: bold;
       font-style: italic;
     }
 
     .comment-entry {
-      color: #424242;
+      color: $is-tundora;
       float: left;
       padding-left: 20px;
       padding-right: 20px;
@@ -78,9 +78,9 @@
   }
 
   .action-link {
-      background: #ddd;
+      background: $is-alto;
       @include border-radius(4px);
-      color: #444;
+      color: $is-tundora;
       display: block;
       font-size: 1.3em;
       padding: 10px;
@@ -131,16 +131,14 @@
 .idea-outer-private {
 	.idea-comments {
 		.comment {
-			background: #fff;
-			border-color: #d5e3ee;
 
 			&.comment-innovationsslussen {
-				background: #fcf7f7;
-				border-color: #bf3434;
+				background: tint($is-red, 95);
+				border-color: $is-red;
 			}
 
 			.comment-author-name {
-				color: #555;
+				color: $is-emperor;
 			}
 		}
 	}

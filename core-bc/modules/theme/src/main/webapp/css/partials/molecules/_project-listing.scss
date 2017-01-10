@@ -1,0 +1,77 @@
+.projects-listing-wrap {
+
+  .projects-listing {
+    @include clearfix();
+
+    .entry-item {
+      margin: 2% 0;
+      width: 100%;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include small {
+        float: left;
+        margin: 2%;
+        width: 48%;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+
+        &:nth-child(odd) {
+          margin-left: 0;
+        }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+
+
+      }
+
+      .entry-item-inner {
+        border: 1px solid darken($is-linkwater, 5);
+
+        @include small {
+          height: 365px;
+          overflow: hidden;
+        }
+      }
+
+      .image-wrap {
+        overflow: hidden;
+        max-height: 150px;
+        padding: 2px 2px 0 2px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .entry-item-content {
+        padding: 1.0em;
+
+        h2 {
+          color: $is-blue;
+          font-size: 1.3em;
+          margin: 0 0 0.5em 0;
+          text-align: center;
+        }
+
+        .link-btn {
+          display: block;
+          text-align: center;
+        }
+
+      }
+
+
+    }
+
+  }
+
+
+}
