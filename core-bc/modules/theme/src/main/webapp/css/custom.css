@@ -81,6 +81,7 @@ body {
 		@import 'partials/molecules/spot-box';
 		@import 'partials/molecules/teaser-blocks';
 		@import 'partials/molecules/top-navigation';
+		@import 'partials/molecules/video';
 		@import 'partials/molecules/vgr-boxed-content';
 		@import 'partials/molecules/vgr-list-view';
 		@import 'partials/molecules/youtube-portlet';
