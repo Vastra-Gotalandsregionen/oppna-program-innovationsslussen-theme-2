@@ -2,7 +2,7 @@
 
   .nav-menu {
     margin: 0;
-    max-width: 250px;
+    //max-width: 250px;
 
     h2 {
       font-size: 1.1em;
@@ -19,37 +19,98 @@
       }
     }
 
+
+    // ul {
+    //   list-style: none;
+    //   background: $is-white;
+    //   border: 1px solid shade($is-linkwater, 10);
+    //   margin: 0;
+    //   padding: 0;
+    //   @include border-radius(0 0 3px 3px);
+    //
+    //   li {
+    //     border-bottom: 1px solid shade($is-linkwater, 10);
+    //     margin: 0;
+    //     padding: 0;
+    //
+    //     a {
+    //       background: $is-white;
+    //       display: block;
+    //       margin: 0;
+    //       padding: 7px 15px;
+    //
+    //       &:hover {
+    //         background: $is-linkwater;
+    //         text-decoration: none;
+    //       }
+    //     }
+    //
+    //     &:last-child {
+    //       border-bottom: none;
+    //     }
+    //
+    //   }
+    // }
+
     ul {
+      background: transparent;
       list-style: none;
-      background: $is-white;
-      border: 1px solid shade($is-linkwater, 10);
       margin: 0;
       padding: 0;
-      @include border-radius(0 0 3px 3px);
 
       li {
         border-bottom: 1px solid shade($is-linkwater, 10);
+        display: block;
         margin: 0;
         padding: 0;
 
+        border: none;
+        margin: 10px 0;
+
         a {
-          background: $is-white;
+          background: $is-linkwater;
+          border: 1px solid $is-linkwater;
           display: block;
-          margin: 0;
-          padding: 7px 15px;
+          color: $is-blue;
+          font-size: 1.0em;
+          padding: 0.7em;
+          text-decoration: none;
+
+          @include small {
+            font-size: 1.1em;
+            padding: 1em;
+          }
+
+          &:after {
+            @include iconfont(0.9em);
+            content: $content-chevron-right;
+            padding-left: 0.2em;
+          }
 
           &:hover {
-            background: $is-linkwater;
-            text-decoration: none;
+            background: darken($is-linkwater, 10);
           }
         }
 
+        &:first-child {
+          margin-top: 0;
+        }
+
         &:last-child {
-          border-bottom: none;
+          margin-bottom: 0;
+        }
+
+        &.selected {
+          a {
+            background: $is-white;
+            border-color: darken($is-linkwater, 10);
+          }
         }
 
       }
     }
+
+
   }
 
 }
