@@ -44,6 +44,13 @@
         margin-bottom: 0;
       }
 
+      &.selected {
+        a {
+          background: $is-white;
+          border-color: darken($is-linkwater, 10);
+        }
+      }
+
       &.ico a span:before {
         @include iconfont(1.2em);
         padding-right: 0.5em;
