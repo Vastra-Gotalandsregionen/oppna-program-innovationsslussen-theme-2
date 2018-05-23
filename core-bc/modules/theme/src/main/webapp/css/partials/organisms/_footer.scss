@@ -1,19 +1,20 @@
 #footer {
-  border-top: 1px solid darken($is-linkwater, 10);
-  background: $is-linkwater;
+  border-top: 1px solid darken(#005c95, 10);
+  background: #005c95;
   bottom: 0;
   height: 91px;
   padding: 0;
   width: 100%;
 
   .footer-inner {
-    padding: 20px 0;
+    padding: 12px 0;
 
     .logo {
-      background: url(../images/theme/logo/vgr-logo-large-transparent.png) no-repeat scroll 0 0 transparent;
+      background: url(../images/theme/logo/vgr-logotyp-neg.png) no-repeat scroll 0 0 transparent;
+      background-size: contain;
       display: block;
       font-size: 0;
-      height: 51px;
+      height: 67px;
       margin: 0 auto;
       text-align: center;
       width: 252px;
