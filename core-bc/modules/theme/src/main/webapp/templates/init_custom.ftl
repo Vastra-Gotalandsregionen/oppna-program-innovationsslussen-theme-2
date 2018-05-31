@@ -67,11 +67,6 @@
 
 <#assign url_prefix_public = "/" />
 
-<#if !hasPublicSiteVirtualHost>
-	<#assign url_prefix_public =  "/web" />
-	<#assign url_prefix_public =  url_prefix_public + page_group.getFriendlyURL() />
-</#if>
-
 <#------ Home URL ----------------------------------------------------------------------------------------------------------------->
 
 <#assign url_site_home = url_prefix_public />
