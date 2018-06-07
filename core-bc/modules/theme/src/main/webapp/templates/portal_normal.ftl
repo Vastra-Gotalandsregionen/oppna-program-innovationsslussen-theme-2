@@ -133,6 +133,5 @@ ${theme.include(bottom_include)}
 <script src="//www.youtube.com/player_api"></script>
 
 <#include "${full_templates_path}/piwik.ftl" />
-<#include "${full_templates_path}/social_sharing.ftl" />
 
 </html>
