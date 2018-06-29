@@ -108,6 +108,16 @@ ${theme.include(body_top_include)}
 
 </div>
 
+<div class="yammer-link"><div class="yammer-heading"><a href="https://www.yammer.com/vgregion.se/#/threads/inGroup?type=in_group&amp;feedId=3726752&amp;view=all"><span>Y</span><span>A</span><span>M</span><span>M</span><span>E</span><span>R</span></a></div>
+    <div class="yammer-info">
+        <strong>Häng med oss på Yammer!</strong>
+        <p>Har du en fråga eller idé som du vill diskutera med fler inom hälso- och sjukvården i VGR?
+            På vår sidan kan du följa och delta i intressanta diskussioner om innovation i vården.
+            <a href="https://www.yammer.com/vgregion.se/#/threads/inGroup?type=in_group&amp;feedId=3726752&amp;view=all">Yammer-tråd</a>
+        </p>
+    </div>
+</div>
+
 <#include "${full_templates_path}/footer.ftl" />
 
 </body>

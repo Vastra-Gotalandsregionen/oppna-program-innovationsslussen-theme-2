@@ -84,6 +84,7 @@ body {
 		@import 'partials/molecules/vgr-boxed-content';
 		@import 'partials/molecules/vgr-list-view';
 		@import 'partials/molecules/youtube-portlet';
+		@import 'partials/molecules/yammer-link';
 
 		@import 'partials/molecules/owl-carousel';
 		@import 'partials/molecules/owl-theme';

@@ -1,0 +1,70 @@
+.yammer-link {
+    position: fixed;
+    right: 0;
+    border-right: none;
+    border-radius: 4px 0px 0px 4px;
+    color: #fff;
+    font-size: .9em;
+    top: 250px;
+    z-index: 100;
+    width: 30px;
+    transition: width .2s ease;
+}
+
+.yammer-heading {
+    background: #006298;
+    box-sizing: border-box;
+    border-radius: 4px 0 0 4px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    height: 300px;
+    vertical-align: middle;
+    font-size: 1.2em;
+    z-index: 101;
+    padding: 0;
+}
+
+.yammer-link span {
+    display: block;
+}
+
+.yammer-link .yammer-heading a {
+    color: #ffffff;
+    display: inline-block;
+    height: 300px;
+    width: 30px;
+    padding: 8px;
+    box-sizing: border-box;
+    padding-top: 58px;
+}
+
+.yammer-info {
+    background: #fff;
+    color: #333;
+    border: 1px solid #006298;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 300px;
+    transform: translateX(214px);
+    transition: transform .2s ease;
+}
+
+.yammer-info {
+    width: 184px;
+    padding: 8px;
+}
+
+.yammer-link:hover {
+    width: 213px;
+}
+
+.yammer-link:hover .yammer-heading {
+    border-radius: 0;
+}
+
+.yammer-link:hover .yammer-info {
+    transform: translateX(0);
+}
